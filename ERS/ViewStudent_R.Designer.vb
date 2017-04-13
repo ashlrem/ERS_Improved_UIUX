@@ -44,11 +44,6 @@ Partial Class ViewStudent_R
         Me.sn = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.goodmoral_btn = New System.Windows.Forms.Button()
-        Me.form137_btn = New System.Windows.Forms.Button()
-        Me.card_btn = New System.Windows.Forms.Button()
-        Me.baptismal_btn = New System.Windows.Forms.Button()
-        Me.nso_btn = New System.Windows.Forms.Button()
         Me.card_lbl = New System.Windows.Forms.Label()
         Me.gm_lbl = New System.Windows.Forms.Label()
         Me.nso_lbl = New System.Windows.Forms.Label()
@@ -149,7 +144,7 @@ Partial Class ViewStudent_R
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(802, 38)
+        Me.Button3.Location = New System.Drawing.Point(836, 290)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(90, 46)
         Me.Button3.TabIndex = 74
@@ -234,11 +229,6 @@ Partial Class ViewStudent_R
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.goodmoral_btn)
-        Me.GroupBox1.Controls.Add(Me.form137_btn)
-        Me.GroupBox1.Controls.Add(Me.card_btn)
-        Me.GroupBox1.Controls.Add(Me.baptismal_btn)
-        Me.GroupBox1.Controls.Add(Me.nso_btn)
         Me.GroupBox1.Controls.Add(Me.card_lbl)
         Me.GroupBox1.Controls.Add(Me.gm_lbl)
         Me.GroupBox1.Controls.Add(Me.nso_lbl)
@@ -251,51 +241,6 @@ Partial Class ViewStudent_R
         Me.GroupBox1.TabIndex = 89
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Requirements:"
-        '
-        'goodmoral_btn
-        '
-        Me.goodmoral_btn.Location = New System.Drawing.Point(613, 54)
-        Me.goodmoral_btn.Name = "goodmoral_btn"
-        Me.goodmoral_btn.Size = New System.Drawing.Size(80, 23)
-        Me.goodmoral_btn.TabIndex = 88
-        Me.goodmoral_btn.Text = "Upload"
-        Me.goodmoral_btn.UseVisualStyleBackColor = True
-        '
-        'form137_btn
-        '
-        Me.form137_btn.Location = New System.Drawing.Point(438, 54)
-        Me.form137_btn.Name = "form137_btn"
-        Me.form137_btn.Size = New System.Drawing.Size(80, 23)
-        Me.form137_btn.TabIndex = 88
-        Me.form137_btn.Text = "Upload"
-        Me.form137_btn.UseVisualStyleBackColor = True
-        '
-        'card_btn
-        '
-        Me.card_btn.Location = New System.Drawing.Point(294, 55)
-        Me.card_btn.Name = "card_btn"
-        Me.card_btn.Size = New System.Drawing.Size(80, 23)
-        Me.card_btn.TabIndex = 88
-        Me.card_btn.Text = "Upload"
-        Me.card_btn.UseVisualStyleBackColor = True
-        '
-        'baptismal_btn
-        '
-        Me.baptismal_btn.Location = New System.Drawing.Point(136, 55)
-        Me.baptismal_btn.Name = "baptismal_btn"
-        Me.baptismal_btn.Size = New System.Drawing.Size(80, 23)
-        Me.baptismal_btn.TabIndex = 88
-        Me.baptismal_btn.Text = "Upload"
-        Me.baptismal_btn.UseVisualStyleBackColor = True
-        '
-        'nso_btn
-        '
-        Me.nso_btn.Location = New System.Drawing.Point(11, 53)
-        Me.nso_btn.Name = "nso_btn"
-        Me.nso_btn.Size = New System.Drawing.Size(80, 23)
-        Me.nso_btn.TabIndex = 88
-        Me.nso_btn.Text = "Upload"
-        Me.nso_btn.UseVisualStyleBackColor = True
         '
         'card_lbl
         '
@@ -357,7 +302,7 @@ Partial Class ViewStudent_R
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(904, 375)
+        Me.ClientSize = New System.Drawing.Size(943, 375)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.SearchStudent_btn)
@@ -410,11 +355,6 @@ Partial Class ViewStudent_R
     Friend WithEvents sn As System.Windows.Forms.TextBox
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents goodmoral_btn As System.Windows.Forms.Button
-    Friend WithEvents form137_btn As System.Windows.Forms.Button
-    Friend WithEvents card_btn As System.Windows.Forms.Button
-    Friend WithEvents baptismal_btn As System.Windows.Forms.Button
-    Friend WithEvents nso_btn As System.Windows.Forms.Button
     Friend WithEvents card_lbl As System.Windows.Forms.Label
     Friend WithEvents gm_lbl As System.Windows.Forms.Label
     Friend WithEvents nso_lbl As System.Windows.Forms.Label

@@ -5,28 +5,37 @@ Imports System.Drawing
 Imports System.Drawing.Printing
 Public Class Reciept
     Private Sub Reciept_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        'Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         'Me.Location = New Point(1, 1)
         'Me.Size = SystemInformation.PrimaryMonitorSize()
         dateP.Text = DateTimePicker1.Value.ToString
 
         nameOS.Text = My.Forms.AddPayment_A.nameOS.Text
         grade.Text = My.Forms.AddPayment_A.grade.Text
-        If My.Forms.AddPayment_A.pp_rdbnt.Checked = True Then
+        If My.Forms.AddPayment_A.Text = "" Then
             amount.Text = My.Forms.AddPayment_A.partialp.Text
             po.Text = "First payment."
-        ElseIf My.Forms.AddPayment_A.fp_rdobnt.Checked = True Then
+        ElseIf My.Forms.AddPayment_A.Text = "" Then
             amount.Text = My.Forms.AddPayment_A.prelim.Text
             po.Text = "Full Payment."
+
+
+        ElseIf My.Forms.UpdatePayment_A.Text = "" Then
+            nameOS.Text = My.Forms.UpdatePayment_A.sn.Text
+            grade.Text = My.Forms.UpdatePayment_A.grade.Text
+            amount.Text = My.Forms.UpdatePayment_A.prelim.Text
+            po.Text = "Last Payment"
+
         End If
+
         am.Text = amount.Text
         am1.Text = am.Text
         am2.Text = am1.Text
 
-    End Sub
-    Private Sub Reciept_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
-        AddPayment_A.Enabled = True
-        UpdatePayment_A.Enabled = True
+        Dim Screen As System.Drawing.Rectangle
+        Screen = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea()
+        Me.Top = (Screen.Height \ 2) - (Me.Height - 320)
+        Me.Left = (Screen.Width \ 2) - (Me.Width \ 2)
     End Sub
     <System.Runtime.InteropServices.DllImport("gdi32.dll")> _
     Public Shared Function BitBlt(ByVal hdcDest As IntPtr, ByVal nXDest As Integer, ByVal nYDest As Integer, ByVal nWidth As Integer, ByVal nHeight As Integer, ByVal hdcSrc As IntPtr, _
@@ -56,16 +65,56 @@ Public Class Reciept
         printDialog1.Document = PrintDocument1
         Dim result As DialogResult = printDialog1.ShowDialog
         If (result = DialogResult.OK) Then
-            PrintDocument1.Print()
-            Me.Close()
-        End If
+            If UpdatePayment_A.Text = "" Then
+                prelimPay_btn()
+                PrintDocument1.Print()
+                Me.TopMost = False
+                UpdatePayment_A.Enabled = True
+                UpdatePayment_A.TopMost = True
+                UpdatePayment_A.Text = "Update Payment"
+                UpdatePayment_A.Show()
+                Me.Close()
+            ElseIf AddPayment_A.Text = "" Then
+                If My.Forms.AddPayment_A.fp_rdobnt.Checked = True Then
+                    FullPayment_A()
+                ElseIf My.Forms.AddPayment_A.pp_rdbnt.Checked = True Then
+                    PartialPayment_A()
+                End If
+                PrintDocument1.Print()
+                Me.TopMost = False
+                AddPayment_A.Enabled = True
+                AddPayment_A.TopMost = True
+                AddPayment_A.Text = "Add Payment"
+                AddPayment_A.Show()
+                Me.Close()
+            End If
+
+            End If
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim a As Integer
-        a = MsgBox("Are you sure do you want to exit?", MsgBoxStyle.YesNo)
+        a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
-            Me.Close()
+
+            If UpdatePayment_A.Text = "" Then
+                UpdatePayment_A.TopMost = True
+                UpdatePayment_A.Enabled = True
+                UpdatePayment_A.Show()
+                Me.TopMost = False
+                Me.Close()
+            ElseIf AddPayment_A.Text = "" Then
+
+                AddPayment_A.TopMost = True
+                AddPayment_A.Enabled = True
+                AddPayment_A.Show()
+                Me.TopMost = False
+                Me.Close()
+
+            End If
+        ElseIf a = MsgBoxResult.No Then
+
+
         End If
     End Sub
 End Class

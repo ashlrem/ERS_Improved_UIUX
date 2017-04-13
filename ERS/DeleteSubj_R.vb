@@ -2,10 +2,15 @@
 
     Private Sub DeleteSubj_R_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
         Dim a As Integer
-        a = MsgBox("Are you sure do you want to exit?", MsgBoxStyle.YesNo)
+        a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
+            My.Forms.Screen_Registrar.Enabled = True
             Screen_Registrar.Show()
             RegistrarPanel.Show()
+        ElseIf a = MsgBoxResult.No Then
+            Dim sa As New DeleteSubj_R
+            sa.TopLevel = True
+            sa.Show()
         End If
     End Sub
     Private Sub DeleteSubj_R_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

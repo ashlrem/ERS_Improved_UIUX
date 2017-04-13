@@ -161,7 +161,7 @@ Partial Class Reciept
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(523, 123)
+        Me.Label10.Location = New System.Drawing.Point(523, 139)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(45, 16)
         Me.Label10.TabIndex = 10
@@ -211,7 +211,7 @@ Partial Class Reciept
         '
         Me.nameOS.AutoSize = True
         Me.nameOS.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nameOS.Location = New System.Drawing.Point(349, 123)
+        Me.nameOS.Location = New System.Drawing.Point(238, 123)
         Me.nameOS.Name = "nameOS"
         Me.nameOS.Size = New System.Drawing.Size(13, 16)
         Me.nameOS.TabIndex = 10
@@ -221,7 +221,7 @@ Partial Class Reciept
         '
         Me.dateP.AutoSize = True
         Me.dateP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dateP.Location = New System.Drawing.Point(574, 124)
+        Me.dateP.Location = New System.Drawing.Point(574, 139)
         Me.dateP.Name = "dateP"
         Me.dateP.Size = New System.Drawing.Size(13, 16)
         Me.dateP.TabIndex = 10
@@ -436,6 +436,7 @@ Partial Class Reciept
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(788, 413)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.print_btn)

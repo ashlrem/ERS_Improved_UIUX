@@ -68,6 +68,8 @@ Module Payment
             ins.Parameters.AddWithValue("@TotalAmountPaid", My.Forms.AddPayment_A.prelim.Text)
             ins.ExecuteNonQuery()
             MsgBox("Payment Added!")
+            My.Forms.AddPayment_A.sn.Text = ""
+            My.Forms.AddPayment_A.prelim.Text = "-"
             objConn.Close()
         Catch ex As Exception
             MsgBox(ex)
@@ -88,6 +90,10 @@ Module Payment
             ins.Parameters.AddWithValue("@TotalAmountPaid", My.Forms.AddPayment_A.partialp.Text)
             ins.ExecuteNonQuery()
             MsgBox("Payment Added!")
+            My.Forms.AddPayment_A.prelim.Text = "-"
+            My.Forms.AddPayment_A.sn.Text = ""
+            My.Forms.AddPayment_A.partialp.Text = ""
+
             objConn.Close()
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -133,9 +139,7 @@ Module Payment
     Public Sub prelimPay_btn()
         Try
 
-            Dim lastpayment As Integer
-            lastpayment = My.Forms.UpdatePayment_A.prelim.Text
-            total = TotalPaid + lastpayment
+         
 
             Dim reg As String = "UPDATE payment_tbl SET FirstPayment = 0, TotalAmountPaid=  '" & total & "' where Student_ID_No ='" & My.Forms.UpdatePayment_A.sn.Text & "'"
             Dim paymentOf As String = "Midterm"
@@ -143,11 +147,7 @@ Module Payment
                 Using sqlCmd = New MySqlCommand(reg, cn1)
                     cn1.Open()
                     sqlCmd.ExecuteNonQuery()
-                    My.Forms.Reciept.nameOS.Text = My.Forms.UpdatePayment_A.sn.Text
-                    My.Forms.Reciept.grade.Text = My.Forms.UpdatePayment_A.grade.Text
-                    My.Forms.Reciept.amount.Text = My.Forms.UpdatePayment_A.prelim.Text
-                    My.Forms.Reciept.po.Text = paymentOf
-                    Reciept.Show()
+                    My.Forms.UpdatePayment_A.pre_btn.Visible = False
                     My.Forms.UpdatePayment_A.prelim.Text = "-"
                     cn1.Close()
                 End Using

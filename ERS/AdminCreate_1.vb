@@ -3,9 +3,10 @@ Imports System.Drawing.Imaging
 Public Class AdminCreate_1
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         Dim a As Integer
-        a = MsgBox("Are you sure do you want to exit?", MsgBoxStyle.YesNo)
+        a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
             AdminPanel.Show()
+            Screen_Admin.Enabled = True
             Me.Close()
         End If
     End Sub

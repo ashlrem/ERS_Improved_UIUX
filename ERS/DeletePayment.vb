@@ -18,11 +18,16 @@
     End Sub
     Private Sub DeletePayment_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
     Dim a As Integer
-        a = MsgBox("Are you sure do you want to exit?", MsgBoxStyle.YesNo)
+        a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
+            Screen_Cashier.Enabled = True
             Screen_Cashier.Show()
             CashierPanel.Show()
             DeletePayment_btn.Visible = True
+        ElseIf a = MsgBoxResult.No Then
+            Dim sa As New DeletePayment
+            sa.TopMost = True
+            sa.Show()
         End If
     End Sub
 End Class

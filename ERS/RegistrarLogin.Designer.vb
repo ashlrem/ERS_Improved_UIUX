@@ -36,9 +36,9 @@ Partial Class RegistrarLogin
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(12, 4)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(146, 37)
@@ -47,7 +47,7 @@ Partial Class RegistrarLogin
         '
         'pw
         '
-        Me.pw.Location = New System.Drawing.Point(261, 112)
+        Me.pw.Location = New System.Drawing.Point(259, 115)
         Me.pw.MaxLength = 18
         Me.pw.Name = "pw"
         Me.pw.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -66,7 +66,7 @@ Partial Class RegistrarLogin
         '
         'en
         '
-        Me.en.Location = New System.Drawing.Point(261, 75)
+        Me.en.Location = New System.Drawing.Point(259, 75)
         Me.en.MaxLength = 18
         Me.en.Name = "en"
         Me.en.Size = New System.Drawing.Size(142, 20)
@@ -110,9 +110,9 @@ Partial Class RegistrarLogin
         Me.Label2.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(101, 70)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(145, 24)
+        Me.Label2.Size = New System.Drawing.Size(139, 24)
         Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Employee No.:"
+        Me.Label2.Text = "Employee No:"
         '
         'RegistrarLogin
         '

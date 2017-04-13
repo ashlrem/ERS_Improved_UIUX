@@ -26,8 +26,13 @@ Public Class ViewClass
         Dim a As Integer
         a = MsgBox("Are you sure do you want to exit?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
+            My.Forms.Screen_Registrar.Enabled = True
             Screen_Admin.Show()
             AdminPanel.Show()
+        ElseIf a = MsgBoxResult.No Then
+            Dim sa As New ViewClass
+            sa.TopMost = True
+            sa.Show()
         End If
     End Sub
 

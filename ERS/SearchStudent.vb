@@ -64,8 +64,9 @@ Public Class SearchStudent
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim a As Integer
-        a = MsgBox("Are you sure do you want to exit?", MsgBoxStyle.YesNo)
+        a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
+            Screen_Admin.Enabled = True
             AdminPanel.Show()
             Screen_Admin.Show()
             Me.Close()

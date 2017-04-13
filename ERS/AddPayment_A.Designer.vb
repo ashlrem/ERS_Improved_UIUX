@@ -291,7 +291,7 @@ Partial Class AddPayment_A
         'Proceed_btn
         '
         Me.Proceed_btn.Enabled = False
-        Me.Proceed_btn.Location = New System.Drawing.Point(316, 409)
+        Me.Proceed_btn.Location = New System.Drawing.Point(310, 465)
         Me.Proceed_btn.Name = "Proceed_btn"
         Me.Proceed_btn.Size = New System.Drawing.Size(277, 70)
         Me.Proceed_btn.TabIndex = 5

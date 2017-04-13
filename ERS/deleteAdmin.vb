@@ -16,11 +16,16 @@ Public Class deleteAdmin
     End Sub
     Private Sub deleteAdmin_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
          Dim a As Integer
-        a = MsgBox("Are you sure do you want to exit?", MsgBoxStyle.YesNo)
+        a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
+            Screen_Admin.Enabled = True
             Screen_Admin.Show()
             AdminPanel.Show()
             DeleteAccount_btn.Show()
+        ElseIf a = MsgBoxResult.No Then
+            Dim sa As New deleteAdmin
+            sa.TopMost = True
+            sa.Show()
         End If
     End Sub
 

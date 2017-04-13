@@ -20,53 +20,58 @@
         End If
     End Sub
 
-    Private Sub UpdateAccountToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        UpdateCashierC.TopLevel = False
-        CashierPanelPictureBox.Controls.Add(UpdateCashierC)
-        CashierPanel.Hide()
-        UpdateCashierC.Show()
-    End Sub
-
     Private Sub AddPaymentToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddPaymentToolStripMenuItem.Click
-        AddPayment_A.TopLevel = False
-        CashierPanelPictureBox.Controls.Add(AddPayment_A)
-        CashierPanel.Hide()
+        'AddPayment_A.TopLevel = False
+        'CashierPanelPictureBox.Controls.Add(AddPayment_A)
+        'CashierPanel.Hide()
+        AddPayment_A.TopMost = True
+        Me.Enabled = False
         AddPayment_A.Show()
     End Sub
     Private Sub UpdatePaymentToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UpdatePaymentToolStripMenuItem.Click
-        UpdatePayment_A.TopLevel = False
-        CashierPanelPictureBox.Controls.Add(UpdatePayment_A)
-        CashierPanel.Hide()
+        'UpdatePayment_A.TopLevel = False
+        'CashierPanelPictureBox.Controls.Add(UpdatePayment_A)
+        'CashierPanel.Hide()
+        UpdatePayment_A.TopMost = True
+        Me.Enabled = False
         UpdatePayment_A.Show()
     End Sub
 
     Private Sub DeletePaymentToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeletePaymentToolStripMenuItem.Click
-        DeletePayment.TopLevel = False
-        CashierPanelPictureBox.Controls.Add(DeletePayment)
-        CashierPanel.Hide()
+        'DeletePayment.TopLevel = False
+        'CashierPanelPictureBox.Controls.Add(DeletePayment)
+        'CashierPanel.Hide()
+        DeletePayment.TopMost = True
+        Me.Enabled = False
         DeletePayment.Show()
     End Sub
 
     Private Sub ViewStudentPaymentToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewStudentPaymentToolStripMenuItem.Click
-        DeletePayment.TopLevel = False
-        CashierPanelPictureBox.Controls.Add(DeletePayment)
-        CashierPanel.Hide()
+        'DeletePayment.TopLevel = False
+        'CashierPanelPictureBox.Controls.Add(DeletePayment)
+        'CashierPanel.Hide()
+        DeletePayment.TopMost = False
+        Me.Enabled = False
         DeletePayment.Show()
         My.Forms.DeletePayment.DeletePayment_btn.Visible = False
         My.Forms.DeletePayment.Text = "View Payment"
     End Sub
 
     Private Sub SearchStudentToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchStudentToolStripMenuItem.Click
-        ViewStud_C.TopLevel = False
-        CashierPanelPictureBox.Controls.Add(ViewStud_C)
-        CashierPanel.Hide()
+        'ViewStud_C.TopLevel = False
+        'CashierPanelPictureBox.Controls.Add(ViewStud_C)
+        'CashierPanel.Hide()
+        Me.Enabled = False
+        ViewStud_C.TopMost = True
         ViewStud_C.Show()
     End Sub
 
     Private Sub SearchPaymentToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchPaymentToolStripMenuItem.Click
-        DeletePayment.TopLevel = False
-        CashierPanelPictureBox.Controls.Add(DeletePayment)
-        CashierPanel.Hide()
+        'DeletePayment.TopLevel = False
+        'CashierPanelPictureBox.Controls.Add(DeletePayment)
+        'CashierPanel.Hide()
+        DeletePayment.TopMost = True
+        Me.Enabled = False
         DeletePayment.Show()
         My.Forms.DeletePayment.DeletePayment_btn.Visible = False
         My.Forms.DeletePayment.Text = "View Payment"

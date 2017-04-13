@@ -13,9 +13,20 @@ Public Class ViewStudent_R
         Return tmpImage
     End Function
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        Screen_Registrar.Show()
-        RegistrarPanel.Show()
-        Me.Close()
+      
+
+        Dim a As Integer
+        a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)
+        If (a = MsgBoxResult.Yes) Then
+            My.Forms.Screen_Registrar.Enabled = True
+            Screen_Registrar.Show()
+            RegistrarPanel.Show()
+            Me.Close()
+        ElseIf a = MsgBoxResult.No Then
+            Dim sa As New ViewStudent
+            sa.TopMost = True
+            sa.Show()
+        End If
     End Sub
     Private Sub ViewStudent_R_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
         Screen_Registrar.Show()
