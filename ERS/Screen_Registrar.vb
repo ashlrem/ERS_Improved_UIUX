@@ -15,37 +15,47 @@
     End Sub
 
     Private Sub DeleteSubjectToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteSubjectToolStripMenuItem.Click
-        DeleteSubj_R.TopLevel = False
-        RegistrarPanelPictureBox.Controls.Add(DeleteSubj_R)
-        RegistrarPanel.Hide()
+        'DeleteSubj_R.TopLevel = False
+        'RegistrarPanelPictureBox.Controls.Add(DeleteSubj_R)
+        'RegistrarPanel.Hide()
+        DeleteSubj_R.TopMost = True
+        Me.Enabled = False
         DeleteSubj_R.Show()
     End Sub
 
     Private Sub UpdateStudentRecordToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UpdateStudentRecordToolStripMenuItem.Click
-        UpdateStudent_R.TopLevel = False
-        RegistrarPanelPictureBox.Controls.Add(UpdateStudent_R)
-        RegistrarPanel.Hide()
+        'UpdateStudent_R.TopLevel = False
+        'RegistrarPanelPictureBox.Controls.Add(UpdateStudent_R)
+        'RegistrarPanel.Hide()
+        UpdateStudent_R.TopMost = True
+        Me.Enabled = False
         UpdateStudent_R.Show()
     End Sub
 
     Private Sub DeleteStudentRecordToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteStudentRecordToolStripMenuItem.Click
-        DeleteStudent_R.TopLevel = False
-        RegistrarPanelPictureBox.Controls.Add(DeleteStudent_R)
-        RegistrarPanel.Hide()
+
+        'RegistrarPanelPictureBox.Controls.Add(DeleteStudent_R)
+        'RegistrarPanel.Hide()
+        DeleteStudent_R.TopMost = True
+        Me.Enabled = False
         DeleteStudent_R.Show()
     End Sub
 
     Private Sub SearchStudentToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchStudentToolStripMenuItem.Click
-        ViewStudent_R.TopLevel = False
-        RegistrarPanelPictureBox.Controls.Add(ViewStudent_R)
-        RegistrarPanel.Hide()
+        'ViewStudent_R.TopLevel = False
+        'RegistrarPanelPictureBox.Controls.Add(ViewStudent_R)
+        'RegistrarPanel.Hide()
+        ViewStudent_R.TopMost = True
+        Me.Enabled = False
         ViewStudent_R.Show()
     End Sub
 
     Private Sub SubjectToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SubjectToolStripMenuItem1.Click
-        ViewClassR.TopLevel = False
-        RegistrarPanelPictureBox.Controls.Add(ViewClassR)
-        RegistrarPanel.Hide()
+        'ViewClassR.TopLevel = False
+        'RegistrarPanelPictureBox.Controls.Add(ViewClassR)
+        'RegistrarPanel.Hide()
+        ViewClass.TopMost = True
+        Me.Enabled = False
         ViewClassR.Show()
     End Sub
 
@@ -55,20 +65,25 @@
         'RegistrarPanelPictureBox.Controls.Add(StudentCreate)
         'RegistrarPanel.Hide()
         StudentCreate.TopMost = True
+        Me.Enabled = False
         StudentCreate.Show()
     End Sub
 
     Private Sub ViewStudentRecordToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewStudentRecordToolStripMenuItem.Click
-        ViewStudent_R.TopLevel = False
-        RegistrarPanelPictureBox.Controls.Add(ViewStudent_R)
-        RegistrarPanel.Hide()
+        'ViewStudent_R.TopLevel = False
+        'RegistrarPanelPictureBox.Controls.Add(ViewStudent_R)
+        'RegistrarPanel.Hide()
+        ViewStudent_R.TopMost = True
+        Me.Enabled = False
         ViewStudent_R.Show()
     End Sub
 
     Private Sub ViewSubjectToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewSubjectToolStripMenuItem.Click
-        ViewClassR.TopLevel = False
-        RegistrarPanelPictureBox.Controls.Add(ViewClassR)
-        RegistrarPanel.Hide()
+        'ViewClassR.TopLevel = False
+        'RegistrarPanelPictureBox.Controls.Add(ViewClassR)
+        'RegistrarPanel.Hide()
+        ViewClass.TopMost = True
+        Me.Enabled = False
         ViewClassR.Show()
     End Sub
 
@@ -106,9 +121,11 @@
     End Sub
 
     Private Sub ViewEnrolledStudentsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewEnrolledStudentsToolStripMenuItem.Click
-        SearchStudent_R.TopLevel = False
-        RegistrarPanelPictureBox.Controls.Add(SearchStudent_R)
-        RegistrarPanel.Hide()
+        'SearchStudent_R.TopLevel = False
+        'RegistrarPanelPictureBox.Controls.Add(SearchStudent_R)
+        'RegistrarPanel.Hide()
+        SearchStudent_R.TopMost = True
+        Me.Enabled = False
         SearchStudent_R.Show()
     End Sub
 End Class

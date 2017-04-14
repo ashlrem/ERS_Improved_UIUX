@@ -27,16 +27,23 @@ Public Class UpdatePayment_A
     End Sub
 
     Private Sub pre_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pre_btn.Click
-        prelimPay_btn()
+        Me.Text = ""
+        Me.TopMost = False
+        Reciept.TopMost = True
+
+        Dim lastpayment As Integer
+        lastpayment = prelim.Text
+        total = TotalPaid + lastpayment
+
         SearchUpdatePayment_A()
+        
         If prelim.Text = "0" Then
             MsgBox("Already paid!")
             pre_btn.Visible = False
             Me.Enabled = False
         End If
-        'If fin_btn.Text = "Paid!" Then
-        '    MsgBox("Already Paid!")
-        'End If
+     
+        Reciept.Show()
     End Sub
     Private Sub UpdatePayment_A_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim Screen As System.Drawing.Rectangle
@@ -46,10 +53,15 @@ Public Class UpdatePayment_A
     End Sub
     Private Sub UpadatePayment_A_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
         Dim a As Integer
-        a = MsgBox("Are you sure do you want to exit?", MsgBoxStyle.YesNo)
+        a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
+            Screen_Cashier.Enabled = True
             Screen_Cashier.Show()
             CashierPanel.Show()
+        ElseIf a = MsgBoxResult.No Then
+            Dim sa As New UpdatePayment_A
+            sa.TopMost = True
+            sa.Show()
         End If
     End Sub
 End Class

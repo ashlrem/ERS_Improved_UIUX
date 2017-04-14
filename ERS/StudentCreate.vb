@@ -165,13 +165,15 @@ Public Class StudentCreate
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StudentCreateBackBtn.Click
         Dim a As Integer
-        a = MsgBox("Are you sure do you want to exit?", MsgBoxStyle.YesNo)
+        a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
             If My.Forms.AdminPanel.empl.Text = "" Then
+                Screen_Registrar.Enabled = True
                 RegistrarPanel.Show()
                 Screen_Registrar.Show()
                 Me.Close()
-            ElseIf My.Forms.CashierPanel.empl.Text = "" Then
+            ElseIf My.Forms.RegistrarPanel.empl.Text = "" Then
+                Screen_Admin.Enabled = True
                 AdminPanel.Show()
                 Screen_Admin.Show()
                 Me.Close()

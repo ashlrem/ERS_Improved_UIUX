@@ -45,7 +45,7 @@ Partial Class LoginAdmin
         '
         'en
         '
-        Me.en.Location = New System.Drawing.Point(226, 69)
+        Me.en.Location = New System.Drawing.Point(226, 75)
         Me.en.MaxLength = 16
         Me.en.Name = "en"
         Me.en.Size = New System.Drawing.Size(172, 20)
@@ -53,7 +53,7 @@ Partial Class LoginAdmin
         '
         'pw
         '
-        Me.pw.Location = New System.Drawing.Point(226, 109)
+        Me.pw.Location = New System.Drawing.Point(226, 110)
         Me.pw.MaxLength = 16
         Me.pw.Name = "pw"
         Me.pw.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -63,9 +63,9 @@ Partial Class LoginAdmin
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(12, 3)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(208, 37)
@@ -97,6 +97,7 @@ Partial Class LoginAdmin
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(75, 105)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(103, 24)
@@ -108,11 +109,12 @@ Partial Class LoginAdmin
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(75, 65)
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(74, 70)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(145, 24)
+        Me.Label2.Size = New System.Drawing.Size(139, 24)
         Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Employee No.:"
+        Me.Label2.Text = "Employee No:"
         '
         'LoginAdmin
         '

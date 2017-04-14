@@ -36,9 +36,9 @@ Partial Class CashierLogin
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(8, 3)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(127, 37)
@@ -47,7 +47,7 @@ Partial Class CashierLogin
         '
         'pw
         '
-        Me.pw.Location = New System.Drawing.Point(238, 106)
+        Me.pw.Location = New System.Drawing.Point(238, 108)
         Me.pw.MaxLength = 18
         Me.pw.Name = "pw"
         Me.pw.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -66,7 +66,7 @@ Partial Class CashierLogin
         '
         'en
         '
-        Me.en.Location = New System.Drawing.Point(238, 65)
+        Me.en.Location = New System.Drawing.Point(238, 70)
         Me.en.MaxLength = 18
         Me.en.Name = "en"
         Me.en.Size = New System.Drawing.Size(163, 20)
@@ -97,11 +97,11 @@ Partial Class CashierLogin
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(77, 63)
+        Me.Label2.Location = New System.Drawing.Point(77, 65)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(145, 24)
+        Me.Label2.Size = New System.Drawing.Size(139, 24)
         Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Employee No.:"
+        Me.Label2.Text = "Employee No:"
         '
         'Label3
         '

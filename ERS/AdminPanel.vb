@@ -16,7 +16,6 @@ Public Class AdminPanel
         Dim imagebyte As Byte() = Convert.FromBase64String(base64code)
         Dim ms As New MemoryStream(imagebyte, 0, imagebyte.Length)
         Dim tmpImage As Image = Image.FromStream(ms, True)
-
         Return tmpImage
     End Function
 

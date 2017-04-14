@@ -6,14 +6,8 @@ Public Class AddPayment_A
     Private Sub AddPayment_A_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim Screen As System.Drawing.Rectangle
         Screen = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea()
-        Me.Top = (Screen.Height \ 2) - (Me.Height - 170) + 35
+        Me.Top = (Screen.Height \ 2) - (Me.Height - 320)
         Me.Left = (Screen.Width \ 2) - (Me.Width \ 2)
-
-
-
-
-
-      
 
 
     End Sub
@@ -64,22 +58,39 @@ Public Class AddPayment_A
             Proceed_btn.Enabled = True
 
         ElseIf pp_rdbnt.Checked = True Then
-            fp_rdobnt.Checked = False
-            Proceed_btn.Enabled = False
+            Try
+                fp_rdobnt.Checked = False
+                Proceed_btn.Enabled = False
 
-            Dim tuition As Integer
-            Dim partialpayment As Integer
-            Dim total2 As Integer
-            tuition = total1.Text
-            partialpayment = partialp.Text
+                Dim totalmin As Integer = total1.Text
+                Dim min As Integer
 
-            total2 = tuition - partialpayment
+                min = totalmin / 2
 
-            prelim.Text = total2
+                Dim patial As Integer = partialp.Text
+
+                If min <= patial Then
+                    Dim tuition As Integer
+                    Dim partialpayment As Integer
+                    Dim total2 As Integer
+
+                    tuition = total1.Text
+                    partialpayment = partialp.Text
+
+                    total2 = tuition - partialpayment
+                    prelim.Text = total2
+                    EnterPartial_grp.Enabled = False
+                    Proceed_btn.Enabled = True
+
+                Else
+                    MsgBox("Partial payment should not be lessthan P " & min)
+                End If
+            Catch
+            End Try
+
         End If
 
-        EnterPartial_grp.Enabled = False
-        Proceed_btn.Enabled = True
+
 
     End Sub
     Private Sub pp_rdbnt_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pp_rdbnt.CheckedChanged
@@ -138,8 +149,11 @@ Public Class AddPayment_A
 
     Private Sub Proceed_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Proceed_btn.Click
         If fp_rdobnt.Checked = True Then
-            FullPayment_A()
+            Me.Text = ""
+            Me.TopMost = False
+            Reciept.TopMost = True
             Reciept.Show()
+            'FullPayment_A()
             Subj1.Text = ""
             Subj2.Text = ""
             Subj3.Text = ""
@@ -160,7 +174,6 @@ Public Class AddPayment_A
             p8.Text = ""
             p9.Text = ""
             totalBooks.Text = ""
-            Proceed_btn.Enabled = True
             EnterPartial_grp.Enabled = False
             Payment_grp.Enabled = False
             fp_rdobnt.Enabled = False
@@ -170,14 +183,16 @@ Public Class AddPayment_A
             total.Text = ""
             sn.Enabled = True
             SearchAddpayemt_btn.Enabled = True
-            sn.Text = ""
-            prelim.Text = "-"
+           
             total.Enabled = True
             Me.Enabled = False
         ElseIf pp_rdbnt.Checked = True Then
-            Proceed_btn.Enabled = False
-            PartialPayment_A()
+            Me.Text = ""
+            Me.TopMost = False
+            Reciept.TopMost = True
             Reciept.Show()
+            Proceed_btn.Enabled = False
+            'PartialPayment_A()
             Subj1.Text = ""
             Subj2.Text = ""
             Subj3.Text = ""
@@ -198,7 +213,7 @@ Public Class AddPayment_A
             p8.Text = ""
             p9.Text = ""
             totalBooks.Text = ""
-            partialp.Text = ""
+
             EnterPartial_grp.Enabled = False
             Payment_grp.Enabled = False
             fp_rdobnt.Enabled = False
@@ -208,8 +223,7 @@ Public Class AddPayment_A
             SearchAddpayemt_btn.Enabled = True
             total1.Text = ""
             total.Text = ""
-            sn.Text = ""
-            prelim.Text = "-"
+     
             total.Enabled = True
             Me.Enabled = False
         End If
@@ -220,51 +234,60 @@ Public Class AddPayment_A
     End Sub
     Private Sub AddPayment_A_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
         Dim a As Integer
-        a = MsgBox("Are you sure do you want to exit?", MsgBoxStyle.YesNo)
+        a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
+            Screen_Cashier.Enabled = True
             Screen_Cashier.Show()
             CashierPanel.Show()
+        ElseIf a = MsgBoxResult.No Then
+            Dim sa As New AddPayment_A
+            sa.TopMost = True
+            sa.Show()
         End If
     End Sub
     Private Sub enterTuition_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles enterTuition_btn.Click
         If total.Text = "" Then
             MsgBox("Please enter tuitionfee.")
         Else
-            partialp.Text = ""
-            t = total.Text
-            total.Text = t
-            Dim totalB As Integer = totalBooks.Text
-            total1.Text = total.Text
-            fp_rdobnt.Enabled = True
-            pp_rdbnt.Enabled = True
-            total.Enabled = False
-
+            Try
+                partialp.Text = ""
+                t = total.Text
+                total.Text = t
+                Dim totalB As Integer = totalBooks.Text
+                total1.Text = total.Text
+                fp_rdobnt.Enabled = True
+                pp_rdbnt.Enabled = True
+                total.Enabled = False
+         
             If getSubj.SelectedItem.ToString = "Grade 1" Then
                 t = total.Text
-                t = t + totalB + 1500
+                t = t + totalB
                 total1.Text = t
             ElseIf getSubj.SelectedItem.ToString = "Grade 2" Then
                 t = total.Text
-                t = t + totalB + 1500
+                t = t + totalB
                 total1.Text = t
             ElseIf getSubj.SelectedItem.ToString = "Grade 3" Then
                 t = total.Text
-                t = t + totalB + 1500
+                t = t + totalB
                 total1.Text = t
             ElseIf getSubj.SelectedItem.ToString = "Grade 4" Then
                 t = total.Text
-                t = t + totalB + 1500
+                t = t + totalB
                 total1.Text = t
             ElseIf getSubj.SelectedItem.ToString = "Grade 5" Then
                 t = total.Text
-                t = t + totalB + 1500
+                t = t + totalB
                 total1.Text = t
             ElseIf getSubj.SelectedItem.ToString = "Grade 6" Then
                 t = total.Text
-                t = t + totalB + 1500
-                total1.Text = t
-            End If
+                t = t + totalB
+                    total1.Text = t
+                End If
+            Catch
+            End Try
         End If
+         
     End Sub
 
     Private Sub getSubj_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles getSubj.SelectedIndexChanged
