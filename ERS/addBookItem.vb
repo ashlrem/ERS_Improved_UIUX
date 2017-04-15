@@ -32,4 +32,12 @@
         Me.Top = (Screen.Height \ 2) - (Me.Height + 60)
         Me.Left = (Screen.Width \ 2) - (Me.Width \ 2) - 10
     End Sub
+
+    Private Sub price_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles price.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
+    End Sub
 End Class

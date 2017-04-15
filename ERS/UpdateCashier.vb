@@ -40,7 +40,11 @@ Public Class UpdateCashier
         Me.Left = (Screen.Width \ 2) - (Me.Width \ 2)
     End Sub
 
-    Private Sub eadd_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles eadd.TextChanged, cno.TextChanged
-
+    Private Sub cno_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles cno.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
     End Sub
 End Class

@@ -80,8 +80,4 @@ Public Class AdminCreate
             End If
         End If
     End Sub
-
-    Private Sub cno_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cno.TextChanged
-
-    End Sub
 End Class

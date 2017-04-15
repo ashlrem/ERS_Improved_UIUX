@@ -45,16 +45,16 @@ Partial Class UpdateStudent_R
         Me.sy = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.goodmoral_btn = New System.Windows.Forms.Button()
-        Me.form137_btn = New System.Windows.Forms.Button()
-        Me.card_btn = New System.Windows.Forms.Button()
-        Me.baptismal_btn = New System.Windows.Forms.Button()
-        Me.nso_btn = New System.Windows.Forms.Button()
         Me.card_lbl = New System.Windows.Forms.Label()
         Me.gm_lbl = New System.Windows.Forms.Label()
         Me.nso_lbl = New System.Windows.Forms.Label()
         Me.form_lbl = New System.Windows.Forms.Label()
         Me.baptismal_lbl = New System.Windows.Forms.Label()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -261,14 +261,14 @@ Partial Class UpdateStudent_R
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.goodmoral_btn)
-        Me.GroupBox1.Controls.Add(Me.form137_btn)
-        Me.GroupBox1.Controls.Add(Me.card_btn)
-        Me.GroupBox1.Controls.Add(Me.baptismal_btn)
-        Me.GroupBox1.Controls.Add(Me.nso_btn)
+        Me.GroupBox1.Controls.Add(Me.CheckBox6)
         Me.GroupBox1.Controls.Add(Me.card_lbl)
+        Me.GroupBox1.Controls.Add(Me.CheckBox5)
         Me.GroupBox1.Controls.Add(Me.gm_lbl)
+        Me.GroupBox1.Controls.Add(Me.CheckBox4)
         Me.GroupBox1.Controls.Add(Me.nso_lbl)
+        Me.GroupBox1.Controls.Add(Me.CheckBox3)
+        Me.GroupBox1.Controls.Add(Me.CheckBox2)
         Me.GroupBox1.Controls.Add(Me.form_lbl)
         Me.GroupBox1.Controls.Add(Me.baptismal_lbl)
         Me.GroupBox1.Enabled = False
@@ -278,51 +278,6 @@ Partial Class UpdateStudent_R
         Me.GroupBox1.TabIndex = 89
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Requirements:"
-        '
-        'goodmoral_btn
-        '
-        Me.goodmoral_btn.Location = New System.Drawing.Point(571, 54)
-        Me.goodmoral_btn.Name = "goodmoral_btn"
-        Me.goodmoral_btn.Size = New System.Drawing.Size(80, 23)
-        Me.goodmoral_btn.TabIndex = 88
-        Me.goodmoral_btn.Text = "Upload"
-        Me.goodmoral_btn.UseVisualStyleBackColor = True
-        '
-        'form137_btn
-        '
-        Me.form137_btn.Location = New System.Drawing.Point(438, 54)
-        Me.form137_btn.Name = "form137_btn"
-        Me.form137_btn.Size = New System.Drawing.Size(80, 23)
-        Me.form137_btn.TabIndex = 88
-        Me.form137_btn.Text = "Upload"
-        Me.form137_btn.UseVisualStyleBackColor = True
-        '
-        'card_btn
-        '
-        Me.card_btn.Location = New System.Drawing.Point(294, 55)
-        Me.card_btn.Name = "card_btn"
-        Me.card_btn.Size = New System.Drawing.Size(80, 23)
-        Me.card_btn.TabIndex = 88
-        Me.card_btn.Text = "Upload"
-        Me.card_btn.UseVisualStyleBackColor = True
-        '
-        'baptismal_btn
-        '
-        Me.baptismal_btn.Location = New System.Drawing.Point(136, 55)
-        Me.baptismal_btn.Name = "baptismal_btn"
-        Me.baptismal_btn.Size = New System.Drawing.Size(80, 23)
-        Me.baptismal_btn.TabIndex = 88
-        Me.baptismal_btn.Text = "Upload"
-        Me.baptismal_btn.UseVisualStyleBackColor = True
-        '
-        'nso_btn
-        '
-        Me.nso_btn.Location = New System.Drawing.Point(11, 53)
-        Me.nso_btn.Name = "nso_btn"
-        Me.nso_btn.Size = New System.Drawing.Size(80, 23)
-        Me.nso_btn.TabIndex = 88
-        Me.nso_btn.Text = "Upload"
-        Me.nso_btn.UseVisualStyleBackColor = True
         '
         'card_lbl
         '
@@ -378,6 +333,56 @@ Partial Class UpdateStudent_R
         Me.baptismal_lbl.Size = New System.Drawing.Size(106, 25)
         Me.baptismal_lbl.TabIndex = 87
         Me.baptismal_lbl.Text = "Baptismal"
+        '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.Location = New System.Drawing.Point(548, 61)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox6.TabIndex = 93
+        Me.CheckBox6.Text = "Good Moral"
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Location = New System.Drawing.Point(411, 61)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(73, 17)
+        Me.CheckBox5.TabIndex = 94
+        Me.CheckBox5.Text = "Form 1-27"
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Location = New System.Drawing.Point(286, 61)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(48, 17)
+        Me.CheckBox4.TabIndex = 92
+        Me.CheckBox4.Text = "Card"
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Location = New System.Drawing.Point(145, 61)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(71, 17)
+        Me.CheckBox3.TabIndex = 90
+        Me.CheckBox3.Text = "Baptismal"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(29, 61)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(49, 17)
+        Me.CheckBox2.TabIndex = 91
+        Me.CheckBox2.Text = "NSO"
+        Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'UpdateStudent_R
         '
@@ -441,14 +446,14 @@ Partial Class UpdateStudent_R
     Friend WithEvents sy As System.Windows.Forms.TextBox
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents goodmoral_btn As System.Windows.Forms.Button
-    Friend WithEvents form137_btn As System.Windows.Forms.Button
-    Friend WithEvents card_btn As System.Windows.Forms.Button
-    Friend WithEvents baptismal_btn As System.Windows.Forms.Button
-    Friend WithEvents nso_btn As System.Windows.Forms.Button
     Friend WithEvents card_lbl As System.Windows.Forms.Label
     Friend WithEvents gm_lbl As System.Windows.Forms.Label
     Friend WithEvents nso_lbl As System.Windows.Forms.Label
     Friend WithEvents form_lbl As System.Windows.Forms.Label
     Friend WithEvents baptismal_lbl As System.Windows.Forms.Label
+    Friend WithEvents CheckBox6 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
 End Class
