@@ -169,6 +169,7 @@ Module Module1
                         MainScreen.Show()
                         My.Forms.AdminCreate.PictureBox1.Image = Nothing
                         My.Forms.AdminCreate.Close()
+                        Screen_Admin.Enabled = True
                     Catch ex As Exception
                         MessageBox.Show(ex.Message)
                     End Try
@@ -257,6 +258,7 @@ Module Module1
                         My.Forms.AdminPanel.Show()
                         My.Forms.AdminCreate_1.PictureBox1.Image = Nothing
                         My.Forms.AdminCreate_1.Close()
+                        Screen_Admin.Enabled = True
                     Catch ex As Exception
                         MessageBox.Show(ex.Message)
                     End Try
@@ -344,6 +346,7 @@ Module Module1
                         AdminPanel.Show()
                         My.Forms.RegistrarCreate.PictureBox1.Image = Nothing
                         My.Forms.RegistrarCreate.Close()
+                        Screen_Admin.Enabled = True
                     Catch ex As Exception
                         MessageBox.Show(ex.Message)
                     End Try
@@ -422,6 +425,7 @@ Module Module1
                         AdminPanel.Show()
                         My.Forms.CashierCreate.PictureBox1.Image = Nothing
                         My.Forms.CashierCreate.Close()
+                        Screen_Admin.Enabled = True
                     Catch ex As Exception
                         MessageBox.Show(ex.Message)
                     End Try
