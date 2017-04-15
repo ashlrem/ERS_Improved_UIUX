@@ -21,6 +21,8 @@ Public Class UpdateStudent_A
         Dim a As Integer
         a = MsgBox("Are you sure do you want to exit?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
+            Screen_Admin.Enabled = True
+            Screen_Admin.Top = True
             AdminPanel.Show()
             Screen_Admin.Show()
             Me.Close()

@@ -50,11 +50,11 @@ Partial Class UpdateStudent_A
         Me.form_lbl = New System.Windows.Forms.Label()
         Me.gm_lbl = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -334,25 +334,25 @@ Partial Class UpdateStudent_A
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Requirements:"
         '
-        'CheckBox2
+        'CheckBox6
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(27, 54)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(49, 17)
-        Me.CheckBox2.TabIndex = 89
-        Me.CheckBox2.Text = "NSO"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.Location = New System.Drawing.Point(409, 54)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(73, 17)
+        Me.CheckBox6.TabIndex = 89
+        Me.CheckBox6.Text = "Form 1-37"
+        Me.CheckBox6.UseVisualStyleBackColor = True
         '
-        'CheckBox3
+        'CheckBox5
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(143, 54)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(71, 17)
-        Me.CheckBox3.TabIndex = 89
-        Me.CheckBox3.Text = "Baptismal"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Location = New System.Drawing.Point(546, 54)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox5.TabIndex = 89
+        Me.CheckBox5.Text = "Good Moral"
+        Me.CheckBox5.UseVisualStyleBackColor = True
         '
         'CheckBox4
         '
@@ -364,25 +364,25 @@ Partial Class UpdateStudent_A
         Me.CheckBox4.Text = "Card"
         Me.CheckBox4.UseVisualStyleBackColor = True
         '
-        'CheckBox5
+        'CheckBox3
         '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(409, 54)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(73, 17)
-        Me.CheckBox5.TabIndex = 89
-        Me.CheckBox5.Text = "Form 1-27"
-        Me.CheckBox5.UseVisualStyleBackColor = True
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Location = New System.Drawing.Point(143, 54)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(71, 17)
+        Me.CheckBox3.TabIndex = 89
+        Me.CheckBox3.Text = "Baptismal"
+        Me.CheckBox3.UseVisualStyleBackColor = True
         '
-        'CheckBox6
+        'CheckBox2
         '
-        Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Location = New System.Drawing.Point(546, 54)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(81, 17)
-        Me.CheckBox6.TabIndex = 89
-        Me.CheckBox6.Text = "Good Moral"
-        Me.CheckBox6.UseVisualStyleBackColor = True
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(27, 54)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(49, 17)
+        Me.CheckBox2.TabIndex = 89
+        Me.CheckBox2.Text = "NSO"
+        Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'UpdateStudent_A
         '

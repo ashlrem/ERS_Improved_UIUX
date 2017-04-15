@@ -165,7 +165,7 @@ Partial Class AddPayment_A
         'total
         '
         Me.total.Location = New System.Drawing.Point(133, 45)
-        Me.total.MaxLength = 4
+        Me.total.MaxLength = 5
         Me.total.Name = "total"
         Me.total.Size = New System.Drawing.Size(100, 20)
         Me.total.TabIndex = 1
@@ -303,7 +303,7 @@ Partial Class AddPayment_A
         Me.Proceed_btn.Enabled = False
         Me.Proceed_btn.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Proceed_btn.ForeColor = System.Drawing.Color.White
-        Me.Proceed_btn.Location = New System.Drawing.Point(310, 465)
+        Me.Proceed_btn.Location = New System.Drawing.Point(310, 458)
         Me.Proceed_btn.Name = "Proceed_btn"
         Me.Proceed_btn.Size = New System.Drawing.Size(277, 70)
         Me.Proceed_btn.TabIndex = 5

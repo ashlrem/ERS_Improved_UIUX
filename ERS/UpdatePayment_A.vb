@@ -42,7 +42,6 @@ Public Class UpdatePayment_A
             pre_btn.Visible = False
             Me.Enabled = False
         End If
-
         Reciept.Show()
     End Sub
     Private Sub UpdatePayment_A_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

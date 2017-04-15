@@ -12,13 +12,14 @@ Public Class Reciept
 
         nameOS.Text = My.Forms.AddPayment_A.nameOS.Text
         grade.Text = My.Forms.AddPayment_A.grade.Text
+
         If My.Forms.AddPayment_A.Text = "" Then
             amount.Text = My.Forms.AddPayment_A.partialp.Text
             po.Text = "First payment."
-        ElseIf My.Forms.AddPayment_A.Text = "" Then
-            amount.Text = My.Forms.AddPayment_A.prelim.Text
-            po.Text = "Full Payment."
 
+        ElseIf My.Forms.AddPayment_A.Text = "" Then
+            po.Text = "Full Payment."
+            amount.Text = My.Forms.AddPayment_A.prelim.Text
 
         ElseIf My.Forms.UpdatePayment_A.Text = "" Then
             nameOS.Text = My.Forms.UpdatePayment_A.sn.Text
@@ -104,7 +105,7 @@ Public Class Reciept
                 Me.TopMost = False
                 Me.Close()
             ElseIf AddPayment_A.Text = "" Then
-
+                My.Forms.AddPayment_A.getSubj.SelectedIndex = -1
                 AddPayment_A.TopMost = True
                 AddPayment_A.Enabled = True
                 AddPayment_A.Show()

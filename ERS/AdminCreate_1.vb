@@ -32,7 +32,7 @@ Public Class AdminCreate_1
         Catch
             MsgBox("Must upload or take picture.")
         End Try
-
+        pic = ""
     End Sub
     Public Function imagetobase64(ByVal image As Image, ByVal format As ImageFormat) As String
         Using ms As New MemoryStream()

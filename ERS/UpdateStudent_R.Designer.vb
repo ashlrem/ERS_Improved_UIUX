@@ -45,16 +45,16 @@ Partial Class UpdateStudent_R
         Me.sy = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.card_lbl = New System.Windows.Forms.Label()
-        Me.gm_lbl = New System.Windows.Forms.Label()
-        Me.nso_lbl = New System.Windows.Forms.Label()
-        Me.form_lbl = New System.Windows.Forms.Label()
-        Me.baptismal_lbl = New System.Windows.Forms.Label()
         Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.card_lbl = New System.Windows.Forms.Label()
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.gm_lbl = New System.Windows.Forms.Label()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.nso_lbl = New System.Windows.Forms.Label()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.form_lbl = New System.Windows.Forms.Label()
+        Me.baptismal_lbl = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -279,6 +279,16 @@ Partial Class UpdateStudent_R
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Requirements:"
         '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.Location = New System.Drawing.Point(436, 61)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(70, 17)
+        Me.CheckBox6.TabIndex = 93
+        Me.CheckBox6.Text = "Form1-37"
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
         'card_lbl
         '
         Me.card_lbl.AutoSize = True
@@ -289,6 +299,16 @@ Partial Class UpdateStudent_R
         Me.card_lbl.Size = New System.Drawing.Size(58, 25)
         Me.card_lbl.TabIndex = 87
         Me.card_lbl.Text = "Card"
+        '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Location = New System.Drawing.Point(560, 61)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox5.TabIndex = 94
+        Me.CheckBox5.Text = "Good Moral"
+        Me.CheckBox5.UseVisualStyleBackColor = True
         '
         'gm_lbl
         '
@@ -301,6 +321,16 @@ Partial Class UpdateStudent_R
         Me.gm_lbl.TabIndex = 87
         Me.gm_lbl.Text = "Good Moral"
         '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Location = New System.Drawing.Point(286, 61)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(48, 17)
+        Me.CheckBox4.TabIndex = 92
+        Me.CheckBox4.Text = "Card"
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
         'nso_lbl
         '
         Me.nso_lbl.AutoSize = True
@@ -311,6 +341,26 @@ Partial Class UpdateStudent_R
         Me.nso_lbl.Size = New System.Drawing.Size(57, 25)
         Me.nso_lbl.TabIndex = 87
         Me.nso_lbl.Text = "NSO"
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Location = New System.Drawing.Point(145, 61)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(71, 17)
+        Me.CheckBox3.TabIndex = 90
+        Me.CheckBox3.Text = "Baptismal"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(29, 61)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(49, 17)
+        Me.CheckBox2.TabIndex = 91
+        Me.CheckBox2.Text = "NSO"
+        Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'form_lbl
         '
@@ -333,56 +383,6 @@ Partial Class UpdateStudent_R
         Me.baptismal_lbl.Size = New System.Drawing.Size(106, 25)
         Me.baptismal_lbl.TabIndex = 87
         Me.baptismal_lbl.Text = "Baptismal"
-        '
-        'CheckBox6
-        '
-        Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Location = New System.Drawing.Point(548, 61)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(81, 17)
-        Me.CheckBox6.TabIndex = 93
-        Me.CheckBox6.Text = "Good Moral"
-        Me.CheckBox6.UseVisualStyleBackColor = True
-        '
-        'CheckBox5
-        '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(411, 61)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(73, 17)
-        Me.CheckBox5.TabIndex = 94
-        Me.CheckBox5.Text = "Form 1-27"
-        Me.CheckBox5.UseVisualStyleBackColor = True
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(286, 61)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(48, 17)
-        Me.CheckBox4.TabIndex = 92
-        Me.CheckBox4.Text = "Card"
-        Me.CheckBox4.UseVisualStyleBackColor = True
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(145, 61)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(71, 17)
-        Me.CheckBox3.TabIndex = 90
-        Me.CheckBox3.Text = "Baptismal"
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(29, 61)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(49, 17)
-        Me.CheckBox2.TabIndex = 91
-        Me.CheckBox2.Text = "NSO"
-        Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'UpdateStudent_R
         '
