@@ -71,6 +71,47 @@ Public Class StudentCreate
 
                 If StudentNo = "" Then
 
+                    If CheckBox2.Checked = True Then
+                        NSO2 = ""
+                        NSO2 = "YES"
+                    ElseIf CheckBox2.Checked = False Then
+                        NSO2 = ""
+                        NSO2 = "No"
+                    End If
+
+
+                    If CheckBox3.Checked = True Then
+                        baptis = ""
+                        baptis = "YES"
+                    ElseIf CheckBox3.Checked = False Then
+                        baptis = ""
+                        baptis = "No"
+                    End If
+
+                    If CheckBox4.Checked = True Then
+                        card = ""
+                        card = "YES"
+                    ElseIf CheckBox4.Checked = False Then
+                        card = ""
+                        card = "No"
+                    End If
+
+                    If CheckBox5.Checked = True Then
+                        goodMoral = ""
+                        goodMoral = "YES"
+                    ElseIf CheckBox5.Checked = False Then
+                        goodMoral = ""
+                        goodMoral = "No"
+                    End If
+
+
+                    If CheckBox6.Checked = True Then
+                        form137 = ""
+                        form137 = "YES"
+                    ElseIf CheckBox6.Checked = False Then
+                        form137 = ""
+                        form137 = "No"
+                    End If
 
                     Try
                         ins.Connection = objConn
@@ -132,13 +173,6 @@ Public Class StudentCreate
                         If CheckBox6.Checked = True Then
                             CheckBox6.Checked = False
                         End If
-
-                        'CheckBox1.Checked = False
-                        'CheckBox2.Checked = False
-                        'CheckBox3.Checked = False
-                        'CheckBox4.Checked = False
-                        'CheckBox5.Checked = False
-                        'CheckBox6.Checked = False
                         pic = ""
                         PictureBox1.Image = Nothing
                         AddSubClear()
@@ -167,12 +201,12 @@ Public Class StudentCreate
         Dim a As Integer
         a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
-            If My.Forms.AdminPanel.empl.Text = "" Then
+            If My.Forms.AdminPanel.Enabled = True Then
                 Screen_Registrar.Enabled = True
                 RegistrarPanel.Show()
                 Screen_Registrar.Show()
                 Me.Close()
-            ElseIf My.Forms.RegistrarPanel.empl.Text = "" Then
+            ElseIf My.Forms.RegistrarPanel.Enabled = True Then
                 Screen_Admin.Enabled = True
                 AdminPanel.Show()
                 Screen_Admin.Show()
@@ -196,12 +230,10 @@ Public Class StudentCreate
             addScho.Enabled = True
         End If
     End Sub
-
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
         Webcam.Show()
         Me.Enabled = False
     End Sub
-
     Private Sub gl_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gl.SelectedIndexChanged
         cn.ConnectionString = "server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'"
         Dim r As MySqlDataReader
@@ -230,50 +262,6 @@ Public Class StudentCreate
 
     End Sub
 
-    Private Sub CheckBox2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox2.CheckedChanged
-        Try
-            If (OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK) Then
-                NSO2 = OpenFileDialog1.FileName
-            End If
-        Catch
-        End Try
-    End Sub
-
-    Private Sub CheckBox4_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox4.CheckedChanged
-        Try
-            If (OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK) Then
-                baptis = OpenFileDialog1.FileName
-            End If
-        Catch
-        End Try
-    End Sub
-
-    Private Sub CheckBox3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox3.CheckedChanged
-        Try
-            If (OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK) Then
-                card = OpenFileDialog1.FileName
-            End If
-        Catch
-        End Try
-    End Sub
-
-    Private Sub CheckBox5_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox5.CheckedChanged
-        Try
-            If (OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK) Then
-                goodMoral = OpenFileDialog1.FileName
-            End If
-        Catch
-        End Try
-    End Sub
-
-    Private Sub CheckBox6_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox6.CheckedChanged
-        Try
-            If (OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK) Then
-                form137 = OpenFileDialog1.FileName
-            End If
-        Catch
-        End Try
-    End Sub
 
     Private Sub sn_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles sn.KeyPress
         If Asc(e.KeyChar) <> 8 Then
@@ -296,19 +284,27 @@ Public Class StudentCreate
             r = cmd.ExecuteReader() 'execute sql query
             Try
                 If r.Read Then
-                    ToolTip1.SetToolTip(sn, "Student Number is not Avilable!")
+                    ToolTip1.SetToolTip(sn, "Student Number is not Available!")
                     Label24.ForeColor = Color.Red
-                    Label24.Text = "Student Number is not Avilable!"
+                    Label24.Text = "Student Number is not Available!"
                     cn1.Close()
                 Else
-                    Label24.Text = "Student Number is Avilable!"
-                    ToolTip1.SetToolTip(sn, "Student Number is Avilable!")
+                    Label24.Text = "Student Number is Available!"
+                    ToolTip1.SetToolTip(sn, "Student Number is Available!")
                     Label24.ForeColor = Color.Green
                     cn1.Close()
                 End If
             Catch ex As Exception
             End Try
             cn1.Close()
+        End If
+    End Sub
+
+    Private Sub cont_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles cont.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
         End If
     End Sub
 End Class

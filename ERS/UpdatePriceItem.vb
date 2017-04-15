@@ -45,7 +45,6 @@ Public Class UpdatePriceItem
         Catch
         End Try
     End Sub
-
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Try
             'eto yung sql query natin, which is UPDATE.
@@ -67,6 +66,12 @@ Public Class UpdatePriceItem
             MessageBox.Show(ex.Message)
             cn.Close()
         End Try
-
+    End Sub
+    Private Sub price_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles price.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
     End Sub
 End Class
