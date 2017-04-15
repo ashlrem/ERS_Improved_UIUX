@@ -70,7 +70,12 @@ Public Class AdminCreate_1
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        Webcam.Show()
+        Me.TopMost = False
+        Webcam.TopMost = True
+        Try
+            Webcam.Show()
+        Catch
+        End Try
     End Sub
 
     Private Sub statusTxtBoxAdmin1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)

@@ -61,6 +61,8 @@ Public Class AdminCreate
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        Me.TopMost = False
+        Webcam.TopMost = True
         Webcam.Show()
     End Sub
     Public Function imagetobase64(ByVal image As Image, ByVal format As ImageFormat) As String
