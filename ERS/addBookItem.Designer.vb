@@ -36,6 +36,7 @@ Partial Class addBookItem
         'itemName
         '
         Me.itemName.Location = New System.Drawing.Point(168, 42)
+        Me.itemName.MaxLength = 18
         Me.itemName.Name = "itemName"
         Me.itemName.Size = New System.Drawing.Size(121, 20)
         Me.itemName.TabIndex = 0
@@ -43,6 +44,7 @@ Partial Class addBookItem
         'price
         '
         Me.price.Location = New System.Drawing.Point(168, 101)
+        Me.price.MaxLength = 4
         Me.price.Name = "price"
         Me.price.Size = New System.Drawing.Size(121, 20)
         Me.price.TabIndex = 2
