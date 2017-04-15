@@ -35,6 +35,8 @@ Partial Class MainScreen
         Me.Pi = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.Pi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,10 +47,11 @@ Partial Class MainScreen
         Me.DateTimePicker1.CustomFormat = "MM/dd/yyyy - hh:mm:ss"
         Me.DateTimePicker1.Enabled = False
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(750, 136)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(1266, 12)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(84, 20)
         Me.DateTimePicker1.TabIndex = 1
+        Me.DateTimePicker1.Visible = False
         '
         'Timer1
         '
@@ -59,10 +62,10 @@ Partial Class MainScreen
         '
         Me.datelbl.AutoSize = True
         Me.datelbl.BackColor = System.Drawing.Color.White
-        Me.datelbl.Font = New System.Drawing.Font("Copperplate Gothic Light", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.datelbl.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.datelbl.Location = New System.Drawing.Point(21, 699)
         Me.datelbl.Name = "datelbl"
-        Me.datelbl.Size = New System.Drawing.Size(52, 22)
+        Me.datelbl.Size = New System.Drawing.Size(42, 26)
         Me.datelbl.TabIndex = 2
         Me.datelbl.Text = "Dat"
         '
@@ -72,54 +75,70 @@ Partial Class MainScreen
         Me.AdminBtn.BackgroundImage = CType(resources.GetObject("AdminBtn.BackgroundImage"), System.Drawing.Image)
         Me.AdminBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.AdminBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.AdminBtn.Font = New System.Drawing.Font("Calibri", 21.75!, System.Drawing.FontStyle.Bold)
+        Me.AdminBtn.ForeColor = System.Drawing.Color.White
         Me.AdminBtn.Location = New System.Drawing.Point(347, 201)
         Me.AdminBtn.Name = "AdminBtn"
         Me.AdminBtn.Size = New System.Drawing.Size(315, 82)
         Me.AdminBtn.TabIndex = 4
+        Me.AdminBtn.Text = "Administrator"
         Me.AdminBtn.UseVisualStyleBackColor = False
         '
         'AboutUsBtn
         '
+        Me.AboutUsBtn.BackColor = System.Drawing.Color.Transparent
         Me.AboutUsBtn.BackgroundImage = CType(resources.GetObject("AboutUsBtn.BackgroundImage"), System.Drawing.Image)
         Me.AboutUsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.AboutUsBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.AboutUsBtn.Font = New System.Drawing.Font("Calibri", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AboutUsBtn.ForeColor = System.Drawing.Color.White
         Me.AboutUsBtn.Location = New System.Drawing.Point(12, 201)
         Me.AboutUsBtn.Name = "AboutUsBtn"
         Me.AboutUsBtn.Size = New System.Drawing.Size(315, 82)
         Me.AboutUsBtn.TabIndex = 3
-        Me.AboutUsBtn.UseVisualStyleBackColor = True
+        Me.AboutUsBtn.Text = "About Us"
+        Me.AboutUsBtn.UseVisualStyleBackColor = False
         '
         'CashierBtn
         '
+        Me.CashierBtn.BackColor = System.Drawing.Color.Transparent
         Me.CashierBtn.BackgroundImage = CType(resources.GetObject("CashierBtn.BackgroundImage"), System.Drawing.Image)
         Me.CashierBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.CashierBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CashierBtn.Font = New System.Drawing.Font("Calibri", 21.75!, System.Drawing.FontStyle.Bold)
+        Me.CashierBtn.ForeColor = System.Drawing.Color.White
         Me.CashierBtn.Location = New System.Drawing.Point(684, 201)
         Me.CashierBtn.Name = "CashierBtn"
         Me.CashierBtn.Size = New System.Drawing.Size(315, 82)
         Me.CashierBtn.TabIndex = 3
-        Me.CashierBtn.UseVisualStyleBackColor = True
+        Me.CashierBtn.Text = "Cashier"
+        Me.CashierBtn.UseVisualStyleBackColor = False
         '
         'RegistrarBtn
         '
         Me.RegistrarBtn.BackgroundImage = CType(resources.GetObject("RegistrarBtn.BackgroundImage"), System.Drawing.Image)
         Me.RegistrarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RegistrarBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.RegistrarBtn.Font = New System.Drawing.Font("Calibri", 21.75!, System.Drawing.FontStyle.Bold)
+        Me.RegistrarBtn.ForeColor = System.Drawing.Color.White
         Me.RegistrarBtn.Location = New System.Drawing.Point(1021, 201)
         Me.RegistrarBtn.Name = "RegistrarBtn"
         Me.RegistrarBtn.Size = New System.Drawing.Size(315, 82)
         Me.RegistrarBtn.TabIndex = 3
+        Me.RegistrarBtn.Text = "Registrar"
         Me.RegistrarBtn.UseVisualStyleBackColor = True
         '
         'Button5
         '
+        Me.Button5.BackColor = System.Drawing.Color.Transparent
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
         Me.Button5.Location = New System.Drawing.Point(1229, 670)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(107, 51)
         Me.Button5.TabIndex = 3
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'Pi
         '
@@ -146,13 +165,37 @@ Partial Class MainScreen
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(12, 11)
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(178, 12)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(1324, 179)
+        Me.PictureBox2.Size = New System.Drawing.Size(207, 178)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 9
         Me.PictureBox2.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(426, 45)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(742, 59)
+        Me.Label1.TabIndex = 10
+        Me.Label1.Text = "St. Martin de Porres Catholic School"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(656, 104)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(211, 29)
+        Me.Label2.TabIndex = 11
+        Me.Label2.Text = "Paombong, Bulacan"
         '
         'MainScreen
         '
@@ -162,6 +205,9 @@ Partial Class MainScreen
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1354, 733)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.datelbl)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button5)
@@ -169,7 +215,6 @@ Partial Class MainScreen
         Me.Controls.Add(Me.CashierBtn)
         Me.Controls.Add(Me.AboutUsBtn)
         Me.Controls.Add(Me.AdminBtn)
-        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Pi)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
@@ -193,4 +238,6 @@ Partial Class MainScreen
     Friend WithEvents Pi As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

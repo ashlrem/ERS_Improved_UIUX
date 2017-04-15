@@ -47,6 +47,9 @@ Partial Class ViewStud_C
         '
         'SearchStudent_btn
         '
+        Me.SearchStudent_btn.BackgroundImage = CType(resources.GetObject("SearchStudent_btn.BackgroundImage"), System.Drawing.Image)
+        Me.SearchStudent_btn.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.SearchStudent_btn.ForeColor = System.Drawing.Color.White
         Me.SearchStudent_btn.Location = New System.Drawing.Point(515, 120)
         Me.SearchStudent_btn.Name = "SearchStudent_btn"
         Me.SearchStudent_btn.Size = New System.Drawing.Size(75, 23)
@@ -136,7 +139,7 @@ Partial Class ViewStud_C
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(796, 289)
+        Me.Button3.Location = New System.Drawing.Point(778, 268)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(90, 46)
         Me.Button3.TabIndex = 74
@@ -196,6 +199,7 @@ Partial Class ViewStud_C
         '
         Me.nam.Enabled = False
         Me.nam.Location = New System.Drawing.Point(313, 153)
+        Me.nam.MaxLength = 70
         Me.nam.Name = "nam"
         Me.nam.Size = New System.Drawing.Size(176, 20)
         Me.nam.TabIndex = 66
@@ -211,6 +215,7 @@ Partial Class ViewStud_C
         'sn
         '
         Me.sn.Location = New System.Drawing.Point(313, 122)
+        Me.sn.MaxLength = 18
         Me.sn.Name = "sn"
         Me.sn.Size = New System.Drawing.Size(176, 20)
         Me.sn.TabIndex = 68
@@ -220,6 +225,7 @@ Partial Class ViewStud_C
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(898, 347)
         Me.ControlBox = False
         Me.Controls.Add(Me.SearchStudent_btn)
@@ -241,6 +247,7 @@ Partial Class ViewStud_C
         Me.Controls.Add(Me.nam)
         Me.Controls.Add(Me.add)
         Me.Controls.Add(Me.sn)
+        Me.DoubleBuffered = True
         Me.MaximumSize = New System.Drawing.Size(914, 386)
         Me.MinimumSize = New System.Drawing.Size(914, 386)
         Me.Name = "ViewStud_C"

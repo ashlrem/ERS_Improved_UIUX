@@ -22,6 +22,7 @@ Partial Class StudentArchive
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StudentArchive))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.sn = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -52,14 +53,18 @@ Partial Class StudentArchive
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(21, 21)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(95, 13)
+        Me.Label1.Size = New System.Drawing.Size(87, 13)
         Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Student Nummber:"
+        Me.Label1.Text = "Student Number:"
         '
         'Retrieve_btn
         '
+        Me.Retrieve_btn.BackgroundImage = CType(resources.GetObject("Retrieve_btn.BackgroundImage"), System.Drawing.Image)
+        Me.Retrieve_btn.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Retrieve_btn.ForeColor = System.Drawing.Color.White
         Me.Retrieve_btn.Location = New System.Drawing.Point(277, 14)
         Me.Retrieve_btn.Name = "Retrieve_btn"
         Me.Retrieve_btn.Size = New System.Drawing.Size(115, 23)
@@ -78,7 +83,7 @@ Partial Class StudentArchive
         Me.Controls.Add(Me.DataGridView1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "StudentArchive"
-        Me.Text = "StudentArchive"
+        Me.Text = "Student Archive"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -22,6 +22,7 @@ Partial Class ViewClass
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ViewClass))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.subj = New System.Windows.Forms.ComboBox()
         Me.SearchSubj_btn = New System.Windows.Forms.Button()
@@ -40,7 +41,7 @@ Partial Class ViewClass
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(16, 16)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(368, 81)
+        Me.GroupBox1.Size = New System.Drawing.Size(415, 81)
         Me.GroupBox1.TabIndex = 23
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Search Subject"
@@ -57,7 +58,10 @@ Partial Class ViewClass
         '
         'SearchSubj_btn
         '
-        Me.SearchSubj_btn.Location = New System.Drawing.Point(270, 31)
+        Me.SearchSubj_btn.BackgroundImage = CType(resources.GetObject("SearchSubj_btn.BackgroundImage"), System.Drawing.Image)
+        Me.SearchSubj_btn.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.SearchSubj_btn.ForeColor = System.Drawing.Color.White
+        Me.SearchSubj_btn.Location = New System.Drawing.Point(299, 30)
         Me.SearchSubj_btn.Name = "SearchSubj_btn"
         Me.SearchSubj_btn.Size = New System.Drawing.Size(75, 23)
         Me.SearchSubj_btn.TabIndex = 2
@@ -77,7 +81,7 @@ Partial Class ViewClass
         '
         Me.sec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.sec.FormattingEnabled = True
-        Me.sec.Location = New System.Drawing.Point(96, 29)
+        Me.sec.Location = New System.Drawing.Point(104, 29)
         Me.sec.Name = "sec"
         Me.sec.Size = New System.Drawing.Size(160, 21)
         Me.sec.TabIndex = 4
@@ -106,6 +110,7 @@ Partial Class ViewClass
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(446, 199)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)

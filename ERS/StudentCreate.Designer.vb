@@ -23,6 +23,7 @@ Partial Class StudentCreate
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StudentCreate))
         Me.pi = New System.Windows.Forms.GroupBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.sec = New System.Windows.Forms.ComboBox()
@@ -98,6 +99,7 @@ Partial Class StudentCreate
         '
         'pi
         '
+        Me.pi.BackColor = System.Drawing.Color.White
         Me.pi.Controls.Add(Me.Label24)
         Me.pi.Controls.Add(Me.sec)
         Me.pi.Controls.Add(Me.Label22)
@@ -188,6 +190,8 @@ Partial Class StudentCreate
         '
         'Button3
         '
+        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
+        Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Location = New System.Drawing.Point(38, 155)
         Me.Button3.Margin = New System.Windows.Forms.Padding(5)
         Me.Button3.Name = "Button3"
@@ -198,7 +202,9 @@ Partial Class StudentCreate
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(38, 185)
+        Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Location = New System.Drawing.Point(38, 194)
         Me.Button4.Margin = New System.Windows.Forms.Padding(5)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(172, 35)
@@ -312,9 +318,12 @@ Partial Class StudentCreate
         Me.bd.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.bd.Location = New System.Drawing.Point(769, 167)
         Me.bd.Margin = New System.Windows.Forms.Padding(5)
+        Me.bd.MaxDate = New Date(2100, 1, 1, 0, 0, 0, 0)
+        Me.bd.MinDate = New Date(1990, 1, 1, 0, 0, 0, 0)
         Me.bd.Name = "bd"
         Me.bd.Size = New System.Drawing.Size(157, 26)
         Me.bd.TabIndex = 10
+        Me.bd.Value = New Date(2000, 1, 1, 0, 0, 0, 0)
         '
         'Label5
         '
@@ -385,7 +394,7 @@ Partial Class StudentCreate
         '
         Me.add.Location = New System.Drawing.Point(335, 164)
         Me.add.Margin = New System.Windows.Forms.Padding(5)
-        Me.add.MaxLength = 18
+        Me.add.MaxLength = 70
         Me.add.Name = "add"
         Me.add.Size = New System.Drawing.Size(315, 26)
         Me.add.TabIndex = 6
@@ -563,7 +572,7 @@ Partial Class StudentCreate
         '
         Me.rl.Location = New System.Drawing.Point(685, 107)
         Me.rl.Margin = New System.Windows.Forms.Padding(5)
-        Me.rl.MaxLength = 18
+        Me.rl.MaxLength = 50
         Me.rl.Name = "rl"
         Me.rl.Size = New System.Drawing.Size(285, 26)
         Me.rl.TabIndex = 21
@@ -572,7 +581,7 @@ Partial Class StudentCreate
         '
         Me.fono.Location = New System.Drawing.Point(685, 75)
         Me.fono.Margin = New System.Windows.Forms.Padding(5)
-        Me.fono.MaxLength = 18
+        Me.fono.MaxLength = 50
         Me.fono.Name = "fono"
         Me.fono.Size = New System.Drawing.Size(285, 26)
         Me.fono.TabIndex = 19
@@ -581,7 +590,7 @@ Partial Class StudentCreate
         '
         Me.mono.Location = New System.Drawing.Point(684, 36)
         Me.mono.Margin = New System.Windows.Forms.Padding(5)
-        Me.mono.MaxLength = 18
+        Me.mono.MaxLength = 50
         Me.mono.Name = "mono"
         Me.mono.Size = New System.Drawing.Size(285, 26)
         Me.mono.TabIndex = 17
@@ -599,7 +608,7 @@ Partial Class StudentCreate
         '
         Me.gdn.Location = New System.Drawing.Point(166, 107)
         Me.gdn.Margin = New System.Windows.Forms.Padding(5)
-        Me.gdn.MaxLength = 18
+        Me.gdn.MaxLength = 50
         Me.gdn.Name = "gdn"
         Me.gdn.Size = New System.Drawing.Size(321, 26)
         Me.gdn.TabIndex = 20
@@ -608,7 +617,7 @@ Partial Class StudentCreate
         '
         Me.fon.Location = New System.Drawing.Point(166, 73)
         Me.fon.Margin = New System.Windows.Forms.Padding(5)
-        Me.fon.MaxLength = 18
+        Me.fon.MaxLength = 50
         Me.fon.Name = "fon"
         Me.fon.Size = New System.Drawing.Size(321, 26)
         Me.fon.TabIndex = 18
@@ -617,7 +626,7 @@ Partial Class StudentCreate
         '
         Me.mon.Location = New System.Drawing.Point(166, 33)
         Me.mon.Margin = New System.Windows.Forms.Padding(5)
-        Me.mon.MaxLength = 18
+        Me.mon.MaxLength = 50
         Me.mon.Name = "mon"
         Me.mon.Size = New System.Drawing.Size(321, 26)
         Me.mon.TabIndex = 16
@@ -690,7 +699,7 @@ Partial Class StudentCreate
         '
         Me.addScho.Enabled = False
         Me.addScho.Location = New System.Drawing.Point(782, 22)
-        Me.addScho.MaxLength = 18
+        Me.addScho.MaxLength = 70
         Me.addScho.Name = "addScho"
         Me.addScho.Size = New System.Drawing.Size(267, 26)
         Me.addScho.TabIndex = 26
@@ -708,13 +717,15 @@ Partial Class StudentCreate
         '
         Me.nols.Enabled = False
         Me.nols.Location = New System.Drawing.Point(524, 22)
-        Me.nols.MaxLength = 18
+        Me.nols.MaxLength = 50
         Me.nols.Name = "nols"
         Me.nols.Size = New System.Drawing.Size(157, 26)
         Me.nols.TabIndex = 26
         '
         'StudentCreateEnrollBtn
         '
+        Me.StudentCreateEnrollBtn.BackgroundImage = CType(resources.GetObject("StudentCreateEnrollBtn.BackgroundImage"), System.Drawing.Image)
+        Me.StudentCreateEnrollBtn.ForeColor = System.Drawing.Color.White
         Me.StudentCreateEnrollBtn.Location = New System.Drawing.Point(472, 88)
         Me.StudentCreateEnrollBtn.Name = "StudentCreateEnrollBtn"
         Me.StudentCreateEnrollBtn.Size = New System.Drawing.Size(141, 39)
@@ -778,11 +789,15 @@ Partial Class StudentCreate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1100, 690)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.pi)
+        Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Location = New System.Drawing.Point(-60, 0)

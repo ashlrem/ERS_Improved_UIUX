@@ -22,20 +22,23 @@ Partial Class UpdatePayment_A
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UpdatePayment_A))
         Me.SearchAddpayemt_btn = New System.Windows.Forms.Button()
         Me.sn = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Payment_grp = New System.Windows.Forms.GroupBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.pre_btn = New System.Windows.Forms.Button()
         Me.prelim = New System.Windows.Forms.Label()
         Me.grade = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.pre_btn = New System.Windows.Forms.Button()
         Me.Payment_grp.SuspendLayout()
         Me.SuspendLayout()
         '
         'SearchAddpayemt_btn
         '
+        Me.SearchAddpayemt_btn.BackgroundImage = CType(resources.GetObject("SearchAddpayemt_btn.BackgroundImage"), System.Drawing.Image)
+        Me.SearchAddpayemt_btn.ForeColor = System.Drawing.Color.White
         Me.SearchAddpayemt_btn.Location = New System.Drawing.Point(278, 15)
         Me.SearchAddpayemt_btn.Name = "SearchAddpayemt_btn"
         Me.SearchAddpayemt_btn.Size = New System.Drawing.Size(75, 23)
@@ -82,6 +85,18 @@ Partial Class UpdatePayment_A
         Me.Label8.TabIndex = 3
         Me.Label8.Text = "First Payment::"
         '
+        'pre_btn
+        '
+        Me.pre_btn.BackgroundImage = CType(resources.GetObject("pre_btn.BackgroundImage"), System.Drawing.Image)
+        Me.pre_btn.ForeColor = System.Drawing.Color.White
+        Me.pre_btn.Location = New System.Drawing.Point(240, 24)
+        Me.pre_btn.Name = "pre_btn"
+        Me.pre_btn.Size = New System.Drawing.Size(92, 23)
+        Me.pre_btn.TabIndex = 2
+        Me.pre_btn.Text = "Pay"
+        Me.pre_btn.UseVisualStyleBackColor = True
+        Me.pre_btn.Visible = False
+        '
         'prelim
         '
         Me.prelim.AutoSize = True
@@ -110,20 +125,11 @@ Partial Class UpdatePayment_A
         Me.Label12.TabIndex = 8
         Me.Label12.Text = "Grade Level:"
         '
-        'pre_btn
-        '
-        Me.pre_btn.Location = New System.Drawing.Point(240, 24)
-        Me.pre_btn.Name = "pre_btn"
-        Me.pre_btn.Size = New System.Drawing.Size(92, 23)
-        Me.pre_btn.TabIndex = 2
-        Me.pre_btn.Text = "Pay"
-        Me.pre_btn.UseVisualStyleBackColor = True
-        Me.pre_btn.Visible = False
-        '
         'UpdatePayment_A
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(369, 155)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.grade)

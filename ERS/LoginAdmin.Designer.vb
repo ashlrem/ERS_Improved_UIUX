@@ -35,26 +35,30 @@ Partial Class LoginAdmin
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(202, 148)
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(202, 149)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(105, 27)
         Me.Button1.TabIndex = 3
+        Me.Button1.Text = "Login"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'en
         '
-        Me.en.Location = New System.Drawing.Point(226, 75)
-        Me.en.MaxLength = 16
+        Me.en.Location = New System.Drawing.Point(245, 74)
+        Me.en.MaxLength = 18
         Me.en.Name = "en"
         Me.en.Size = New System.Drawing.Size(172, 20)
         Me.en.TabIndex = 1
         '
         'pw
         '
-        Me.pw.Location = New System.Drawing.Point(226, 110)
-        Me.pw.MaxLength = 16
+        Me.pw.Location = New System.Drawing.Point(245, 109)
+        Me.pw.MaxLength = 18
         Me.pw.Name = "pw"
         Me.pw.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.pw.Size = New System.Drawing.Size(172, 20)
@@ -64,17 +68,18 @@ Partial Class LoginAdmin
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(12, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(208, 37)
+        Me.Label1.Size = New System.Drawing.Size(201, 39)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Administrator"
         '
         'LoginCancelBtn
         '
-        Me.LoginCancelBtn.Location = New System.Drawing.Point(313, 148)
+        Me.LoginCancelBtn.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoginCancelBtn.Location = New System.Drawing.Point(313, 149)
         Me.LoginCancelBtn.Name = "LoginCancelBtn"
         Me.LoginCancelBtn.Size = New System.Drawing.Size(104, 27)
         Me.LoginCancelBtn.TabIndex = 5
@@ -85,9 +90,10 @@ Partial Class LoginAdmin
         '
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.LinkLabel1.Location = New System.Drawing.Point(104, 155)
+        Me.LinkLabel1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.Location = New System.Drawing.Point(104, 156)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(92, 13)
+        Me.LinkLabel1.Size = New System.Drawing.Size(90, 13)
         Me.LinkLabel1.TabIndex = 4
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Forgot Password?"
@@ -96,11 +102,11 @@ Partial Class LoginAdmin
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(75, 105)
+        Me.Label3.Location = New System.Drawing.Point(94, 104)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(103, 24)
+        Me.Label3.Size = New System.Drawing.Size(100, 26)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Password:"
         '
@@ -108,11 +114,11 @@ Partial Class LoginAdmin
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(74, 70)
+        Me.Label2.Location = New System.Drawing.Point(93, 69)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(139, 24)
+        Me.Label2.Size = New System.Drawing.Size(134, 26)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Employee No:"
         '
@@ -133,6 +139,7 @@ Partial Class LoginAdmin
         Me.Controls.Add(Me.pw)
         Me.Controls.Add(Me.en)
         Me.Controls.Add(Me.Button1)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.MaximumSize = New System.Drawing.Size(518, 221)
         Me.MinimumSize = New System.Drawing.Size(518, 221)

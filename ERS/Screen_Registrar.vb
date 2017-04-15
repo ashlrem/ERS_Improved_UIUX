@@ -1,6 +1,6 @@
 ﻿Public Class Screen_Registrar
 
- 
+
     Private Sub UpdateAccountToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         UpdateRegistrarR.TopLevel = False
         RegistrarPanelPictureBox.Controls.Add(UpdateRegistrarR)

@@ -22,6 +22,7 @@ Partial Class updateBookItem
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(updateBookItem))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -44,6 +45,7 @@ Partial Class updateBookItem
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(26, 37)
+        Me.TextBox1.MaxLength = 18
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 1
@@ -67,6 +69,8 @@ Partial Class updateBookItem
         '
         'Button1
         '
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(259, 37)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
@@ -86,6 +90,7 @@ Partial Class updateBookItem
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(174, 111)
+        Me.TextBox2.MaxLength = 4
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
         Me.TextBox2.TabIndex = 6

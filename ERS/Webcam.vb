@@ -75,7 +75,7 @@ Public Class Webcam
                 StudentCreate.Enabled = True
                 Me.Close()
             End If
-            End If
+        End If
     End Sub
     Private Sub Webcam_Closing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles MyBase.FormClosing
         Dim a As Integer

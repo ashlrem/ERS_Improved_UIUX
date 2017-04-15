@@ -19,7 +19,7 @@ Public Class DeleteStudent_A
         End If
     End Sub
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-      Dim a As Integer
+        Dim a As Integer
         a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
             Screen_Admin.Enabled = True

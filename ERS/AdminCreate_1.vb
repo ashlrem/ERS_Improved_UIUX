@@ -65,7 +65,7 @@ Public Class AdminCreate_1
             PictureBox1.Image = Image.FromFile(pic)
         Catch
             MsgBox("Please select picture.")
-                 PictureBox1.Image = PictureBox1.ErrorImage
+            PictureBox1.Image = PictureBox1.ErrorImage
         End Try
     End Sub
 

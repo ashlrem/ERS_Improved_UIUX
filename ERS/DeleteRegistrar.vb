@@ -16,7 +16,7 @@ Public Class DeleteRegistrar
         regdel()
     End Sub
     Private Sub DeleteRegistrar_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
-         Dim a As Integer
+        Dim a As Integer
         a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
             Screen_Admin.Enabled = True

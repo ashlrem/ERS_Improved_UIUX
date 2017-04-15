@@ -123,7 +123,7 @@
         ViewStudent.Show()
     End Sub
 
-   
+
     Private Sub UpdateSubjectToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UpdateSubjectToolStripMenuItem.Click
         UpdateClass_A.TopMost = True
         Me.Enabled = False

@@ -22,6 +22,7 @@ Partial Class ChangePassC
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ChangePassC))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ne1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -33,6 +34,9 @@ Partial Class ChangePassC
         '
         'Button1
         '
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(38, 78)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(121, 28)
@@ -52,20 +56,22 @@ Partial Class ChangePassC
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 9.75!)
         Me.Label2.Location = New System.Drawing.Point(22, 51)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(91, 13)
+        Me.Label2.Size = New System.Drawing.Size(98, 15)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Retype Newpass:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 9.75!)
         Me.Label1.Location = New System.Drawing.Point(22, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(78, 13)
+        Me.Label1.Size = New System.Drawing.Size(90, 15)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "NewPassword:"
+        Me.Label1.Text = "New Password:"
         '
         'rtp
         '
@@ -85,6 +91,7 @@ Partial Class ChangePassC
         '
         'Button2
         '
+        Me.Button2.Font = New System.Drawing.Font("Calibri", 9.75!)
         Me.Button2.Location = New System.Drawing.Point(165, 76)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(121, 28)
@@ -96,6 +103,7 @@ Partial Class ChangePassC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(351, 116)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button2)

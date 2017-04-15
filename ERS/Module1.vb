@@ -78,11 +78,11 @@ Module Module1
     End Sub
     Public Sub registrarPanelDisplay()
         cn.Close()
-        insert() 
+        insert()
         Dim reg As String = "SELECT * FROM registrar_account WHERE (EmployeeID ='" & My.Forms.RegistrarPanel.empl.Text & "')"
-        cn1.Open() 
+        cn1.Open()
         Dim cmd As MySqlCommand = New MySqlCommand(reg, cn1)
-        r = cmd.ExecuteReader() 
+        r = cmd.ExecuteReader()
         If r.Read Then
             My.Forms.RegistrarPanel.n1.Text = r("Surname").ToString() & ", " & r("GivenName").ToString() & " " & r("MiddleName").ToString() & "."
             My.Forms.RegistrarPanel.email.Text = r("Email_Account").ToString() & "."
@@ -535,7 +535,7 @@ Module Module1
         My.Forms.AdminCreate.pw.Text = ""
         My.Forms.AdminCreate.rtp.Text = ""
 
-        My.Forms.StudentCreate.addScho.Text = "
+        My.Forms.StudentCreate.addScho.Text = ""
         My.Forms.StudentCreate.nols.Text = ""
         My.Forms.StudentCreate.sn.Text = ""
         My.Forms.StudentCreate.ln.Text = ""
@@ -2609,7 +2609,7 @@ Module Module1
             MessageBox.Show(ex.Message)
             cn.Close()
         End Try
-             
+
     End Sub
     Public Sub SearchSubject_R_View_btn()
         'not implemented
@@ -2813,7 +2813,7 @@ Module Module1
         conn1.Close()
     End Sub
     Public Sub SearchStudent_R_Delete_btn()
-        Dim conn As New MySqlConnection 
+        Dim conn As New MySqlConnection
         Try
             'insert() 'tatanggalin natin to, ang error kasi is yung pag connect sa db. gawa tayo ng sarili.
             conn.ConnectionString = "server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'"
@@ -2943,7 +2943,7 @@ Module Module1
                 Else
                     My.Forms.UpdateStudent_R.gm_lbl.BackColor = Color.Green
                 End If
-            
+
                 My.Forms.UpdateStudent_R.GroupBox1.Enabled = True
                 conn.Close() 'papalitan natin lahat ng cn1 ng conn
             Else
@@ -2957,7 +2957,7 @@ Module Module1
         conn.Close()
     End Sub
     Public Sub SearchStudent_A_ViewStudent_btn()
-        Dim conn As New MySqlConnection 
+        Dim conn As New MySqlConnection
         Try
             'insert() 'tatanggalin natin to, ang error kasi is yung pag connect sa db. gawa tayo ng sarili.
             conn.ConnectionString = "server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'"
@@ -3040,7 +3040,7 @@ Module Module1
     End Sub
 
     Public Sub SearchStudent_R_ViewStudent_btn()
-       Dim conn As New MySqlConnection 
+        Dim conn As New MySqlConnection
         Try
             'insert() 'tatanggalin natin to, ang error kasi is yung pag connect sa db. gawa tayo ng sarili.
             conn.ConnectionString = "server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'"
@@ -3169,7 +3169,7 @@ Module Module1
             r = cmd.ExecuteReader()
             If r.Read Then
                 StudentNo = r("Student_ID_No").ToString()
-              
+
                 conn.Close() 'papalitan natin lahat ng cn1 ng conn
             Else
                 conn.Close()

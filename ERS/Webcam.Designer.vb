@@ -22,6 +22,7 @@ Partial Class Webcam
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Webcam))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.capture_btn = New System.Windows.Forms.Button()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
@@ -40,6 +41,9 @@ Partial Class Webcam
         '
         'capture_btn
         '
+        Me.capture_btn.BackgroundImage = CType(resources.GetObject("capture_btn.BackgroundImage"), System.Drawing.Image)
+        Me.capture_btn.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.capture_btn.ForeColor = System.Drawing.Color.White
         Me.capture_btn.Location = New System.Drawing.Point(110, 205)
         Me.capture_btn.Name = "capture_btn"
         Me.capture_btn.Size = New System.Drawing.Size(75, 23)

@@ -36,13 +36,13 @@ Public Class UpdatePayment_A
         total = TotalPaid + lastpayment
 
         SearchUpdatePayment_A()
-        
+
         If prelim.Text = "0" Then
             MsgBox("Already paid!")
             pre_btn.Visible = False
             Me.Enabled = False
         End If
-     
+
         Reciept.Show()
     End Sub
     Private Sub UpdatePayment_A_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

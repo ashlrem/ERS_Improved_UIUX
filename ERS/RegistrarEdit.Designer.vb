@@ -22,6 +22,7 @@ Partial Class RegistrarEdit
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RegistrarEdit))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -86,6 +87,9 @@ Partial Class RegistrarEdit
         '
         'Button2
         '
+        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
+        Me.Button2.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Location = New System.Drawing.Point(214, 214)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(159, 27)
@@ -103,6 +107,7 @@ Partial Class RegistrarEdit
         'eadd
         '
         Me.eadd.Location = New System.Drawing.Point(115, 162)
+        Me.eadd.MaxLength = 40
         Me.eadd.Name = "eadd"
         Me.eadd.Size = New System.Drawing.Size(170, 20)
         Me.eadd.TabIndex = 6
@@ -110,6 +115,7 @@ Partial Class RegistrarEdit
         'add
         '
         Me.add.Location = New System.Drawing.Point(115, 136)
+        Me.add.MaxLength = 70
         Me.add.Name = "add"
         Me.add.Size = New System.Drawing.Size(170, 20)
         Me.add.TabIndex = 5
@@ -124,6 +130,7 @@ Partial Class RegistrarEdit
         'mn
         '
         Me.mn.Location = New System.Drawing.Point(115, 84)
+        Me.mn.MaxLength = 18
         Me.mn.Name = "mn"
         Me.mn.Size = New System.Drawing.Size(170, 20)
         Me.mn.TabIndex = 3
@@ -131,6 +138,7 @@ Partial Class RegistrarEdit
         'fn
         '
         Me.fn.Location = New System.Drawing.Point(115, 58)
+        Me.fn.MaxLength = 18
         Me.fn.Name = "fn"
         Me.fn.Size = New System.Drawing.Size(170, 20)
         Me.fn.TabIndex = 2
@@ -138,6 +146,7 @@ Partial Class RegistrarEdit
         'ln
         '
         Me.ln.Location = New System.Drawing.Point(115, 32)
+        Me.ln.MaxLength = 18
         Me.ln.Name = "ln"
         Me.ln.Size = New System.Drawing.Size(170, 20)
         Me.ln.TabIndex = 1
@@ -207,9 +216,12 @@ Partial Class RegistrarEdit
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(243, 31)
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(298, 24)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(75, 36)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Validate"
         Me.Button1.UseVisualStyleBackColor = True
@@ -217,9 +229,10 @@ Partial Class RegistrarEdit
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(23, 36)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(71, 36)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 13)
+        Me.Label1.Size = New System.Drawing.Size(78, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "EmployeeID:"
         '
@@ -230,14 +243,14 @@ Partial Class RegistrarEdit
         Me.GroupBox1.Controls.Add(Me.en)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 13)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(379, 81)
+        Me.GroupBox1.Size = New System.Drawing.Size(426, 81)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Account Validation"
         '
         'en
         '
-        Me.en.Location = New System.Drawing.Point(96, 33)
+        Me.en.Location = New System.Drawing.Point(158, 33)
         Me.en.Name = "en"
         Me.en.Size = New System.Drawing.Size(127, 20)
         Me.en.TabIndex = 0
@@ -246,11 +259,12 @@ Partial Class RegistrarEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(450, 361)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "RegistrarEdit"
-        Me.Text = "RegistrarEdit"
+        Me.Text = "Registrar Edit"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

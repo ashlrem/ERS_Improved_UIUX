@@ -22,6 +22,7 @@ Partial Class UpdateCashierC
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UpdateCashierC))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.status = New System.Windows.Forms.ComboBox()
         Me.update_account = New System.Windows.Forms.Button()
@@ -88,6 +89,9 @@ Partial Class UpdateCashierC
         '
         'update_account
         '
+        Me.update_account.BackgroundImage = CType(resources.GetObject("update_account.BackgroundImage"), System.Drawing.Image)
+        Me.update_account.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.update_account.ForeColor = System.Drawing.Color.White
         Me.update_account.Location = New System.Drawing.Point(250, 214)
         Me.update_account.Name = "update_account"
         Me.update_account.Size = New System.Drawing.Size(159, 27)
@@ -108,56 +112,56 @@ Partial Class UpdateCashierC
         'cno
         '
         Me.cno.Location = New System.Drawing.Point(113, 188)
-        Me.cno.MaxLength = 18
+        Me.cno.MaxLength = 11
         Me.cno.Name = "cno"
         Me.cno.Size = New System.Drawing.Size(170, 20)
         Me.cno.TabIndex = 7
         '
         'eadd
         '
-        Me.eadd.Location = New System.Drawing.Point(115, 162)
-        Me.eadd.MaxLength = 18
+        Me.eadd.Location = New System.Drawing.Point(113, 162)
+        Me.eadd.MaxLength = 40
         Me.eadd.Name = "eadd"
-        Me.eadd.Size = New System.Drawing.Size(170, 20)
+        Me.eadd.Size = New System.Drawing.Size(172, 20)
         Me.eadd.TabIndex = 6
         '
         'add
         '
-        Me.add.Location = New System.Drawing.Point(115, 136)
-        Me.add.MaxLength = 18
+        Me.add.Location = New System.Drawing.Point(113, 136)
+        Me.add.MaxLength = 70
         Me.add.Name = "add"
-        Me.add.Size = New System.Drawing.Size(170, 20)
+        Me.add.Size = New System.Drawing.Size(172, 20)
         Me.add.TabIndex = 5
         '
         'bd
         '
-        Me.bd.Location = New System.Drawing.Point(115, 110)
+        Me.bd.Location = New System.Drawing.Point(113, 110)
         Me.bd.Name = "bd"
-        Me.bd.Size = New System.Drawing.Size(170, 20)
+        Me.bd.Size = New System.Drawing.Size(172, 20)
         Me.bd.TabIndex = 4
         '
         'mn
         '
-        Me.mn.Location = New System.Drawing.Point(115, 84)
+        Me.mn.Location = New System.Drawing.Point(113, 84)
         Me.mn.MaxLength = 18
         Me.mn.Name = "mn"
-        Me.mn.Size = New System.Drawing.Size(170, 20)
+        Me.mn.Size = New System.Drawing.Size(172, 20)
         Me.mn.TabIndex = 3
         '
         'fn
         '
-        Me.fn.Location = New System.Drawing.Point(115, 58)
+        Me.fn.Location = New System.Drawing.Point(113, 58)
         Me.fn.MaxLength = 18
         Me.fn.Name = "fn"
-        Me.fn.Size = New System.Drawing.Size(170, 20)
+        Me.fn.Size = New System.Drawing.Size(172, 20)
         Me.fn.TabIndex = 2
         '
         'ln
         '
-        Me.ln.Location = New System.Drawing.Point(115, 32)
+        Me.ln.Location = New System.Drawing.Point(113, 32)
         Me.ln.MaxLength = 18
         Me.ln.Name = "ln"
-        Me.ln.Size = New System.Drawing.Size(170, 20)
+        Me.ln.Size = New System.Drawing.Size(172, 20)
         Me.ln.TabIndex = 1
         '
         'Label7
@@ -225,17 +229,20 @@ Partial Class UpdateCashierC
         '
         'en
         '
-        Me.en.Location = New System.Drawing.Point(96, 31)
+        Me.en.Location = New System.Drawing.Point(113, 31)
         Me.en.MaxLength = 18
         Me.en.Name = "en"
-        Me.en.Size = New System.Drawing.Size(141, 20)
+        Me.en.Size = New System.Drawing.Size(172, 20)
         Me.en.TabIndex = 0
         '
         'ValidateAccountUpdate_btn
         '
-        Me.ValidateAccountUpdate_btn.Location = New System.Drawing.Point(243, 31)
+        Me.ValidateAccountUpdate_btn.BackgroundImage = CType(resources.GetObject("ValidateAccountUpdate_btn.BackgroundImage"), System.Drawing.Image)
+        Me.ValidateAccountUpdate_btn.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.ValidateAccountUpdate_btn.ForeColor = System.Drawing.Color.White
+        Me.ValidateAccountUpdate_btn.Location = New System.Drawing.Point(319, 23)
         Me.ValidateAccountUpdate_btn.Name = "ValidateAccountUpdate_btn"
-        Me.ValidateAccountUpdate_btn.Size = New System.Drawing.Size(75, 23)
+        Me.ValidateAccountUpdate_btn.Size = New System.Drawing.Size(75, 35)
         Me.ValidateAccountUpdate_btn.TabIndex = 2
         Me.ValidateAccountUpdate_btn.Text = "Validate"
         Me.ValidateAccountUpdate_btn.UseVisualStyleBackColor = True
@@ -247,7 +254,7 @@ Partial Class UpdateCashierC
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(13, 13)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(379, 81)
+        Me.GroupBox1.Size = New System.Drawing.Size(415, 81)
         Me.GroupBox1.TabIndex = 15
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Account Validation"

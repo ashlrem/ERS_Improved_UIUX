@@ -22,6 +22,7 @@ Partial Class DeletePayment
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DeletePayment))
         Me.SearchAddpayemt_btn = New System.Windows.Forms.Button()
         Me.sn = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -36,6 +37,9 @@ Partial Class DeletePayment
         '
         'SearchAddpayemt_btn
         '
+        Me.SearchAddpayemt_btn.BackgroundImage = CType(resources.GetObject("SearchAddpayemt_btn.BackgroundImage"), System.Drawing.Image)
+        Me.SearchAddpayemt_btn.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.SearchAddpayemt_btn.ForeColor = System.Drawing.Color.White
         Me.SearchAddpayemt_btn.Location = New System.Drawing.Point(194, 32)
         Me.SearchAddpayemt_btn.Name = "SearchAddpayemt_btn"
         Me.SearchAddpayemt_btn.Size = New System.Drawing.Size(94, 36)
@@ -114,13 +118,17 @@ Partial Class DeletePayment
         '
         'DeletePayment_btn
         '
+        Me.DeletePayment_btn.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.DeletePayment_btn.BackgroundImage = CType(resources.GetObject("DeletePayment_btn.BackgroundImage"), System.Drawing.Image)
         Me.DeletePayment_btn.Enabled = False
+        Me.DeletePayment_btn.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.DeletePayment_btn.ForeColor = System.Drawing.Color.White
         Me.DeletePayment_btn.Location = New System.Drawing.Point(55, 193)
         Me.DeletePayment_btn.Name = "DeletePayment_btn"
         Me.DeletePayment_btn.Size = New System.Drawing.Size(233, 61)
         Me.DeletePayment_btn.TabIndex = 11
         Me.DeletePayment_btn.Text = "Delete"
-        Me.DeletePayment_btn.UseVisualStyleBackColor = True
+        Me.DeletePayment_btn.UseVisualStyleBackColor = False
         '
         'DeletePayment
         '

@@ -61,6 +61,7 @@ Partial Class UpdateStudent_A
         '
         'Button3
         '
+        Me.Button3.Font = New System.Drawing.Font("Calibri", 9.75!)
         Me.Button3.Location = New System.Drawing.Point(803, 292)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(90, 52)
@@ -70,7 +71,7 @@ Partial Class UpdateStudent_A
         '
         'PictureBox2
         '
-        Me.PictureBox2.Location = New System.Drawing.Point(63, 118)
+        Me.PictureBox2.Location = New System.Drawing.Point(39, 118)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(151, 130)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -81,7 +82,7 @@ Partial Class UpdateStudent_A
         '
         Me.con.Enabled = False
         Me.con.Location = New System.Drawing.Point(639, 205)
-        Me.con.MaxLength = 9
+        Me.con.MaxLength = 11
         Me.con.Name = "con"
         Me.con.Size = New System.Drawing.Size(158, 20)
         Me.con.TabIndex = 15
@@ -126,7 +127,7 @@ Partial Class UpdateStudent_A
         '
         Me.nam.Enabled = False
         Me.nam.Location = New System.Drawing.Point(338, 149)
-        Me.nam.MaxLength = 22
+        Me.nam.MaxLength = 40
         Me.nam.Name = "nam"
         Me.nam.Size = New System.Drawing.Size(176, 20)
         Me.nam.TabIndex = 10
@@ -135,7 +136,7 @@ Partial Class UpdateStudent_A
         '
         Me.add.Enabled = False
         Me.add.Location = New System.Drawing.Point(338, 227)
-        Me.add.MaxLength = 18
+        Me.add.MaxLength = 70
         Me.add.Name = "add"
         Me.add.Size = New System.Drawing.Size(176, 20)
         Me.add.TabIndex = 13
@@ -153,10 +154,13 @@ Partial Class UpdateStudent_A
         Me.UpdateButton_a_Student.BackColor = System.Drawing.Color.White
         Me.UpdateButton_a_Student.BackgroundImage = CType(resources.GetObject("UpdateButton_a_Student.BackgroundImage"), System.Drawing.Image)
         Me.UpdateButton_a_Student.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.UpdateButton_a_Student.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UpdateButton_a_Student.ForeColor = System.Drawing.Color.White
         Me.UpdateButton_a_Student.Location = New System.Drawing.Point(692, 292)
         Me.UpdateButton_a_Student.Name = "UpdateButton_a_Student"
         Me.UpdateButton_a_Student.Size = New System.Drawing.Size(105, 52)
         Me.UpdateButton_a_Student.TabIndex = 8
+        Me.UpdateButton_a_Student.Text = "Update"
         Me.UpdateButton_a_Student.UseVisualStyleBackColor = False
         '
         'Label1
@@ -241,6 +245,9 @@ Partial Class UpdateStudent_A
         '
         'SearchStudent_btn
         '
+        Me.SearchStudent_btn.BackgroundImage = CType(resources.GetObject("SearchStudent_btn.BackgroundImage"), System.Drawing.Image)
+        Me.SearchStudent_btn.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.SearchStudent_btn.ForeColor = System.Drawing.Color.White
         Me.SearchStudent_btn.Location = New System.Drawing.Point(540, 116)
         Me.SearchStudent_btn.Name = "SearchStudent_btn"
         Me.SearchStudent_btn.Size = New System.Drawing.Size(75, 23)
@@ -320,7 +327,7 @@ Partial Class UpdateStudent_A
         Me.GroupBox1.Controls.Add(Me.form_lbl)
         Me.GroupBox1.Controls.Add(Me.baptismal_lbl)
         Me.GroupBox1.Enabled = False
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 259)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 273)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(671, 87)
         Me.GroupBox1.TabIndex = 88
@@ -377,6 +384,7 @@ Partial Class UpdateStudent_A
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(904, 395)
         Me.ControlBox = False
         Me.Controls.Add(Me.SearchStudent_btn)
@@ -400,6 +408,7 @@ Partial Class UpdateStudent_A
         Me.Controls.Add(Me.sn)
         Me.Controls.Add(Me.UpdateButton_a_Student)
         Me.Controls.Add(Me.GroupBox1)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "UpdateStudent_A"
         Me.Text = "UpdateStudent_A"

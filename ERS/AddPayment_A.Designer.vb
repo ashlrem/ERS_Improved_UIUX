@@ -22,6 +22,7 @@ Partial Class AddPayment_A
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddPayment_A))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.sn = New System.Windows.Forms.TextBox()
         Me.SearchAddpayemt_btn = New System.Windows.Forms.Button()
@@ -103,12 +104,16 @@ Partial Class AddPayment_A
         '
         'SearchAddpayemt_btn
         '
+        Me.SearchAddpayemt_btn.BackColor = System.Drawing.Color.Transparent
+        Me.SearchAddpayemt_btn.BackgroundImage = CType(resources.GetObject("SearchAddpayemt_btn.BackgroundImage"), System.Drawing.Image)
+        Me.SearchAddpayemt_btn.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.SearchAddpayemt_btn.ForeColor = System.Drawing.Color.White
         Me.SearchAddpayemt_btn.Location = New System.Drawing.Point(171, 12)
         Me.SearchAddpayemt_btn.Name = "SearchAddpayemt_btn"
         Me.SearchAddpayemt_btn.Size = New System.Drawing.Size(75, 36)
         Me.SearchAddpayemt_btn.TabIndex = 2
         Me.SearchAddpayemt_btn.Text = "Search"
-        Me.SearchAddpayemt_btn.UseVisualStyleBackColor = True
+        Me.SearchAddpayemt_btn.UseVisualStyleBackColor = False
         '
         'miscellaneous_fee_grp
         '
@@ -138,6 +143,9 @@ Partial Class AddPayment_A
         '
         'enterTuition_btn
         '
+        Me.enterTuition_btn.BackgroundImage = CType(resources.GetObject("enterTuition_btn.BackgroundImage"), System.Drawing.Image)
+        Me.enterTuition_btn.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.enterTuition_btn.ForeColor = System.Drawing.Color.White
         Me.enterTuition_btn.Location = New System.Drawing.Point(276, 19)
         Me.enterTuition_btn.Name = "enterTuition_btn"
         Me.enterTuition_btn.Size = New System.Drawing.Size(285, 63)
@@ -264,6 +272,8 @@ Partial Class AddPayment_A
         '
         'Button1
         '
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(214, 71)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(66, 23)
@@ -290,7 +300,10 @@ Partial Class AddPayment_A
         '
         'Proceed_btn
         '
+        Me.Proceed_btn.BackgroundImage = CType(resources.GetObject("Proceed_btn.BackgroundImage"), System.Drawing.Image)
         Me.Proceed_btn.Enabled = False
+        Me.Proceed_btn.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Proceed_btn.ForeColor = System.Drawing.Color.White
         Me.Proceed_btn.Location = New System.Drawing.Point(310, 465)
         Me.Proceed_btn.Name = "Proceed_btn"
         Me.Proceed_btn.Size = New System.Drawing.Size(277, 70)
@@ -643,6 +656,7 @@ Partial Class AddPayment_A
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(604, 547)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -655,6 +669,7 @@ Partial Class AddPayment_A
         Me.Controls.Add(Me.sn)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox3)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.MaximumSize = New System.Drawing.Size(614, 580)
         Me.MinimumSize = New System.Drawing.Size(614, 580)

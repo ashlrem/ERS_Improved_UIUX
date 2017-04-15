@@ -22,6 +22,7 @@ Partial Class UpdateClass_R
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UpdateClass_R))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.sec = New System.Windows.Forms.ComboBox()
         Me.UpdateSubj_btn = New System.Windows.Forms.Button()
@@ -42,7 +43,7 @@ Partial Class UpdateClass_R
         Me.GroupBox2.Enabled = False
         Me.GroupBox2.Location = New System.Drawing.Point(16, 103)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(415, 112)
+        Me.GroupBox2.Size = New System.Drawing.Size(334, 79)
         Me.GroupBox2.TabIndex = 18
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Subject Information"
@@ -58,9 +59,12 @@ Partial Class UpdateClass_R
         '
         'UpdateSubj_btn
         '
-        Me.UpdateSubj_btn.Location = New System.Drawing.Point(241, 68)
+        Me.UpdateSubj_btn.BackgroundImage = CType(resources.GetObject("UpdateSubj_btn.BackgroundImage"), System.Drawing.Image)
+        Me.UpdateSubj_btn.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.UpdateSubj_btn.ForeColor = System.Drawing.Color.White
+        Me.UpdateSubj_btn.Location = New System.Drawing.Point(243, 21)
         Me.UpdateSubj_btn.Name = "UpdateSubj_btn"
-        Me.UpdateSubj_btn.Size = New System.Drawing.Size(159, 27)
+        Me.UpdateSubj_btn.Size = New System.Drawing.Size(75, 32)
         Me.UpdateSubj_btn.TabIndex = 6
         Me.UpdateSubj_btn.Text = "Update"
         Me.UpdateSubj_btn.UseVisualStyleBackColor = True
@@ -81,7 +85,7 @@ Partial Class UpdateClass_R
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(16, 16)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(415, 81)
+        Me.GroupBox1.Size = New System.Drawing.Size(334, 81)
         Me.GroupBox1.TabIndex = 17
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Search Section"
@@ -96,9 +100,12 @@ Partial Class UpdateClass_R
         '
         'SearchSubj_btn
         '
-        Me.SearchSubj_btn.Location = New System.Drawing.Point(262, 31)
+        Me.SearchSubj_btn.BackgroundImage = CType(resources.GetObject("SearchSubj_btn.BackgroundImage"), System.Drawing.Image)
+        Me.SearchSubj_btn.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.SearchSubj_btn.ForeColor = System.Drawing.Color.White
+        Me.SearchSubj_btn.Location = New System.Drawing.Point(243, 24)
         Me.SearchSubj_btn.Name = "SearchSubj_btn"
-        Me.SearchSubj_btn.Size = New System.Drawing.Size(75, 23)
+        Me.SearchSubj_btn.Size = New System.Drawing.Size(75, 32)
         Me.SearchSubj_btn.TabIndex = 2
         Me.SearchSubj_btn.Text = "Search"
         Me.SearchSubj_btn.UseVisualStyleBackColor = True
@@ -116,7 +123,7 @@ Partial Class UpdateClass_R
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(446, 225)
+        Me.ClientSize = New System.Drawing.Size(370, 215)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D

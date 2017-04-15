@@ -65,6 +65,9 @@ Partial Class Reciept
         '
         'print_btn
         '
+        Me.print_btn.BackgroundImage = CType(resources.GetObject("print_btn.BackgroundImage"), System.Drawing.Image)
+        Me.print_btn.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.print_btn.ForeColor = System.Drawing.Color.White
         Me.print_btn.Location = New System.Drawing.Point(199, 371)
         Me.print_btn.Name = "print_btn"
         Me.print_btn.Size = New System.Drawing.Size(211, 33)
@@ -120,10 +123,10 @@ Partial Class Reciept
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Modern No. 20", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(236, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(485, 29)
+        Me.Label1.Size = New System.Drawing.Size(474, 36)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Saint Martin de Pores Catholic Church"
         '
@@ -131,7 +134,7 @@ Partial Class Reciept
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(338, 83)
+        Me.Label4.Location = New System.Drawing.Point(354, 85)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(185, 25)
         Me.Label4.TabIndex = 10
@@ -140,10 +143,10 @@ Partial Class Reciept
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(362, 50)
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(380, 50)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(138, 18)
+        Me.Label2.Size = New System.Drawing.Size(125, 18)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Paombong Bulacan"
         '
@@ -230,10 +233,10 @@ Partial Class Reciept
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(380, 68)
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 11.25!)
+        Me.Label3.Location = New System.Drawing.Point(386, 68)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(104, 15)
+        Me.Label3.Size = New System.Drawing.Size(110, 18)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "TIN- 000-042-987"
         '
@@ -424,6 +427,7 @@ Partial Class Reciept
         '
         'Button1
         '
+        Me.Button1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Button1.Location = New System.Drawing.Point(416, 371)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(211, 33)

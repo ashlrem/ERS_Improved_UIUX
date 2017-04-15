@@ -22,6 +22,7 @@ Partial Class ForgotR
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ForgotR))
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ne1 = New System.Windows.Forms.TextBox()
@@ -30,9 +31,10 @@ Partial Class ForgotR
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(170, 76)
+        Me.Button2.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.Button2.Location = New System.Drawing.Point(167, 69)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(75, 33)
         Me.Button2.TabIndex = 11
         Me.Button2.Text = "Cancel"
         Me.Button2.UseVisualStyleBackColor = True
@@ -40,25 +42,29 @@ Partial Class ForgotR
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(40, 35)
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.Label1.Location = New System.Drawing.Point(31, 34)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(124, 13)
+        Me.Label1.Size = New System.Drawing.Size(139, 15)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Enter Employee Number:"
         '
         'ne1
         '
-        Me.ne1.Location = New System.Drawing.Point(173, 32)
+        Me.ne1.Location = New System.Drawing.Point(176, 32)
         Me.ne1.MaxLength = 18
         Me.ne1.Name = "ne1"
-        Me.ne1.Size = New System.Drawing.Size(100, 20)
+        Me.ne1.Size = New System.Drawing.Size(119, 20)
         Me.ne1.TabIndex = 8
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(89, 76)
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(86, 69)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(75, 33)
         Me.Button1.TabIndex = 9
         Me.Button1.Text = "Verify"
         Me.Button1.UseVisualStyleBackColor = True
@@ -67,6 +73,7 @@ Partial Class ForgotR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(326, 135)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button2)

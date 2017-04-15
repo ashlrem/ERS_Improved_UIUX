@@ -64,13 +64,13 @@ Public Class AdminCreate
         Webcam.Show()
     End Sub
     Public Function imagetobase64(ByVal image As Image, ByVal format As ImageFormat) As String
-            Using ms As New MemoryStream()
-                image.Save(ms, format)
-                Dim imageByte As Byte() = ms.ToArray()
+        Using ms As New MemoryStream()
+            image.Save(ms, format)
+            Dim imageByte As Byte() = ms.ToArray()
             Dim base64String As String = Convert.ToBase64String(imageByte)
             pic = base64String
             Return base64String
-            End Using
+        End Using
     End Function
 
     Private Sub cno_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles cno.KeyPress

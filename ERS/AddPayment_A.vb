@@ -183,7 +183,7 @@ Public Class AddPayment_A
             total.Text = ""
             sn.Enabled = True
             SearchAddpayemt_btn.Enabled = True
-           
+
             total.Enabled = True
             Me.Enabled = False
         ElseIf pp_rdbnt.Checked = True Then
@@ -223,7 +223,7 @@ Public Class AddPayment_A
             SearchAddpayemt_btn.Enabled = True
             total1.Text = ""
             total.Text = ""
-     
+
             total.Enabled = True
             Me.Enabled = False
         End If
@@ -258,36 +258,36 @@ Public Class AddPayment_A
                 fp_rdobnt.Enabled = True
                 pp_rdbnt.Enabled = True
                 total.Enabled = False
-         
-            If getSubj.SelectedItem.ToString = "Grade 1" Then
-                t = total.Text
-                t = t + totalB
-                total1.Text = t
-            ElseIf getSubj.SelectedItem.ToString = "Grade 2" Then
-                t = total.Text
-                t = t + totalB
-                total1.Text = t
-            ElseIf getSubj.SelectedItem.ToString = "Grade 3" Then
-                t = total.Text
-                t = t + totalB
-                total1.Text = t
-            ElseIf getSubj.SelectedItem.ToString = "Grade 4" Then
-                t = total.Text
-                t = t + totalB
-                total1.Text = t
-            ElseIf getSubj.SelectedItem.ToString = "Grade 5" Then
-                t = total.Text
-                t = t + totalB
-                total1.Text = t
-            ElseIf getSubj.SelectedItem.ToString = "Grade 6" Then
-                t = total.Text
-                t = t + totalB
+
+                If getSubj.SelectedItem.ToString = "Grade 1" Then
+                    t = total.Text
+                    t = t + totalB
+                    total1.Text = t
+                ElseIf getSubj.SelectedItem.ToString = "Grade 2" Then
+                    t = total.Text
+                    t = t + totalB
+                    total1.Text = t
+                ElseIf getSubj.SelectedItem.ToString = "Grade 3" Then
+                    t = total.Text
+                    t = t + totalB
+                    total1.Text = t
+                ElseIf getSubj.SelectedItem.ToString = "Grade 4" Then
+                    t = total.Text
+                    t = t + totalB
+                    total1.Text = t
+                ElseIf getSubj.SelectedItem.ToString = "Grade 5" Then
+                    t = total.Text
+                    t = t + totalB
+                    total1.Text = t
+                ElseIf getSubj.SelectedItem.ToString = "Grade 6" Then
+                    t = total.Text
+                    t = t + totalB
                     total1.Text = t
                 End If
             Catch
             End Try
         End If
-         
+
     End Sub
 
     Private Sub getSubj_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles getSubj.SelectedIndexChanged

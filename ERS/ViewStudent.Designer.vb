@@ -60,6 +60,9 @@ Partial Class ViewStudent
         '
         'SearchStudent_btn
         '
+        Me.SearchStudent_btn.BackgroundImage = CType(resources.GetObject("SearchStudent_btn.BackgroundImage"), System.Drawing.Image)
+        Me.SearchStudent_btn.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.SearchStudent_btn.ForeColor = System.Drawing.Color.White
         Me.SearchStudent_btn.Location = New System.Drawing.Point(517, 102)
         Me.SearchStudent_btn.Name = "SearchStudent_btn"
         Me.SearchStudent_btn.Size = New System.Drawing.Size(75, 23)
@@ -149,7 +152,7 @@ Partial Class ViewStudent
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(779, 295)
+        Me.Button3.Location = New System.Drawing.Point(784, 284)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(90, 46)
         Me.Button3.TabIndex = 54
@@ -224,6 +227,7 @@ Partial Class ViewStudent
         'sn
         '
         Me.sn.Location = New System.Drawing.Point(315, 104)
+        Me.sn.MaxLength = 18
         Me.sn.Name = "sn"
         Me.sn.Size = New System.Drawing.Size(176, 20)
         Me.sn.TabIndex = 48
@@ -357,6 +361,7 @@ Partial Class ViewStudent
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(904, 379)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupBox1)
@@ -379,6 +384,7 @@ Partial Class ViewStudent
         Me.Controls.Add(Me.nam)
         Me.Controls.Add(Me.add)
         Me.Controls.Add(Me.sn)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "ViewStudent"
         Me.Text = "ViewStudent"

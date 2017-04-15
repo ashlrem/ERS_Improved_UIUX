@@ -13,7 +13,7 @@ Public Class ViewStudent_R
         Return tmpImage
     End Function
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-      
+
 
         Dim a As Integer
         a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)

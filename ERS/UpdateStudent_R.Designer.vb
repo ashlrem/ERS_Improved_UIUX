@@ -61,6 +61,9 @@ Partial Class UpdateStudent_R
         '
         'SearchStudent_btn
         '
+        Me.SearchStudent_btn.BackgroundImage = CType(resources.GetObject("SearchStudent_btn.BackgroundImage"), System.Drawing.Image)
+        Me.SearchStudent_btn.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.SearchStudent_btn.ForeColor = System.Drawing.Color.White
         Me.SearchStudent_btn.Location = New System.Drawing.Point(517, 107)
         Me.SearchStudent_btn.Name = "SearchStudent_btn"
         Me.SearchStudent_btn.Size = New System.Drawing.Size(75, 23)
@@ -150,9 +153,10 @@ Partial Class UpdateStudent_R
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(799, 299)
+        Me.Button3.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.Button3.Location = New System.Drawing.Point(799, 277)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(93, 46)
+        Me.Button3.Size = New System.Drawing.Size(93, 68)
         Me.Button3.TabIndex = 33
         Me.Button3.Text = "Cancel"
         Me.Button3.UseVisualStyleBackColor = True
@@ -170,7 +174,7 @@ Partial Class UpdateStudent_R
         '
         Me.con.Enabled = False
         Me.con.Location = New System.Drawing.Point(616, 196)
-        Me.con.MaxLength = 9
+        Me.con.MaxLength = 11
         Me.con.Name = "con"
         Me.con.Size = New System.Drawing.Size(158, 20)
         Me.con.TabIndex = 30
@@ -215,7 +219,7 @@ Partial Class UpdateStudent_R
         '
         Me.add.Enabled = False
         Me.add.Location = New System.Drawing.Point(315, 218)
-        Me.add.MaxLength = 18
+        Me.add.MaxLength = 70
         Me.add.Name = "add"
         Me.add.Size = New System.Drawing.Size(176, 20)
         Me.add.TabIndex = 28
@@ -233,10 +237,13 @@ Partial Class UpdateStudent_R
         Me.UpdateButton_a_Student.BackColor = System.Drawing.Color.White
         Me.UpdateButton_a_Student.BackgroundImage = CType(resources.GetObject("UpdateButton_a_Student.BackgroundImage"), System.Drawing.Image)
         Me.UpdateButton_a_Student.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.UpdateButton_a_Student.Location = New System.Drawing.Point(688, 299)
+        Me.UpdateButton_a_Student.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UpdateButton_a_Student.ForeColor = System.Drawing.Color.White
+        Me.UpdateButton_a_Student.Location = New System.Drawing.Point(688, 277)
         Me.UpdateButton_a_Student.Name = "UpdateButton_a_Student"
-        Me.UpdateButton_a_Student.Size = New System.Drawing.Size(105, 46)
+        Me.UpdateButton_a_Student.Size = New System.Drawing.Size(105, 68)
         Me.UpdateButton_a_Student.TabIndex = 24
+        Me.UpdateButton_a_Student.Text = "Update"
         Me.UpdateButton_a_Student.UseVisualStyleBackColor = False
         '
         'sy
@@ -265,7 +272,7 @@ Partial Class UpdateStudent_R
         Me.GroupBox1.Controls.Add(Me.form_lbl)
         Me.GroupBox1.Controls.Add(Me.baptismal_lbl)
         Me.GroupBox1.Enabled = False
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 258)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 267)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(670, 87)
         Me.GroupBox1.TabIndex = 89
@@ -377,6 +384,7 @@ Partial Class UpdateStudent_R
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(904, 395)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupBox1)
@@ -400,6 +408,7 @@ Partial Class UpdateStudent_R
         Me.Controls.Add(Me.add)
         Me.Controls.Add(Me.sn)
         Me.Controls.Add(Me.UpdateButton_a_Student)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "UpdateStudent_R"
         Me.Text = "UpdateStudent_R"

@@ -22,6 +22,7 @@ Partial Class UpdateClass_A
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UpdateClass_A))
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.sec = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -42,7 +43,7 @@ Partial Class UpdateClass_A
         Me.GroupBox3.Enabled = False
         Me.GroupBox3.Location = New System.Drawing.Point(12, 99)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(415, 112)
+        Me.GroupBox3.Size = New System.Drawing.Size(337, 89)
         Me.GroupBox3.TabIndex = 20
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Subject Information"
@@ -58,9 +59,11 @@ Partial Class UpdateClass_A
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(237, 67)
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(243, 20)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(159, 27)
+        Me.Button1.Size = New System.Drawing.Size(75, 34)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Update"
         Me.Button1.UseVisualStyleBackColor = True
@@ -76,9 +79,12 @@ Partial Class UpdateClass_A
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(262, 31)
+        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
+        Me.Button2.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(243, 23)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(75, 35)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "Search"
         Me.Button2.UseVisualStyleBackColor = True
@@ -98,7 +104,7 @@ Partial Class UpdateClass_A
         Me.GroupBox4.Controls.Add(Me.Label7)
         Me.GroupBox4.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(415, 81)
+        Me.GroupBox4.Size = New System.Drawing.Size(337, 81)
         Me.GroupBox4.TabIndex = 19
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Search Section"
@@ -116,7 +122,7 @@ Partial Class UpdateClass_A
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(446, 225)
+        Me.ClientSize = New System.Drawing.Size(373, 219)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox4)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D

@@ -34,7 +34,7 @@ Partial Class SearchStudent_R
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(912, 14)
+        Me.Button1.Location = New System.Drawing.Point(910, 325)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 11
@@ -44,7 +44,7 @@ Partial Class SearchStudent_R
         'lblNoOfStudent
         '
         Me.lblNoOfStudent.AutoSize = True
-        Me.lblNoOfStudent.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNoOfStudent.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNoOfStudent.Location = New System.Drawing.Point(219, 325)
         Me.lblNoOfStudent.Name = "lblNoOfStudent"
         Me.lblNoOfStudent.Size = New System.Drawing.Size(13, 18)
@@ -54,10 +54,10 @@ Partial Class SearchStudent_R
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(15, 325)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(198, 18)
+        Me.Label1.Size = New System.Drawing.Size(189, 18)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Number of Student Enrolled :"
         '
@@ -94,9 +94,10 @@ Partial Class SearchStudent_R
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(9, 21)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(97, 13)
+        Me.Label2.Size = New System.Drawing.Size(95, 13)
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Emter Student No.:"
         '

@@ -22,10 +22,12 @@ Partial Class UpdateAdmin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UpdateAdmin))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.status = New System.Windows.Forms.ComboBox()
         Me.UpdateAdmin_btn = New System.Windows.Forms.Button()
+        Me.cno = New System.Windows.Forms.TextBox()
         Me.eadd = New System.Windows.Forms.TextBox()
         Me.add = New System.Windows.Forms.TextBox()
         Me.bd = New System.Windows.Forms.MaskedTextBox()
@@ -43,7 +45,6 @@ Partial Class UpdateAdmin
         Me.en = New System.Windows.Forms.TextBox()
         Me.ValidateAccountUpdate_btn = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cno = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -98,17 +99,28 @@ Partial Class UpdateAdmin
         '
         'UpdateAdmin_btn
         '
+        Me.UpdateAdmin_btn.BackgroundImage = CType(resources.GetObject("UpdateAdmin_btn.BackgroundImage"), System.Drawing.Image)
+        Me.UpdateAdmin_btn.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.UpdateAdmin_btn.ForeColor = System.Drawing.Color.White
         Me.UpdateAdmin_btn.Location = New System.Drawing.Point(250, 214)
         Me.UpdateAdmin_btn.Name = "UpdateAdmin_btn"
         Me.UpdateAdmin_btn.Size = New System.Drawing.Size(159, 27)
         Me.UpdateAdmin_btn.TabIndex = 6
-        Me.UpdateAdmin_btn.Text = "Update Accont"
+        Me.UpdateAdmin_btn.Text = "Update Account"
         Me.UpdateAdmin_btn.UseVisualStyleBackColor = True
+        '
+        'cno
+        '
+        Me.cno.Location = New System.Drawing.Point(115, 188)
+        Me.cno.MaxLength = 11
+        Me.cno.Name = "cno"
+        Me.cno.Size = New System.Drawing.Size(170, 20)
+        Me.cno.TabIndex = 7
         '
         'eadd
         '
         Me.eadd.Location = New System.Drawing.Point(115, 162)
-        Me.eadd.MaxLength = 18
+        Me.eadd.MaxLength = 40
         Me.eadd.Name = "eadd"
         Me.eadd.Size = New System.Drawing.Size(170, 20)
         Me.eadd.TabIndex = 6
@@ -116,7 +128,7 @@ Partial Class UpdateAdmin
         'add
         '
         Me.add.Location = New System.Drawing.Point(115, 136)
-        Me.add.MaxLength = 18
+        Me.add.MaxLength = 70
         Me.add.Name = "add"
         Me.add.Size = New System.Drawing.Size(170, 20)
         Me.add.TabIndex = 5
@@ -131,7 +143,7 @@ Partial Class UpdateAdmin
         'mn
         '
         Me.mn.Location = New System.Drawing.Point(115, 84)
-        Me.mn.MaxLength = 1
+        Me.mn.MaxLength = 18
         Me.mn.Name = "mn"
         Me.mn.Size = New System.Drawing.Size(170, 20)
         Me.mn.TabIndex = 3
@@ -155,25 +167,28 @@ Partial Class UpdateAdmin
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(23, 195)
+        Me.Label7.Font = New System.Drawing.Font("Calibri", 8.25!)
+        Me.Label7.Location = New System.Drawing.Point(23, 191)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(84, 13)
+        Me.Label7.Size = New System.Drawing.Size(85, 13)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "ContactNumber:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(23, 169)
+        Me.Label6.Font = New System.Drawing.Font("Calibri", 8.25!)
+        Me.Label6.Location = New System.Drawing.Point(23, 165)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(81, 13)
+        Me.Label6.Size = New System.Drawing.Size(79, 13)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Email_Account:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(23, 143)
+        Me.Label5.Font = New System.Drawing.Font("Calibri", 8.25!)
+        Me.Label5.Location = New System.Drawing.Point(23, 139)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(48, 13)
         Me.Label5.TabIndex = 0
@@ -182,34 +197,38 @@ Partial Class UpdateAdmin
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(25, 117)
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 8.25!)
+        Me.Label4.Location = New System.Drawing.Point(23, 113)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(48, 13)
+        Me.Label4.Size = New System.Drawing.Size(50, 13)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Birthday:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(23, 91)
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 8.25!)
+        Me.Label3.Location = New System.Drawing.Point(23, 87)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 13)
+        Me.Label3.Size = New System.Drawing.Size(71, 13)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "MiddleName:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(25, 65)
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 8.25!)
+        Me.Label2.Location = New System.Drawing.Point(23, 61)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 13)
+        Me.Label2.Size = New System.Drawing.Size(65, 13)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "GivenName:"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(23, 39)
+        Me.Label8.Font = New System.Drawing.Font("Calibri", 8.25!)
+        Me.Label8.Location = New System.Drawing.Point(23, 35)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(52, 13)
         Me.Label8.TabIndex = 0
@@ -222,24 +241,27 @@ Partial Class UpdateAdmin
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(16, 16)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(379, 81)
+        Me.GroupBox1.Size = New System.Drawing.Size(411, 81)
         Me.GroupBox1.TabIndex = 13
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Account Validation"
         '
         'en
         '
-        Me.en.Location = New System.Drawing.Point(96, 31)
+        Me.en.Location = New System.Drawing.Point(111, 31)
         Me.en.MaxLength = 18
         Me.en.Name = "en"
-        Me.en.Size = New System.Drawing.Size(141, 20)
+        Me.en.Size = New System.Drawing.Size(170, 20)
         Me.en.TabIndex = 0
         '
         'ValidateAccountUpdate_btn
         '
-        Me.ValidateAccountUpdate_btn.Location = New System.Drawing.Point(243, 31)
+        Me.ValidateAccountUpdate_btn.BackgroundImage = CType(resources.GetObject("ValidateAccountUpdate_btn.BackgroundImage"), System.Drawing.Image)
+        Me.ValidateAccountUpdate_btn.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ValidateAccountUpdate_btn.ForeColor = System.Drawing.Color.White
+        Me.ValidateAccountUpdate_btn.Location = New System.Drawing.Point(298, 22)
         Me.ValidateAccountUpdate_btn.Name = "ValidateAccountUpdate_btn"
-        Me.ValidateAccountUpdate_btn.Size = New System.Drawing.Size(75, 23)
+        Me.ValidateAccountUpdate_btn.Size = New System.Drawing.Size(75, 36)
         Me.ValidateAccountUpdate_btn.TabIndex = 2
         Me.ValidateAccountUpdate_btn.Text = "Validate"
         Me.ValidateAccountUpdate_btn.UseVisualStyleBackColor = True
@@ -247,19 +269,12 @@ Partial Class UpdateAdmin
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(23, 36)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 13)
+        Me.Label1.Size = New System.Drawing.Size(66, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "EmployeeID:"
-        '
-        'cno
-        '
-        Me.cno.Location = New System.Drawing.Point(115, 188)
-        Me.cno.MaxLength = 18
-        Me.cno.Name = "cno"
-        Me.cno.Size = New System.Drawing.Size(170, 20)
-        Me.cno.TabIndex = 7
         '
         'UpdateAdmin
         '

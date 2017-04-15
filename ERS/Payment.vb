@@ -117,7 +117,7 @@ Module Payment
                 My.Forms.UpdatePayment_A.pre_btn.Visible = True
                 TotalPaid = r("TotalAmountPaid")
 
-             
+
                 My.Forms.Reciept.nameOS.Text = My.Forms.UpdatePayment_A.sn.Text
                 My.Forms.Reciept.grade.Text = My.Forms.UpdatePayment_A.grade.Text
 
@@ -139,7 +139,7 @@ Module Payment
     Public Sub prelimPay_btn()
         Try
 
-         
+
 
             Dim reg As String = "UPDATE payment_tbl SET FirstPayment = 0, TotalAmountPaid=  '" & total & "' where Student_ID_No ='" & My.Forms.UpdatePayment_A.sn.Text & "'"
             Dim paymentOf As String = "Midterm"

@@ -49,9 +49,12 @@ Partial Class DeleteStudent_A
         '
         'SearchStudent_btn
         '
-        Me.SearchStudent_btn.Location = New System.Drawing.Point(517, 107)
+        Me.SearchStudent_btn.BackgroundImage = CType(resources.GetObject("SearchStudent_btn.BackgroundImage"), System.Drawing.Image)
+        Me.SearchStudent_btn.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.SearchStudent_btn.ForeColor = System.Drawing.Color.White
+        Me.SearchStudent_btn.Location = New System.Drawing.Point(518, 102)
         Me.SearchStudent_btn.Name = "SearchStudent_btn"
-        Me.SearchStudent_btn.Size = New System.Drawing.Size(75, 23)
+        Me.SearchStudent_btn.Size = New System.Drawing.Size(75, 33)
         Me.SearchStudent_btn.TabIndex = 42
         Me.SearchStudent_btn.Text = "Search"
         Me.SearchStudent_btn.UseVisualStyleBackColor = True
@@ -60,9 +63,10 @@ Partial Class DeleteStudent_A
         '
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Calibri", 9.75!)
         Me.Label8.Location = New System.Drawing.Point(525, 199)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(47, 13)
+        Me.Label8.Size = New System.Drawing.Size(52, 15)
         Me.Label8.TabIndex = 34
         Me.Label8.Text = "Contact:"
         '
@@ -70,9 +74,10 @@ Partial Class DeleteStudent_A
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Calibri", 9.75!)
         Me.Label7.Location = New System.Drawing.Point(525, 147)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(48, 13)
+        Me.Label7.Size = New System.Drawing.Size(57, 15)
         Me.Label7.TabIndex = 35
         Me.Label7.Text = "Birthday:"
         '
@@ -80,9 +85,10 @@ Partial Class DeleteStudent_A
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Location = New System.Drawing.Point(215, 221)
+        Me.Label6.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.Label6.Location = New System.Drawing.Point(212, 221)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(48, 13)
+        Me.Label6.Size = New System.Drawing.Size(54, 15)
         Me.Label6.TabIndex = 39
         Me.Label6.Text = "Address:"
         '
@@ -90,9 +96,10 @@ Partial Class DeleteStudent_A
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Calibri", 9.75!)
         Me.Label5.Location = New System.Drawing.Point(525, 173)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(29, 13)
+        Me.Label5.Size = New System.Drawing.Size(29, 15)
         Me.Label5.TabIndex = 38
         Me.Label5.Text = "Age:"
         '
@@ -100,9 +107,10 @@ Partial Class DeleteStudent_A
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Location = New System.Drawing.Point(215, 192)
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.Label4.Location = New System.Drawing.Point(212, 195)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(68, 13)
+        Me.Label4.Size = New System.Drawing.Size(73, 15)
         Me.Label4.TabIndex = 36
         Me.Label4.Text = "School Year:"
         '
@@ -110,9 +118,10 @@ Partial Class DeleteStudent_A
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Location = New System.Drawing.Point(215, 169)
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.Label3.Location = New System.Drawing.Point(212, 169)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(65, 13)
+        Me.Label3.Size = New System.Drawing.Size(70, 15)
         Me.Label3.TabIndex = 37
         Me.Label3.Text = "Grade Level"
         '
@@ -120,9 +129,10 @@ Partial Class DeleteStudent_A
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(215, 143)
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.Label2.Location = New System.Drawing.Point(212, 143)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(78, 13)
+        Me.Label2.Size = New System.Drawing.Size(85, 15)
         Me.Label2.TabIndex = 40
         Me.Label2.Text = "Student Name:"
         '
@@ -130,15 +140,18 @@ Partial Class DeleteStudent_A
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(209, 113)
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.Label1.Location = New System.Drawing.Point(212, 112)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(84, 13)
+        Me.Label1.Size = New System.Drawing.Size(94, 15)
         Me.Label1.TabIndex = 41
         Me.Label1.Text = "Student Number"
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.Color.White
+        Me.Button3.BackColor = System.Drawing.SystemColors.Control
+        Me.Button3.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.Button3.ForeColor = System.Drawing.Color.Black
         Me.Button3.Location = New System.Drawing.Point(790, 264)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(90, 46)
@@ -213,7 +226,7 @@ Partial Class DeleteStudent_A
         '
         Me.add.Enabled = False
         Me.add.Location = New System.Drawing.Point(315, 218)
-        Me.add.MaxLength = 18
+        Me.add.MaxLength = 70
         Me.add.Name = "add"
         Me.add.Size = New System.Drawing.Size(176, 20)
         Me.add.TabIndex = 28
@@ -229,7 +242,10 @@ Partial Class DeleteStudent_A
         'DeleteButton_a_Student
         '
         Me.DeleteButton_a_Student.BackColor = System.Drawing.Color.White
+        Me.DeleteButton_a_Student.BackgroundImage = CType(resources.GetObject("DeleteButton_a_Student.BackgroundImage"), System.Drawing.Image)
         Me.DeleteButton_a_Student.Enabled = False
+        Me.DeleteButton_a_Student.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.DeleteButton_a_Student.ForeColor = System.Drawing.Color.White
         Me.DeleteButton_a_Student.Location = New System.Drawing.Point(669, 264)
         Me.DeleteButton_a_Student.Name = "DeleteButton_a_Student"
         Me.DeleteButton_a_Student.Size = New System.Drawing.Size(105, 46)
@@ -246,6 +262,7 @@ Partial Class DeleteStudent_A
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(904, 363)
         Me.ControlBox = False
         Me.Controls.Add(Me.SearchStudent_btn)
@@ -268,9 +285,10 @@ Partial Class DeleteStudent_A
         Me.Controls.Add(Me.add)
         Me.Controls.Add(Me.sn)
         Me.Controls.Add(Me.DeleteButton_a_Student)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "DeleteStudent_A"
-        Me.Text = "DeleteStudent_A"
+        Me.Text = "Delete Student"
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

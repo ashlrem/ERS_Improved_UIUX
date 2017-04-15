@@ -23,6 +23,8 @@ Partial Class forgot2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(forgot2))
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.ne1 = New System.Windows.Forms.Label()
         Me.ans2 = New System.Windows.Forms.TextBox()
@@ -33,37 +35,64 @@ Partial Class forgot2
         Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(29, 106)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(430, 26)
+        Me.Label2.TabIndex = 16
+        Me.Label2.Text = "These questions will help us verify your identity."
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(28, 35)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(490, 36)
+        Me.Label1.TabIndex = 15
+        Me.Label1.Text = "Please answer your security questions."
+        '
         'Button3
         '
         Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button3.Location = New System.Drawing.Point(538, 149)
+        Me.Button3.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(540, 169)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(128, 42)
-        Me.Button3.TabIndex = 11
+        Me.Button3.TabIndex = 13
+        Me.Button3.Text = "Continue"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'ne1
         '
         Me.ne1.AutoSize = True
-        Me.ne1.Location = New System.Drawing.Point(565, 164)
+        Me.ne1.Location = New System.Drawing.Point(567, 184)
         Me.ne1.Name = "ne1"
         Me.ne1.Size = New System.Drawing.Size(39, 13)
-        Me.ne1.TabIndex = 12
+        Me.ne1.TabIndex = 14
         Me.ne1.Text = "Label1"
         '
         'ans2
         '
-        Me.ans2.Location = New System.Drawing.Point(64, 258)
-        Me.ans2.MaxLength = 18
+        Me.ans2.Location = New System.Drawing.Point(66, 278)
+        Me.ans2.MaxLength = 30
         Me.ans2.Name = "ans2"
         Me.ans2.Size = New System.Drawing.Size(294, 20)
-        Me.ans2.TabIndex = 10
+        Me.ans2.TabIndex = 12
         '
         'ans1
         '
-        Me.ans1.Location = New System.Drawing.Point(64, 164)
-        Me.ans1.MaxLength = 18
+        Me.ans1.Location = New System.Drawing.Point(66, 201)
+        Me.ans1.MaxLength = 30
         Me.ans1.Name = "ans1"
         Me.ans1.Size = New System.Drawing.Size(294, 20)
         Me.ans1.TabIndex = 9
@@ -71,41 +100,48 @@ Partial Class forgot2
         'sq2
         '
         Me.sq2.AutoSize = True
+        Me.sq2.BackColor = System.Drawing.Color.Transparent
         Me.sq2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.sq2.Location = New System.Drawing.Point(28, 213)
+        Me.sq2.Location = New System.Drawing.Point(30, 244)
         Me.sq2.Name = "sq2"
         Me.sq2.Size = New System.Drawing.Size(63, 20)
-        Me.sq2.TabIndex = 7
+        Me.sq2.TabIndex = 10
         Me.sq2.Text = "Label1"
         '
         'sq1
         '
         Me.sq1.AutoSize = True
+        Me.sq1.BackColor = System.Drawing.Color.Transparent
         Me.sq1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.sq1.Location = New System.Drawing.Point(28, 119)
+        Me.sq1.Location = New System.Drawing.Point(30, 166)
         Me.sq1.Name = "sq1"
         Me.sq1.Size = New System.Drawing.Size(63, 20)
-        Me.sq1.TabIndex = 8
+        Me.sq1.TabIndex = 11
         Me.sq1.Text = "Label1"
         '
         'Button2
         '
-        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.Location = New System.Drawing.Point(538, 198)
+        Me.Button2.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button2.ForeColor = System.Drawing.Color.Black
+        Me.Button2.Location = New System.Drawing.Point(540, 261)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(128, 37)
-        Me.Button2.TabIndex = 5
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "Cancel"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
         '
         Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.Location = New System.Drawing.Point(538, 241)
+        Me.Button1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(540, 217)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(128, 37)
-        Me.Button1.TabIndex = 6
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "Back"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'forgot2
@@ -116,6 +152,8 @@ Partial Class forgot2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(696, 332)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.ne1)
         Me.Controls.Add(Me.ans2)
@@ -124,15 +162,18 @@ Partial Class forgot2
         Me.Controls.Add(Me.sq1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.DoubleBuffered = True
         Me.Location = New System.Drawing.Point(350, 50)
         Me.MaximumSize = New System.Drawing.Size(712, 371)
         Me.MinimumSize = New System.Drawing.Size(712, 371)
         Me.Name = "forgot2"
-        Me.Text = "forgot2"
+        Me.Text = "Forgot Password"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents ne1 As System.Windows.Forms.Label
     Friend WithEvents ans2 As System.Windows.Forms.TextBox

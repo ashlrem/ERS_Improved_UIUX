@@ -117,6 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="print_btn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAPoAAABkCAYAAACvgC0OAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAALKSURBVHhe7dPVlhBkAEXhc0kppXSnhCClU5QoAmJQEtIMNXQz5MCAIq2ILYqCQSooYQBK3PpI
+        x/85ztoX31r7BbZGH37yX2EAsZ6o5tBjA8immsZHBpBN1Y0PDSCbqg/+awDZVHXgHwPIpqqGBwaQTZUN
+        9w0gmyr33zOAbKrY97cBZFPF3r8MIJte2vOnAWQro/9RAkAyvbj7rgFk06hddwwgm0bV3zaAbBpZf8sA
+        smnkzt8NIJtG7PjNALJpxPabBpBNw7fdMIBsZfRfSwBIpmFbfzGAbBq25boBZNMLm68ZQLYy+tUSAJJp
+        6KYrBpBNQzZeNoBsGrLhkgFk0/PrfzaAbGX0n0oASKbB6340gGwavPYHA8imQWsuGkA2Daq7YADZNLDu
+        ewPIpoGrvzOAbBqw6rwBZNNzK781gGxl9G9KAEim/ivOGUA29V/+tQFkU7/arwwgm/ot+9IAsqnvsi8M
+        IJv6Lv3cALKpz5LPDCCb+iz+1ACyqffiTwwgm3ovOmsA2dRr4VkDyKaeCz42gGzqOf+MAWRTj/kfGUA2
+        9Xj3QwPIpu7zThtANnWfe8oAsqnb3JMGkE3d5pwwgGzqOvu4AWRT13eOGUA2dZl11ACyldE/KAEgmTrP
+        PGIA2dRpxvsGkE2dpr9nANnUcfphA8imjtMOGUA2dXi70QCyqcNbBw0gm9q/ecAAspXRG0oASKZ2b+w3
+        gGxqN3WfAWTTs6/vNYBsZfQ9JQAk0zNTdhtANrWdvMsAsqntpHoDyKY2r+00gGxl9B0lACRT64nbDSCb
+        Wr+6zQCyqdUrWw0gm1pN2GIA2dRywmYDyKaWL28ygGx6evxGA8imp8ZtMIBsZfT1JQAkU4ux6wwgm1qM
+        WWsA2dR89BoDyKbmNXUGkE3NalYbQDY1q15lANnUtGqlAWRT08oVBpBNTSqXG0A2NamofVgYQKrau/8D
+        1gw+gzmE2lUAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="PrintDocument1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -156,7 +175,6 @@
   <metadata name="LineShape1.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>675, 0</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEASABIAAD/4RV4RXhpZgAATU0AKgAAAAgADAEAAAMAAAABAyAAAAEBAAMAAAAB

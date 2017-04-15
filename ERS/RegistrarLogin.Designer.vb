@@ -37,11 +37,11 @@ Partial Class RegistrarLogin
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 24.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(12, 4)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(146, 37)
+        Me.Label1.Size = New System.Drawing.Size(135, 39)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Registrar"
         '
@@ -56,13 +56,17 @@ Partial Class RegistrarLogin
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
         Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.Location = New System.Drawing.Point(259, 144)
+        Me.Button1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(217, 146)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(106, 27)
         Me.Button1.TabIndex = 3
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Text = "Login"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'en
         '
@@ -76,16 +80,18 @@ Partial Class RegistrarLogin
         '
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.LinkLabel1.Location = New System.Drawing.Point(161, 158)
+        Me.LinkLabel1.Font = New System.Drawing.Font("Calibri", 8.25!)
+        Me.LinkLabel1.Location = New System.Drawing.Point(103, 154)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(92, 13)
+        Me.LinkLabel1.Size = New System.Drawing.Size(90, 13)
         Me.LinkLabel1.TabIndex = 4
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Forgot Password?"
         '
         'LoginCancelBtn
         '
-        Me.LoginCancelBtn.Location = New System.Drawing.Point(371, 144)
+        Me.LoginCancelBtn.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.LoginCancelBtn.Location = New System.Drawing.Point(329, 146)
         Me.LoginCancelBtn.Name = "LoginCancelBtn"
         Me.LoginCancelBtn.Size = New System.Drawing.Size(104, 27)
         Me.LoginCancelBtn.TabIndex = 8
@@ -96,10 +102,10 @@ Partial Class RegistrarLogin
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold)
         Me.Label3.Location = New System.Drawing.Point(101, 110)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(103, 24)
+        Me.Label3.Size = New System.Drawing.Size(100, 26)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Password:"
         '
@@ -107,10 +113,10 @@ Partial Class RegistrarLogin
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(101, 70)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(139, 24)
+        Me.Label2.Size = New System.Drawing.Size(134, 26)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Employee No:"
         '

@@ -22,6 +22,7 @@ Partial Class DeleteSub_A
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DeleteSub_A))
         Me.DeleteSubj_btn = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.subj = New System.Windows.Forms.ComboBox()
@@ -36,11 +37,14 @@ Partial Class DeleteSub_A
         '
         'DeleteSubj_btn
         '
-        Me.DeleteSubj_btn.Location = New System.Drawing.Point(294, 41)
+        Me.DeleteSubj_btn.BackgroundImage = CType(resources.GetObject("DeleteSubj_btn.BackgroundImage"), System.Drawing.Image)
+        Me.DeleteSubj_btn.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.DeleteSubj_btn.ForeColor = System.Drawing.Color.White
+        Me.DeleteSubj_btn.Location = New System.Drawing.Point(321, 21)
         Me.DeleteSubj_btn.Name = "DeleteSubj_btn"
-        Me.DeleteSubj_btn.Size = New System.Drawing.Size(115, 27)
+        Me.DeleteSubj_btn.Size = New System.Drawing.Size(79, 34)
         Me.DeleteSubj_btn.TabIndex = 6
-        Me.DeleteSubj_btn.Text = "Delete Class"
+        Me.DeleteSubj_btn.Text = "Delete"
         Me.DeleteSubj_btn.UseVisualStyleBackColor = True
         '
         'GroupBox1
@@ -50,7 +54,7 @@ Partial Class DeleteSub_A
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(16, 16)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(368, 81)
+        Me.GroupBox1.Size = New System.Drawing.Size(415, 81)
         Me.GroupBox1.TabIndex = 25
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Search Subject"
@@ -60,16 +64,19 @@ Partial Class DeleteSub_A
         Me.subj.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.subj.FormattingEnabled = True
         Me.subj.Items.AddRange(New Object() {"Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6"})
-        Me.subj.Location = New System.Drawing.Point(104, 30)
+        Me.subj.Location = New System.Drawing.Point(133, 34)
         Me.subj.Name = "subj"
-        Me.subj.Size = New System.Drawing.Size(160, 21)
+        Me.subj.Size = New System.Drawing.Size(164, 21)
         Me.subj.TabIndex = 4
         '
         'SearchSubj_btn
         '
-        Me.SearchSubj_btn.Location = New System.Drawing.Point(270, 31)
+        Me.SearchSubj_btn.BackgroundImage = CType(resources.GetObject("SearchSubj_btn.BackgroundImage"), System.Drawing.Image)
+        Me.SearchSubj_btn.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.SearchSubj_btn.ForeColor = System.Drawing.Color.White
+        Me.SearchSubj_btn.Location = New System.Drawing.Point(321, 24)
         Me.SearchSubj_btn.Name = "SearchSubj_btn"
-        Me.SearchSubj_btn.Size = New System.Drawing.Size(75, 23)
+        Me.SearchSubj_btn.Size = New System.Drawing.Size(79, 34)
         Me.SearchSubj_btn.TabIndex = 2
         Me.SearchSubj_btn.Text = "Search"
         Me.SearchSubj_btn.UseVisualStyleBackColor = True
@@ -77,18 +84,20 @@ Partial Class DeleteSub_A
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 34)
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.Label1.Location = New System.Drawing.Point(23, 36)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(96, 13)
+        Me.Label1.Size = New System.Drawing.Size(104, 15)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Enter Grade Level:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(47, 32)
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 9.75!)
+        Me.Label2.Location = New System.Drawing.Point(50, 32)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 13)
+        Me.Label2.Size = New System.Drawing.Size(46, 15)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Section"
         '
@@ -96,9 +105,9 @@ Partial Class DeleteSub_A
         '
         Me.sec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.sec.FormattingEnabled = True
-        Me.sec.Location = New System.Drawing.Point(96, 29)
+        Me.sec.Location = New System.Drawing.Point(133, 29)
         Me.sec.Name = "sec"
-        Me.sec.Size = New System.Drawing.Size(160, 21)
+        Me.sec.Size = New System.Drawing.Size(164, 21)
         Me.sec.TabIndex = 4
         '
         'GroupBox2
