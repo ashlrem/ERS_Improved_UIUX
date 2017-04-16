@@ -18,8 +18,8 @@ Public Class UpdateStudent_R
         a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
             My.Forms.Screen_Registrar.Enabled = True
-            Screen_Registrar.Show()
             RegistrarPanel.Show()
+            Screen_Registrar.Show()
             Me.Close()
         End If
     End Sub
@@ -35,86 +35,12 @@ Public Class UpdateStudent_R
         Me.Left = (Screen.Width \ 2) - (Me.Width \ 2)
     End Sub
 
-    Private Sub nso_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nso_btn.Click
-        Try
-            If (OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK) Then
-                NSO2 = OpenFileDialog1.FileName
-            End If
-        Catch
-        End Try
-        If NSO2 = "none" Then
-            nso_lbl.BackColor = Color.Red
-        Else
-            nso_lbl.BackColor = Color.Green
-        End If
-    End Sub
-
-    Private Sub baptismal_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles baptismal_btn.Click
-        Try
-            If (OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK) Then
-                baptis = OpenFileDialog1.FileName
-            End If
-        Catch
-        End Try
-        If baptis = "none" Then
-            baptismal_lbl.BackColor = Color.Red
-        Else
-            baptismal_lbl.BackColor = Color.Green
-        End If
-    End Sub
-
-    Private Sub card_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles card_btn.Click
-        Try
-            If (OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK) Then
-                card = OpenFileDialog1.FileName
-            End If
-        Catch
-        End Try
-        If card = "none" Then
-            card_lbl.BackColor = Color.Red
-        Else
-            card_lbl.BackColor = Color.Green
-        End If
-    End Sub
-
-    Private Sub form137_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles form137_btn.Click
-        Try
-            If (OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK) Then
-                form137 = OpenFileDialog1.FileName
-            End If
-        Catch
-        End Try
-        If form137 = "none" Then
-            form_lbl.BackColor = Color.Red
-        Else
-            form_lbl.BackColor = Color.Green
-        End If
-    End Sub
-
-    Private Sub goodmoral_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles goodmoral_btn.Click
-        Try
-            If (OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK) Then
-                goodMoral = OpenFileDialog1.FileName
-            End If
-        Catch
-        End Try
-        If goodMoral = "none" Then
-            gm_lbl.BackColor = Color.Red
-        Else
-            gm_lbl.BackColor = Color.Green
-        End If
-    End Sub
-
     Private Sub sn_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles sn.KeyPress
         If Asc(e.KeyChar) <> 8 Then
             If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
                 e.Handled = True
             End If
         End If
-    End Sub
-
-    Private Sub sn_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sn.TextChanged
-
     End Sub
 
     Private Sub ag_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles ag.KeyPress
@@ -135,9 +61,5 @@ Public Class UpdateStudent_R
                 e.Handled = True
             End If
         End If
-    End Sub
-
-    Private Sub con_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles con.TextChanged
-
     End Sub
 End Class

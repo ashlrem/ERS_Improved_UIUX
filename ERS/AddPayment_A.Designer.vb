@@ -157,7 +157,6 @@ Partial Class AddPayment_A
         '
         Me.getSubj.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.getSubj.FormattingEnabled = True
-        Me.getSubj.Items.AddRange(New Object() {"Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6"})
         Me.getSubj.Location = New System.Drawing.Point(130, 12)
         Me.getSubj.Name = "getSubj"
         Me.getSubj.Size = New System.Drawing.Size(103, 21)
