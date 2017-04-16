@@ -27,6 +27,7 @@
         AddPayment_A.TopMost = True
         Me.Enabled = False
         AddPayment_A.Show()
+        AddPayment_A.Text = "Add payment"
     End Sub
     Private Sub UpdatePaymentToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UpdatePaymentToolStripMenuItem.Click
         'UpdatePayment_A.TopLevel = False
@@ -35,6 +36,7 @@
         UpdatePayment_A.TopMost = True
         Me.Enabled = False
         UpdatePayment_A.Show()
+        UpdatePayment_A.Text = "Update Payment"
     End Sub
 
     Private Sub DeletePaymentToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeletePaymentToolStripMenuItem.Click
