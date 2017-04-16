@@ -71,7 +71,12 @@ Public Class CashierCreate
     End Property
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        Webcam.Show()
+        Me.TopMost = False
+        Webcam.TopMost = True
+        Try
+            Webcam.Show()
+        Catch
+        End Try
     End Sub
 
     Private Sub cno_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles cno.KeyPress

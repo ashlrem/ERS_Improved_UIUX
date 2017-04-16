@@ -231,7 +231,12 @@ Public Class StudentCreate
         End If
     End Sub
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        Webcam.Show()
+        Me.TopMost = False
+        Webcam.TopMost = True
+        Try
+            Webcam.Show()
+        Catch
+        End Try
         Me.Enabled = False
     End Sub
     Private Sub gl_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gl.SelectedIndexChanged

@@ -78,9 +78,7 @@ Public Class Webcam
         End If
     End Sub
     Private Sub Webcam_Closing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Dim a As Integer
-        a = MsgBox("Are you sure do you want to exit?", MsgBoxStyle.YesNo)
-        If (a = MsgBoxResult.Yes) Then
+      
             Try
                 CAMERA.Stop()
             Catch
@@ -90,6 +88,5 @@ Public Class Webcam
             CashierCreate.Enabled = True
             RegistrarCreate.Enabled = True
             StudentCreate.Enabled = True
-        End If
     End Sub
 End Class
