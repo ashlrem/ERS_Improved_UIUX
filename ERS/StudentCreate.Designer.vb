@@ -34,7 +34,6 @@ Partial Class StudentCreate
         Me.Button4 = New System.Windows.Forms.Button()
         Me.age = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.gl = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -109,7 +108,6 @@ Partial Class StudentCreate
         Me.pi.Controls.Add(Me.Button4)
         Me.pi.Controls.Add(Me.age)
         Me.pi.Controls.Add(Me.Label4)
-        Me.pi.Controls.Add(Me.CheckBox1)
         Me.pi.Controls.Add(Me.gl)
         Me.pi.Controls.Add(Me.Label13)
         Me.pi.Controls.Add(Me.Label12)
@@ -229,17 +227,6 @@ Partial Class StudentCreate
         Me.Label4.Size = New System.Drawing.Size(46, 20)
         Me.Label4.TabIndex = 195
         Me.Label4.Text = "Age:"
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(891, 284)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(5)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(89, 24)
-        Me.CheckBox1.TabIndex = 15
-        Me.CheckBox1.Text = "Scholar"
-        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'gl
         '
@@ -802,6 +789,8 @@ Partial Class StudentCreate
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Location = New System.Drawing.Point(-60, 0)
         Me.Margin = New System.Windows.Forms.Padding(5)
+        Me.MaximumSize = New System.Drawing.Size(1110, 723)
+        Me.MinimumSize = New System.Drawing.Size(1110, 723)
         Me.Name = "StudentCreate"
         Me.Text = "Enrollment Form"
         Me.pi.ResumeLayout(False)
@@ -836,7 +825,6 @@ Partial Class StudentCreate
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label

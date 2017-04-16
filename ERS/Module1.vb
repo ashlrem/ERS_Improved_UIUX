@@ -41,17 +41,17 @@ Module Module1
     Public form137 As String = "none"
     Public goodMoral As String = "none"
 
-    'Public server As String = "127.0.0.1" 'papalitan to ng ip address ng server pag need na siya i connect sa LAN
-    'Public port As String = "3306" 'gagawing 3306 to pag need na i connect sa LAN, or kung anong port yung na set natin
-    'Public user As String = "ers_admin" 'for now, root yung user, pero, magdadagdag tayo ng new username pag LAN
-    'Public password As String = "1234" 'no password si root dun sa wamp natin, so leave it empty
-    'Public database As String = "ers" ' eto yung name ng database natin, ers.
-
-    Public server As String = "127.0.0.1" 'papalitan to ng ip address ng server pag need na siya i connect sa LAN
-    Public port As String = "" 'gagawing 3306 to pag need na i connect sa LAN, or kung anong port yung na set natin
-    Public user As String = "root" 'for now, root yung user, pero, magdadagdag tayo ng new username pag LAN
-    Public password As String = "" 'no password si root dun sa wamp natin, so leave it empty
+    Public server As String = "192.168.254.115" 'papalitan to ng ip address ng server pag need na siya i connect sa LAN
+    Public port As String = "3306" 'gagawing 3306 to pag need na i connect sa LAN, or kung anong port yung na set natin
+    Public user As String = "ers_admin" 'for now, root yung user, pero, magdadagdag tayo ng new username pag LAN
+    Public password As String = "1234" 'no password si root dun sa wamp natin, so leave it empty
     Public database As String = "ers" ' eto yung name ng database natin, ers.
+
+    'Public server As String = "127.0.0.1" 'papalitan to ng ip address ng server pag need na siya i connect sa LAN
+    'Public port As String = "" 'gagawing 3306 to pag need na i connect sa LAN, or kung anong port yung na set natin
+    'Public user As String = "root" 'for now, root yung user, pero, magdadagdag tayo ng new username pag LAN
+    'Public password As String = "" 'no password si root dun sa wamp natin, so leave it empty
+    'Public database As String = "ers" ' eto yung name ng database natin, ers.
     Public Sub splash()
         'connection string na ginagamit ng system natin para mag connect sa database
         cn.ConnectionString = "server= '" & server & "';port= '" & port & "';userid= '" & user & "';password= '" & password & "';database='" & database & "'"
@@ -168,6 +168,7 @@ Module Module1
                         My.Forms.AdminCreate.ln.Focus()
                         MainScreen.Show()
                         My.Forms.AdminCreate.PictureBox1.Image = Nothing
+                        My.Forms.AdminCreate_1.PictureBox1.Image = Nothing
                         My.Forms.AdminCreate.Close()
                         Screen_Admin.Enabled = True
                     Catch ex As Exception
@@ -255,10 +256,10 @@ Module Module1
                         My.Forms.AdminCreate_1.rtp.Text = ""
                         MsgBox("Admin Account Successfully Created!")
                         My.Forms.AdminCreate_1.ln.Focus()
+                        Screen_Admin.Enabled = True
                         My.Forms.AdminPanel.Show()
                         My.Forms.AdminCreate_1.PictureBox1.Image = Nothing
                         My.Forms.AdminCreate_1.Close()
-                        Screen_Admin.Enabled = True
                     Catch ex As Exception
                         MessageBox.Show(ex.Message)
                     End Try
@@ -345,6 +346,8 @@ Module Module1
                         My.Forms.RegistrarCreate.ln.Focus()
                         AdminPanel.Show()
                         My.Forms.RegistrarCreate.PictureBox1.Image = Nothing
+                        My.Forms.AdminCreate.PictureBox1.Image = Nothing
+                        My.Forms.AdminCreate_1.PictureBox1.Image = Nothing
                         My.Forms.RegistrarCreate.Close()
                         Screen_Admin.Enabled = True
                     Catch ex As Exception
@@ -424,6 +427,10 @@ Module Module1
                         My.Forms.CashierCreate.ln.Focus()
                         AdminPanel.Show()
                         My.Forms.CashierCreate.PictureBox1.Image = Nothing
+                        My.Forms.RegistrarCreate.PictureBox1.Image = Nothing
+                        My.Forms.AdminCreate.PictureBox1.Image = Nothing
+                        My.Forms.AdminCreate_1.PictureBox1.Image = Nothing
+
                         My.Forms.CashierCreate.Close()
                         Screen_Admin.Enabled = True
                     Catch ex As Exception
@@ -463,9 +470,12 @@ Module Module1
                 Dim a As Integer
                 a = MsgBox("Do you want to Add another Class?", MsgBoxStyle.YesNo)
                 If (a = MsgBoxResult.Yes) Then
-                    AddSubClear()
+                    My.Forms.AddClass.gl.SelectedIndex = -1
+                    My.Forms.AddClass.sec.Text = ""
                 ElseIf (a = MsgBoxResult.No) Then
                     My.Forms.AddClass_A.Close()
+                    Screen_Admin.Enabled = True
+                    Screen_Admin.TopMost = True
                 End If
 
             End If

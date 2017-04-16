@@ -38,7 +38,7 @@ Public Class AdminCreate
         Catch ex As Exception
             MsgBox("Must upload or take picture.")
         End Try
-
+        pic = ""
     End Sub
 
     Private Sub AdminCreate_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

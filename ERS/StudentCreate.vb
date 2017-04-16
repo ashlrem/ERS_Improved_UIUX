@@ -53,11 +53,6 @@ Public Class StudentCreate
                 pic = encodingtypestring & imagetobase64(PictureBox1.Image, encodeType)
 
 
-                If CheckBox1.Checked = True Then
-                    s = "Yes"
-                ElseIf CheckBox1.Checked = False Then
-                    s = "No"
-                End If
 
                 Dim objConn As New MySqlConnection
                 Dim ins As New MySqlCommand
@@ -115,7 +110,7 @@ Public Class StudentCreate
 
                     Try
                         ins.Connection = objConn
-                        ins.CommandText = "INSERT INTO student_info VALUES(@Photo, @Student_ID_No, @LastName, @GivenName, @MiddleName, @Birthday, @Birth_Place, @Gender, @Address, @Age, @Citizenship, @Religion, @SchoolYear, @GradeLevel, @Section, @Scholar, @MotherName, @OccupationM, @FatherName, @OccupationF, @Guardian, @Relation, @Contact, @NSO, @Baptismal, @Name_Of_LastSchool, @Address_of_LastSchool, @UploadCard, @UploadForm137, @UploadGoodMoral)"
+                        ins.CommandText = "INSERT INTO student_info VALUES(@Photo, @Student_ID_No, @LastName, @GivenName, @MiddleName, @Birthday, @Birth_Place, @Gender, @Address, @Age, @Citizenship, @Religion, @SchoolYear, @GradeLevel, @Section, @MotherName, @OccupationM, @FatherName, @OccupationF, @Guardian, @Relation, @Contact, @NSO, @Baptismal, @Name_Of_LastSchool, @Address_of_LastSchool, @UploadCard, @UploadForm137, @UploadGoodMoral)"
                         ins.Parameters.AddWithValue("@Photo", pic)
                         ins.Parameters.AddWithValue("@Student_ID_No", sn.Text)
                         ins.Parameters.AddWithValue("@LastName", ln.Text)
@@ -131,7 +126,6 @@ Public Class StudentCreate
                         ins.Parameters.AddWithValue("@SchoolYear", sy.Text)
                         ins.Parameters.AddWithValue("@GradeLevel", gl.SelectedItem.ToString)
                         ins.Parameters.AddWithValue("@Section", sec.SelectedItem.ToString)
-                        ins.Parameters.AddWithValue("@Scholar", s)
                         ins.Parameters.AddWithValue("@MotherName", mon.Text)
                         ins.Parameters.AddWithValue("@OccupationM", mono.Text)
                         ins.Parameters.AddWithValue("@FatherName", fon.Text)
@@ -150,9 +144,6 @@ Public Class StudentCreate
                         ins.ExecuteNonQuery()
                         MsgBox("Student Added!!")
 
-                        If CheckBox1.Checked = True Then
-                            CheckBox1.Checked = False
-                        End If
 
                         If CheckBox2.Checked = True Then
                             CheckBox2.Checked = False

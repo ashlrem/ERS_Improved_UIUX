@@ -19,12 +19,13 @@ Public Class CashierCreate
             pic = encodingtypestring & imagetobase64(PictureBox1.Image, encodeType)
             Try
                 createCashier()
+                Screen_Cashier.TopMost = True
             Catch
             End Try
         Catch
             MsgBox("Must upload or take picture.")
         End Try
-
+        pic = ""
     End Sub
     Public Function imagetobase64(ByVal image As Image, ByVal format As ImageFormat) As String
         Using ms As New MemoryStream()

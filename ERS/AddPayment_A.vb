@@ -208,7 +208,6 @@ Public Class AddPayment_A
             total.Text = ""
             sn.Enabled = True
             SearchAddpayemt_btn.Enabled = True
-
             total.Enabled = True
             Me.Enabled = False
         ElseIf pp_rdbnt.Checked = True Then
@@ -336,71 +335,75 @@ Public Class AddPayment_A
         p8.Text = "0"
         p9.Text = "0"
         totalBooks.Text = ""
-        insert()
-        Dim reg As String = "SELECT * FROM items_tbl WHERE (gradelevel ='" & getSubj.SelectedItem.ToString & "')"
-        cn1.Open() 'open database connection ulit para maka connect tayo sa databae.
-
-        Dim cmd As MySqlCommand = New MySqlCommand(reg, cn1)
-        r = cmd.ExecuteReader() 'execute sql query
         Try
-            If r.Read = True Then
-                Subj1.Text = r("ItemName").ToString
-                p1.Text = r("Price").ToString
+            insert()
+            Dim reg As String = "SELECT * FROM items_tbl WHERE (gradelevel ='" & getSubj.SelectedItem.ToString & "')"
+            cn1.Open() 'open database connection ulit para maka connect tayo sa databae.
+
+            Dim cmd As MySqlCommand = New MySqlCommand(reg, cn1)
+            r = cmd.ExecuteReader() 'execute sql query
+            Try
                 If r.Read = True Then
-                    Subj2.Text = r("ItemName").ToString
-                    p2.Text = r("Price").ToString
+                    Subj1.Text = r("ItemName").ToString
+                    p1.Text = r("Price").ToString
+                    If r.Read = True Then
+                        Subj2.Text = r("ItemName").ToString
+                        p2.Text = r("Price").ToString
+                    End If
+                    If r.Read = True Then
+                        Subj3.Text = r("ItemName").ToString
+                        p3.Text = r("Price").ToString
+                    End If
+                    If r.Read = True Then
+                        Subj4.Text = r("ItemName").ToString
+                        p4.Text = r("Price").ToString
+                    End If
+                    If r.Read = True Then
+                        Subj5.Text = r("ItemName").ToString
+                        p5.Text = r("Price").ToString
+                    End If
+                    If r.Read = True Then
+                        Subj6.Text = r("ItemName").ToString
+                        p6.Text = r("Price").ToString
+                    End If
+                    If r.Read = True Then
+                        Subj7.Text = r("ItemName").ToString
+                        p7.Text = r("Price").ToString
+                    End If
+                    If r.Read = True Then
+                        Subj8.Text = r("ItemName").ToString
+                        p8.Text = r("Price").ToString
+                    End If
+                    If r.Read = True Then
+                        Subj9.Text = r("ItemName").ToString
+                        p9.Text = r("Price").ToString
+                    End If
                 End If
-                If r.Read = True Then
-                    Subj3.Text = r("ItemName").ToString
-                    p3.Text = r("Price").ToString
-                End If
-                If r.Read = True Then
-                    Subj4.Text = r("ItemName").ToString
-                    p4.Text = r("Price").ToString
-                End If
-                If r.Read = True Then
-                    Subj5.Text = r("ItemName").ToString
-                    p5.Text = r("Price").ToString
-                End If
-                If r.Read = True Then
-                    Subj6.Text = r("ItemName").ToString
-                    p6.Text = r("Price").ToString
-                End If
-                If r.Read = True Then
-                    Subj7.Text = r("ItemName").ToString
-                    p7.Text = r("Price").ToString
-                End If
-                If r.Read = True Then
-                    Subj8.Text = r("ItemName").ToString
-                    p8.Text = r("Price").ToString
-                End If
-                If r.Read = True Then
-                    Subj9.Text = r("ItemName").ToString
-                    p9.Text = r("Price").ToString
-                End If
-            End If
+
+
+                cn1.Close()
+            Catch ex As Exception
+            End Try
             cn1.Close()
-        Catch ex As Exception
+
+            Dim total123 As Integer
+            Dim il As Integer = IdLace.Text
+            Dim pat As Integer = Patch.Text
+            Dim s1 As Integer = p1.Text
+            Dim s2 As Integer = p2.Text
+            Dim s3 As Integer = p3.Text
+            Dim s4 As Integer = p4.Text
+            Dim s5 As Integer = p5.Text
+            Dim s6 As Integer = p6.Text
+            Dim s7 As Integer = p7.Text
+            Dim s8 As Integer = p8.Text
+            Dim s9 As Integer = p9.Text
+            total123 = il + pat + s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + s9
+            totalBooks.Text = total123
+
+
+        Catch
         End Try
-        cn1.Close()
-
-
-
-
-        Dim total123 As Integer
-        Dim il As Integer = IdLace.Text
-        Dim pat As Integer = Patch.Text
-        Dim s1 As Integer = p1.Text
-        Dim s2 As Integer = p2.Text
-        Dim s3 As Integer = p3.Text
-        Dim s4 As Integer = p4.Text
-        Dim s5 As Integer = p5.Text
-        Dim s6 As Integer = p6.Text
-        Dim s7 As Integer = p7.Text
-        Dim s8 As Integer = p8.Text
-        Dim s9 As Integer = p9.Text
-        total123 = il + pat + s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + s9
-        totalBooks.Text = total123
 
     End Sub
     Private Sub sn_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sn.TextChanged
