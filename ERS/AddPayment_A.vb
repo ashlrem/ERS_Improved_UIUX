@@ -132,7 +132,16 @@ Public Class AddPayment_A
     Private Sub SearchAddpayemt_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchAddpayemt_btn.Click
         Try
             SearchAddPayment1_A()
-            If grade.Text = "Grade 1" Then
+            If grade.Text = "Kinder" Then
+                getSubj.Items.Clear()
+                getSubj.Items.Add("Grade 1")
+                getSubj.Items.Add("Grade 2")
+                getSubj.Items.Add("Grade 3")
+                getSubj.Items.Add("Grade 4")
+                getSubj.Items.Add("Grade 5")
+                getSubj.Items.Add("Grade 6")
+
+            ElseIf grade.Text = "Grade 1" Then
                 getSubj.Items.Clear()
                 getSubj.Items.Add("Grade 2")
                 getSubj.Items.Add("Grade 3")

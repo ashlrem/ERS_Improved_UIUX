@@ -232,7 +232,7 @@ Partial Class StudentCreate
         '
         Me.gl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.gl.FormattingEnabled = True
-        Me.gl.Items.AddRange(New Object() {"Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6"})
+        Me.gl.Items.AddRange(New Object() {"Kinder", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6"})
         Me.gl.Location = New System.Drawing.Point(335, 282)
         Me.gl.Margin = New System.Windows.Forms.Padding(5)
         Me.gl.Name = "gl"
