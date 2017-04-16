@@ -2751,7 +2751,7 @@ Module Module1
 
 
                 NSO2 = r("NSO").ToString()
-                If NSO2 = "" Then
+                If NSO2 = "No" Then
                     My.Forms.UpdateStudent_A.nso_lbl.BackColor = Color.Red
                     My.Forms.UpdateStudent_A.CheckBox2.Checked = False
                 Else
@@ -2994,7 +2994,7 @@ Module Module1
                 pic = ""
 
                 NSO2 = r("NSO").ToString()
-                If NSO2 = "" Then
+                If NSO2 = "No" Then
                     My.Forms.UpdateStudent_R.nso_lbl.BackColor = Color.Red
                     My.Forms.UpdateStudent_R.CheckBox2.Checked = False
                 Else
@@ -3086,7 +3086,7 @@ Module Module1
                 pic = ""
 
                 NSO2 = r("NSO").ToString()
-                If NSO2 = "" Then
+                If NSO2 = "No" Then
                     My.Forms.ViewStudent.nso_lbl.BackColor = Color.Red
                 Else
                     My.Forms.ViewStudent.nso_lbl.BackColor = Color.Green
@@ -3094,28 +3094,28 @@ Module Module1
 
 
                 baptis = r("Baptismal").ToString()
-                If baptis = "" Then
+                If baptis = "No" Then
                     My.Forms.ViewStudent.baptismal_lbl.BackColor = Color.Red
                 Else
                     My.Forms.ViewStudent.baptismal_lbl.BackColor = Color.Green
                 End If
 
                 card = r("UploadCard").ToString()
-                If card = "" Then
+                If card = "No" Then
                     My.Forms.ViewStudent.card_lbl.BackColor = Color.Red
                 Else
                     My.Forms.ViewStudent.card_lbl.BackColor = Color.Green
                 End If
 
                 form137 = r("UploadForm137").ToString()
-                If form137 = "" Then
+                If form137 = "No" Then
                     My.Forms.ViewStudent.form_lbl.BackColor = Color.Red
                 Else
                     My.Forms.ViewStudent.form_lbl.BackColor = Color.Green
                 End If
 
                 goodMoral = r("UploadGoodMoral").ToString()
-                If goodMoral = "" Then
+                If goodMoral = "No" Then
                     My.Forms.ViewStudent.gm_lbl.BackColor = Color.Red
                 Else
                     My.Forms.ViewStudent.gm_lbl.BackColor = Color.Green
@@ -3169,7 +3169,7 @@ Module Module1
                 pic = ""
 
                 NSO2 = r("NSO").ToString()
-                If NSO2 = "none" Then
+                If NSO2 = "No" Then
                     My.Forms.ViewStudent_R.nso_lbl.BackColor = Color.Red
                 Else
                     My.Forms.ViewStudent_R.nso_lbl.BackColor = Color.Green
@@ -3177,28 +3177,28 @@ Module Module1
 
 
                 baptis = r("Baptismal").ToString()
-                If baptis = "none" Then
+                If baptis = "No" Then
                     My.Forms.ViewStudent_R.baptismal_lbl.BackColor = Color.Red
                 Else
                     My.Forms.ViewStudent_R.baptismal_lbl.BackColor = Color.Green
                 End If
 
                 card = r("UploadCard").ToString()
-                If card = "" Then
+                If card = "No" Then
                     My.Forms.ViewStudent_R.card_lbl.BackColor = Color.Red
                 Else
                     My.Forms.ViewStudent_R.card_lbl.BackColor = Color.Green
                 End If
 
                 form137 = r("UploadForm137").ToString()
-                If form137 = "none" Then
+                If form137 = "No" Then
                     My.Forms.ViewStudent_R.form_lbl.BackColor = Color.Red
                 Else
                     My.Forms.ViewStudent_R.form_lbl.BackColor = Color.Green
                 End If
 
                 goodMoral = r("UploadGoodMoral").ToString()
-                If goodMoral = "none" Then
+                If goodMoral = "No" Then
                     My.Forms.ViewStudent_R.gm_lbl.BackColor = Color.Red
                 Else
                     My.Forms.ViewStudent_R.gm_lbl.BackColor = Color.Green
