@@ -237,7 +237,6 @@ Public Class StudentCreate
             Webcam.Show()
         Catch
         End Try
-        Me.Enabled = False
     End Sub
     Private Sub gl_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gl.SelectedIndexChanged
         cn.ConnectionString = "server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'"
