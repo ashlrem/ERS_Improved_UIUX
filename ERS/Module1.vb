@@ -466,19 +466,10 @@ Module Module1
                 ins.Parameters.Clear()
                 MsgBox("Class saved successfully!")
                 objConn.Close()
-
-                Dim a As Integer
-                a = MsgBox("Do you want to Add another Class?", MsgBoxStyle.YesNo)
-                If (a = MsgBoxResult.Yes) Then
-                    My.Forms.AddClass.gl.SelectedIndex = -1
+                My.Forms.AddClass.gl.SelectedIndex = -1
                     My.Forms.AddClass.sec.Text = ""
-                ElseIf (a = MsgBoxResult.No) Then
-                    My.Forms.AddClass_A.Close()
-                    Screen_Admin.Enabled = True
-                    Screen_Admin.TopMost = True
                 End If
 
-            End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
@@ -502,13 +493,7 @@ Module Module1
                 ins.Parameters.Clear()
                 MsgBox("Class saved successfully!")
                 objConn.Close()
-                Dim a As Integer
-                a = MsgBox("Do you want to Add another class?", MsgBoxStyle.YesNo)
-                If (a = MsgBoxResult.Yes) Then
-                    AddSubClear()
-                ElseIf (a = MsgBoxResult.No) Then
-                    My.Forms.AddClassR.Close()
-                End If
+                AddSubClear()
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
