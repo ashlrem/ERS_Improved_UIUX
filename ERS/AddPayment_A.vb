@@ -66,22 +66,25 @@ Public Class AddPayment_A
                 Dim min As Integer
 
                 min = totalmin / 2
-
+                Dim a As Integer = total1.Text
                 Dim patial As Integer = partialp.Text
 
                 If min <= patial Then
-                    Dim tuition As Integer
-                    Dim partialpayment As Integer
-                    Dim total2 As Integer
+                    If patial < a Then
+                        Dim tuition As Integer
+                        Dim partialpayment As Integer
+                        Dim total2 As Integer
 
-                    tuition = total1.Text
-                    partialpayment = partialp.Text
+                        tuition = total1.Text
+                        partialpayment = partialp.Text
 
-                    total2 = tuition - partialpayment
-                    prelim.Text = total2
-                    EnterPartial_grp.Enabled = False
-                    Proceed_btn.Enabled = True
-
+                        total2 = tuition - partialpayment
+                        prelim.Text = total2
+                        EnterPartial_grp.Enabled = False
+                        Proceed_btn.Enabled = True
+                    Else
+                        MsgBox("Payment must not higher than tuition.")
+                    End If
                 Else
                     MsgBox("Partial payment should not be lessthan P " & min)
                 End If
@@ -237,7 +240,6 @@ Public Class AddPayment_A
             p8.Text = ""
             p9.Text = ""
             totalBooks.Text = ""
-
             EnterPartial_grp.Enabled = False
             Payment_grp.Enabled = False
             fp_rdobnt.Enabled = False
@@ -247,13 +249,33 @@ Public Class AddPayment_A
             SearchAddpayemt_btn.Enabled = True
             total1.Text = ""
             total.Text = ""
-
             total.Enabled = True
             Me.Enabled = False
         End If
-        nameOS.Text = "---"
-        grade.Text = "---"
         Proceed_btn.Enabled = False
+        Reciept.nameOS.Text = nameOS.Text
+        Reciept.grade.Text = grade.Text
+
+        If Me.Text = "" Then
+            If pp_rdbnt.Checked = True Then
+                Reciept.amount.Text = partialp.Text
+                Reciept.po.Text = "First payment."
+
+            ElseIf fp_rdobnt.Checked = True Then
+                Reciept.po.Text = "Full Payment."
+                Reciept.amount.Text = prelim.Text
+            End If
+        ElseIf My.Forms.UpdatePayment_A.Text = "" Then
+            Reciept.nameOS.Text = My.Forms.UpdatePayment_A.sn.Text
+            Reciept.grade.Text = My.Forms.UpdatePayment_A.grade.Text
+            Reciept.amount.Text = My.Forms.UpdatePayment_A.prelim.Text
+            Reciept.po.Text = "Last Payment"
+
+        End If
+
+        Reciept.am.Text = Reciept.amount.Text
+        Reciept.am1.Text = Reciept.am.Text
+        Reciept.am2.Text = Reciept.am1.Text
 
     End Sub
     Private Sub AddPayment_A_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing

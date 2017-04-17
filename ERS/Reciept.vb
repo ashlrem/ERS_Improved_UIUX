@@ -10,29 +10,7 @@ Public Class Reciept
         'Me.Size = SystemInformation.PrimaryMonitorSize()
         dateP.Text = DateTimePicker1.Value.ToString
 
-        nameOS.Text = My.Forms.AddPayment_A.nameOS.Text
-        grade.Text = My.Forms.AddPayment_A.grade.Text
-
-        If My.Forms.AddPayment_A.Text = "" Then
-            amount.Text = My.Forms.AddPayment_A.partialp.Text
-            po.Text = "First payment."
-
-        ElseIf My.Forms.AddPayment_A.Text = "" Then
-            po.Text = "Full Payment."
-            amount.Text = My.Forms.AddPayment_A.prelim.Text
-
-        ElseIf My.Forms.UpdatePayment_A.Text = "" Then
-            nameOS.Text = My.Forms.UpdatePayment_A.sn.Text
-            grade.Text = My.Forms.UpdatePayment_A.grade.Text
-            amount.Text = My.Forms.UpdatePayment_A.prelim.Text
-            po.Text = "Last Payment"
-
-        End If
-
-        am.Text = amount.Text
-        am1.Text = am.Text
-        am2.Text = am1.Text
-
+     
         Dim Screen As System.Drawing.Rectangle
         Screen = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea()
         Me.Top = (Screen.Height \ 2) - (Me.Height - 320)
@@ -67,15 +45,6 @@ Public Class Reciept
         Dim result As DialogResult = printDialog1.ShowDialog
         If (result = DialogResult.OK) Then
             If UpdatePayment_A.Text = "" Then
-                prelimPay_btn()
-                PrintDocument1.Print()
-                Me.TopMost = False
-                UpdatePayment_A.Enabled = True
-                UpdatePayment_A.TopMost = True
-                UpdatePayment_A.Text = "Update Payment"
-                UpdatePayment_A.Show()
-                Me.Close()
-            ElseIf AddPayment_A.Text = "" Then
                 If My.Forms.AddPayment_A.fp_rdobnt.Checked = True Then
                     FullPayment_A()
                 ElseIf My.Forms.AddPayment_A.pp_rdbnt.Checked = True Then
@@ -89,7 +58,16 @@ Public Class Reciept
                 AddPayment_A.Show()
                 Me.Close()
             End If
-
+            ElseIf AddPayment_A.Text = "" Then
+                prelimPay_btn()
+                PrintDocument1.Print()
+                Me.TopMost = False
+                UpdatePayment_A.Enabled = True
+                UpdatePayment_A.TopMost = True
+                UpdatePayment_A.Text = "Update Payment"
+                UpdatePayment_A.Show()
+                Me.Close()
+             
         End If
     End Sub
 
@@ -97,25 +75,22 @@ Public Class Reciept
         Dim a As Integer
         a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
-
             If UpdatePayment_A.Text = "" Then
+                My.Forms.AddPayment_A.getSubj.SelectedIndex = -1
+                AddPayment_A.TopMost = True
+                AddPayment_A.Enabled = True
+                AddPayment_A.Proceed_btn.Enabled = False
+                AddPayment_A.Show()
+                Me.TopMost = False
+                Me.Close()
+            ElseIf AddPayment_A.Text = "" Then
                 UpdatePayment_A.TopMost = True
                 UpdatePayment_A.Enabled = True
                 UpdatePayment_A.Show()
                 Me.TopMost = False
                 Me.Close()
-            ElseIf AddPayment_A.Text = "" Then
-                My.Forms.AddPayment_A.getSubj.SelectedIndex = -1
-                AddPayment_A.TopMost = True
-                AddPayment_A.Enabled = True
-                AddPayment_A.Show()
-                Me.TopMost = False
-                Me.Close()
-
             End If
         ElseIf a = MsgBoxResult.No Then
-
-
         End If
     End Sub
 End Class

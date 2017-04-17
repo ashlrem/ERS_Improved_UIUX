@@ -70,6 +70,7 @@ Module Payment
             MsgBox("Payment Added!")
             My.Forms.AddPayment_A.sn.Text = ""
             My.Forms.AddPayment_A.prelim.Text = "-"
+            AddPayment_A.Text = ""
             objConn.Close()
         Catch ex As Exception
             MsgBox(ex)
@@ -138,9 +139,6 @@ Module Payment
     End Sub
     Public Sub prelimPay_btn()
         Try
-
-
-
             Dim reg As String = "UPDATE payment_tbl SET FirstPayment = 0, TotalAmountPaid=  '" & total & "' where Student_ID_No ='" & My.Forms.UpdatePayment_A.sn.Text & "'"
             Dim paymentOf As String = "Midterm"
             Using cn1 = New MySqlConnection("server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'")
@@ -149,6 +147,7 @@ Module Payment
                     sqlCmd.ExecuteNonQuery()
                     My.Forms.UpdatePayment_A.pre_btn.Visible = False
                     My.Forms.UpdatePayment_A.prelim.Text = "-"
+                    UpdatePayment_A.Text = "Update Payment"
                     cn1.Close()
                 End Using
                 cn1.Close()

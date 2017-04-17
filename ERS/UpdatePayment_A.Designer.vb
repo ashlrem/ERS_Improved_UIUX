@@ -139,7 +139,6 @@ Partial Class UpdatePayment_A
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "UpdatePayment_A"
-        Me.Text = "UpdatePayment_A"
         Me.Payment_grp.ResumeLayout(False)
         Me.Payment_grp.PerformLayout()
         Me.ResumeLayout(False)

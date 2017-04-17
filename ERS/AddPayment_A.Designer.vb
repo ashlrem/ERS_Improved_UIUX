@@ -292,7 +292,7 @@ Partial Class AddPayment_A
         'partialp
         '
         Me.partialp.Location = New System.Drawing.Point(133, 73)
-        Me.partialp.MaxLength = 4
+        Me.partialp.MaxLength = 5
         Me.partialp.Name = "partialp"
         Me.partialp.Size = New System.Drawing.Size(75, 20)
         Me.partialp.TabIndex = 1
@@ -673,7 +673,6 @@ Partial Class AddPayment_A
         Me.MaximumSize = New System.Drawing.Size(614, 580)
         Me.MinimumSize = New System.Drawing.Size(614, 580)
         Me.Name = "AddPayment_A"
-        Me.Text = "Add Student Payment"
         Me.miscellaneous_fee_grp.ResumeLayout(False)
         Me.miscellaneous_fee_grp.PerformLayout()
         Me.Payment_grp.ResumeLayout(False)
