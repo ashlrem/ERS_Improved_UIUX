@@ -42,6 +42,10 @@ Public Class AddPayment_A
             t = total.Text
             t = t + totalB
             total1.Text = t
+        ElseIf getSubj.SelectedItem.ToString = "Kinder" Then
+            t = total.Text
+            t = t + totalB
+            total1.Text = t
         End If
         EnterPartial_grp.Enabled = False
         Dim tuition As Integer
@@ -126,6 +130,10 @@ Public Class AddPayment_A
             t = total.Text
             t = t + totalB
             total1.Text = t
+        ElseIf getSubj.SelectedItem.ToString = "Kinder" Then
+            t = total.Text
+            t = t + totalB
+            total1.Text = t
         End If
     End Sub
 
@@ -134,6 +142,7 @@ Public Class AddPayment_A
             SearchAddPayment1_A()
             If grade.Text = "Kinder" Then
                 getSubj.Items.Clear()
+                getSubj.Items.Add("Kinder")
                 getSubj.Items.Add("Grade 1")
                 getSubj.Items.Add("Grade 2")
                 getSubj.Items.Add("Grade 3")
@@ -143,6 +152,7 @@ Public Class AddPayment_A
 
             ElseIf grade.Text = "Grade 1" Then
                 getSubj.Items.Clear()
+                getSubj.Items.Add("Grade 1")
                 getSubj.Items.Add("Grade 2")
                 getSubj.Items.Add("Grade 3")
                 getSubj.Items.Add("Grade 4")
@@ -150,21 +160,28 @@ Public Class AddPayment_A
                 getSubj.Items.Add("Grade 6")
 
             ElseIf grade.Text = "Grade 2" Then
+                getSubj.Items.Add("Grade 2")
                 getSubj.Items.Add("Grade 3")
                 getSubj.Items.Add("Grade 4")
                 getSubj.Items.Add("Grade 5")
                 getSubj.Items.Add("Grade 6")
 
             ElseIf grade.Text = "Grade 3" Then
+                getSubj.Items.Add("Grade 3")
                 getSubj.Items.Add("Grade 4")
                 getSubj.Items.Add("Grade 5")
                 getSubj.Items.Add("Grade 6")
 
             ElseIf grade.Text = "Grade 4" Then
+                getSubj.Items.Add("Grade 4")
                 getSubj.Items.Add("Grade 5")
                 getSubj.Items.Add("Grade 6")
 
             ElseIf grade.Text = "Grade 5" Then
+                getSubj.Items.Add("Grade 5")
+                getSubj.Items.Add("Grade 6")
+
+            ElseIf grade.Text = "Grade 6" Then
                 getSubj.Items.Add("Grade 6")
 
             End If
@@ -335,6 +352,10 @@ Public Class AddPayment_A
                     t = t + totalB
                     total1.Text = t
                 ElseIf getSubj.SelectedItem.ToString = "Grade 6" Then
+                    t = total.Text
+                    t = t + totalB
+                    total1.Text = t
+                ElseIf getSubj.SelectedItem.ToString = "Kinder" Then
                     t = total.Text
                     t = t + totalB
                     total1.Text = t

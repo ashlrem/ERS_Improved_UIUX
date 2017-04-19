@@ -271,7 +271,7 @@ Module Payment
             My.Forms.addBookItem.itemName.Text = ""
             objConn.Close()
         Catch ex As Exception
-            MsgBox(ex)
+            MsgBox(ex.Message)
         End Try
     End Sub
     Public Sub retrieve123_btn()

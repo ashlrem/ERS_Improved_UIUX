@@ -451,11 +451,12 @@ Module Module1
         'Adding Subjects (insert to database table "subject_tbl")
         Dim cn = "server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'"
         objConn.ConnectionString = cn
-        objConn.Open()
+
         Try
             If (My.Forms.AddClass.gl.SelectedIndex = -1 Or My.Forms.AddClass.sec.Text = "") Then
                 MsgBox("Enter the empty fields!")
             Else
+                objConn.Open()
                 ins.Connection = objConn
 
                 ins.CommandText = "INSERT INTO subject_tbl VALUES(@Grade_Level , @Section)"
@@ -467,24 +468,25 @@ Module Module1
                 MsgBox("Class saved successfully!")
                 objConn.Close()
                 My.Forms.AddClass.gl.SelectedIndex = -1
-                    My.Forms.AddClass.sec.Text = ""
+                My.Forms.AddClass.sec.Text = ""
                 End If
 
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
-
+        ins.Parameters.Clear()
         objConn.Close()
     End Sub
     Public Sub qweR()
         'Adding Subjects (insert to database table "subject_tbl")
         Dim cn = "server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'"
         objConn.ConnectionString = cn
-        objConn.Open()
+
         Try
             If (My.Forms.AddClassR.gl.SelectedIndex = -1 Or My.Forms.AddClassR.sec.Text = "") Then
                 MsgBox("Enter the empty fields!")
             Else
+                objConn.Open()
                 ins.Connection = objConn
                 ins.CommandText = "INSERT INTO subject_tbl VALUES(@Grade_Level, @Section)"
                 ins.Parameters.AddWithValue("@Grade_Level", My.Forms.AddClassR.gl.SelectedItem.ToString)
@@ -498,6 +500,7 @@ Module Module1
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+        ins.Parameters.Clear()
         objConn.Close()
     End Sub
 
