@@ -120,6 +120,7 @@ Partial Class Screen_Cashier
         Me.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
         Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.SearchToolStripMenuItem.Text = "Search"
+        Me.SearchToolStripMenuItem.Visible = False
         '
         'SearchStudentToolStripMenuItem
         '

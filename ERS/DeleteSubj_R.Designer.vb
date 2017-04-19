@@ -114,7 +114,7 @@ Partial Class DeleteSubj_R
         '
         Me.subj.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.subj.FormattingEnabled = True
-        Me.subj.Items.AddRange(New Object() {"Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6"})
+        Me.subj.Items.AddRange(New Object() {"Kinder", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6"})
         Me.subj.Location = New System.Drawing.Point(104, 30)
         Me.subj.Name = "subj"
         Me.subj.Size = New System.Drawing.Size(160, 21)

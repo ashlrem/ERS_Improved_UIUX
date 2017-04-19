@@ -171,7 +171,8 @@ Public Class StudentCreate
                         objConn.Close()
 
                     Catch ex As Exception
-                        MessageBox.Show("Student ID already exists!")
+                        MessageBox.Show(ex.Message)
+                        'MessageBox.Show("Error Adding Student to database!")
                     End Try
                 Else
                     MsgBox("Student ID already exist in the Database!")

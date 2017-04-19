@@ -80,7 +80,7 @@ Partial Class addBookItem
         '
         Me.gradelvl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.gradelvl.FormattingEnabled = True
-        Me.gradelvl.Items.AddRange(New Object() {"Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6"})
+        Me.gradelvl.Items.AddRange(New Object() {"Kinder", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6"})
         Me.gradelvl.Location = New System.Drawing.Point(168, 74)
         Me.gradelvl.Name = "gradelvl"
         Me.gradelvl.Size = New System.Drawing.Size(121, 21)
