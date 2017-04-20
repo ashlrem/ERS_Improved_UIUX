@@ -60,6 +60,7 @@ Partial Class CashierCreate
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -68,7 +69,7 @@ Partial Class CashierCreate
         Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
         Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(607, 301)
+        Me.Button1.Location = New System.Drawing.Point(607, 314)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(170, 38)
         Me.Button1.TabIndex = 16
@@ -120,7 +121,7 @@ Partial Class CashierCreate
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Calibri", 9.0!)
-        Me.Button2.Location = New System.Drawing.Point(783, 301)
+        Me.Button2.Location = New System.Drawing.Point(783, 314)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 38)
         Me.Button2.TabIndex = 19
@@ -164,7 +165,7 @@ Partial Class CashierCreate
         Me.sq2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.sq2.FormattingEnabled = True
         Me.sq2.Items.AddRange(New Object() {"What was the name of your elementary/primary school?", "What time of the day were you born?", "What is your favorite basketball team?"})
-        Me.sq2.Location = New System.Drawing.Point(208, 290)
+        Me.sq2.Location = New System.Drawing.Point(209, 294)
         Me.sq2.Name = "sq2"
         Me.sq2.Size = New System.Drawing.Size(293, 21)
         Me.sq2.TabIndex = 12
@@ -174,7 +175,7 @@ Partial Class CashierCreate
         Me.sq1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.sq1.FormattingEnabled = True
         Me.sq1.Items.AddRange(New Object() {"Who is your favorite hero?", "What is the color of your first pet?", "In what year was your father born?"})
-        Me.sq1.Location = New System.Drawing.Point(208, 237)
+        Me.sq1.Location = New System.Drawing.Point(209, 241)
         Me.sq1.Name = "sq1"
         Me.sq1.Size = New System.Drawing.Size(293, 21)
         Me.sq1.TabIndex = 10
@@ -209,7 +210,7 @@ Partial Class CashierCreate
         '
         'pw
         '
-        Me.pw.Location = New System.Drawing.Point(652, 240)
+        Me.pw.Location = New System.Drawing.Point(652, 253)
         Me.pw.MaxLength = 18
         Me.pw.Name = "pw"
         Me.pw.Size = New System.Drawing.Size(206, 20)
@@ -217,7 +218,7 @@ Partial Class CashierCreate
         '
         'rtp
         '
-        Me.rtp.Location = New System.Drawing.Point(652, 271)
+        Me.rtp.Location = New System.Drawing.Point(652, 284)
         Me.rtp.MaxLength = 18
         Me.rtp.Name = "rtp"
         Me.rtp.Size = New System.Drawing.Size(206, 20)
@@ -225,7 +226,7 @@ Partial Class CashierCreate
         '
         'ans2
         '
-        Me.ans2.Location = New System.Drawing.Point(208, 318)
+        Me.ans2.Location = New System.Drawing.Point(209, 322)
         Me.ans2.MaxLength = 30
         Me.ans2.Name = "ans2"
         Me.ans2.Size = New System.Drawing.Size(293, 20)
@@ -233,7 +234,7 @@ Partial Class CashierCreate
         '
         'ans1
         '
-        Me.ans1.Location = New System.Drawing.Point(208, 264)
+        Me.ans1.Location = New System.Drawing.Point(209, 268)
         Me.ans1.MaxLength = 30
         Me.ans1.Name = "ans1"
         Me.ans1.Size = New System.Drawing.Size(293, 20)
@@ -326,7 +327,7 @@ Partial Class CashierCreate
         Me.Label15.AutoSize = True
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(514, 270)
+        Me.Label15.Location = New System.Drawing.Point(514, 283)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(132, 19)
         Me.Label15.TabIndex = 56
@@ -337,7 +338,7 @@ Partial Class CashierCreate
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Label14.Location = New System.Drawing.Point(514, 240)
+        Me.Label14.Location = New System.Drawing.Point(514, 253)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(86, 23)
         Me.Label14.TabIndex = 55
@@ -381,7 +382,7 @@ Partial Class CashierCreate
         Me.Label13.AutoSize = True
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(142, 318)
+        Me.Label13.Location = New System.Drawing.Point(143, 322)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(60, 19)
         Me.Label13.TabIndex = 60
@@ -392,7 +393,7 @@ Partial Class CashierCreate
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(142, 262)
+        Me.Label12.Location = New System.Drawing.Point(143, 266)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(60, 19)
         Me.Label12.TabIndex = 59
@@ -403,7 +404,7 @@ Partial Class CashierCreate
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(60, 289)
+        Me.Label11.Location = New System.Drawing.Point(61, 293)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(142, 19)
         Me.Label11.TabIndex = 58
@@ -414,11 +415,19 @@ Partial Class CashierCreate
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(60, 236)
+        Me.Label10.Location = New System.Drawing.Point(61, 240)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(142, 19)
         Me.Label10.TabIndex = 57
         Me.Label10.Text = "Security Question 1"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(649, 234)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(0, 13)
+        Me.Label16.TabIndex = 61
         '
         'CashierCreate
         '
@@ -426,8 +435,9 @@ Partial Class CashierCreate
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(873, 351)
+        Me.ClientSize = New System.Drawing.Size(873, 365)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
@@ -510,4 +520,5 @@ Partial Class CashierCreate
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
 End Class

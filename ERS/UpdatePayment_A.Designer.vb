@@ -81,9 +81,9 @@ Partial Class UpdatePayment_A
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(6, 30)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(76, 13)
+        Me.Label8.Size = New System.Drawing.Size(75, 13)
         Me.Label8.TabIndex = 3
-        Me.Label8.Text = "First Payment::"
+        Me.Label8.Text = "Remaining Bal"
         '
         'pre_btn
         '

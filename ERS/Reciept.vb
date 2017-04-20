@@ -76,7 +76,6 @@ Public Class Reciept
         a = MsgBox("Are you sure do you want to cancel?", MsgBoxStyle.YesNo)
         If (a = MsgBoxResult.Yes) Then
             If UpdatePayment_A.Text = "" Then
-                My.Forms.AddPayment_A.getSubj.SelectedIndex = -1
                 AddPayment_A.TopMost = True
                 AddPayment_A.Enabled = True
                 AddPayment_A.Proceed_btn.Enabled = False

@@ -4,7 +4,54 @@ Public Class UpdateStudent_A
     Dim encodeType As ImageFormat = ImageFormat.Jpeg
     Dim decoding As String = String.Empty
     Private Sub SearchStudent_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchStudent_btn.Click
-        SearchStudent_A_Update_btn()
+        Try
+            SearchStudent_A_Update_btn()
+            If gradeLabel.Text = "Kinder" Then
+                glComboBox.Items.Clear()
+                glComboBox.Items.Add("Grade 1")
+                glComboBox.Items.Add("Grade 2")
+                glComboBox.Items.Add("Grade 3")
+                glComboBox.Items.Add("Grade 4")
+                glComboBox.Items.Add("Grade 5")
+                glComboBox.Items.Add("Grade 6")
+
+            ElseIf gradeLabel.Text = "Grade 1" Then
+                glComboBox.Items.Clear()
+                glComboBox.Items.Add("Grade 2")
+                glComboBox.Items.Add("Grade 3")
+                glComboBox.Items.Add("Grade 4")
+                glComboBox.Items.Add("Grade 5")
+                glComboBox.Items.Add("Grade 6")
+
+            ElseIf gradeLabel.Text = "Grade 2" Then
+                glComboBox.Items.Clear()
+                glComboBox.Items.Add("Grade 3")
+                glComboBox.Items.Add("Grade 4")
+                glComboBox.Items.Add("Grade 5")
+                glComboBox.Items.Add("Grade 6")
+
+            ElseIf gradeLabel.Text = "Grade 3" Then
+                glComboBox.Items.Clear()
+                glComboBox.Items.Add("Grade 4")
+                glComboBox.Items.Add("Grade 5")
+                glComboBox.Items.Add("Grade 6")
+
+            ElseIf gradeLabel.Text = "Grade 4" Then
+                glComboBox.Items.Clear()
+                glComboBox.Items.Add("Grade 5")
+                glComboBox.Items.Add("Grade 6")
+
+            ElseIf gradeLabel.Text = "Grade 5" Then
+                glComboBox.Items.Clear()
+                glComboBox.Items.Add("Grade 6")
+
+            ElseIf gradeLabel.Text = "Grade 6" Then
+                glComboBox.Items.Clear()
+                glComboBox.Items.Add("Graduate")
+            End If
+        Catch ex As Exception
+        End Try
+
     End Sub
 
     Public Function base64toimage(ByVal base64code As String) As Image
@@ -16,6 +63,7 @@ Public Class UpdateStudent_A
 
     Private Sub UpdateButton_a_Student_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UpdateButton_a_Student.Click
         editstud()
+        gradeLabel.Text = "--"
     End Sub
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         Dim a As Integer
@@ -59,9 +107,5 @@ Public Class UpdateStudent_A
                 e.Handled = True
             End If
         End If
-    End Sub
-
-    Private Sub sn_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sn.TextChanged
-
     End Sub
 End Class

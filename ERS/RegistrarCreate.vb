@@ -93,4 +93,31 @@ Public Class RegistrarCreate
             End If
         End If
     End Sub
+
+    Private Sub en_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles en.TextChanged
+        If en.Text = "" Then
+            Label16.Text = " -"
+        Else
+            insert()
+            Dim reg As String = "SELECT * FROM registrar_account WHERE (EmployeeID ='" & en.Text & "')"
+            cn1.Open()
+
+            Dim cmd As MySqlCommand = New MySqlCommand(reg, cn1)
+            r = cmd.ExecuteReader() 'execute sql query
+
+            Try
+                If r.Read Then
+                    Label16.ForeColor = Color.Red
+                    Label16.Text = "Employee ID is not Available!"
+                    cn1.Close()
+                Else
+                    Label16.Text = "Employee ID is Available!"
+                    Label16.ForeColor = Color.Green
+                    cn1.Close()
+                End If
+            Catch ex As Exception
+            End Try
+            cn1.Close()
+        End If
+    End Sub
 End Class

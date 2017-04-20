@@ -1884,7 +1884,7 @@ Module Module1
         'edit Student info
         Try
             'eto yung sql query natin, which is UPDATE.
-            Dim reg1 As String = "UPDATE student_info SET Address = '" & My.Forms.UpdateStudent_A.add.Text & "', Birthday = '" & My.Forms.UpdateStudent_A.bd.Text & "', GradeLevel = '" & My.Forms.UpdateStudent_A.gl.Text & "', Birthday = '" & My.Forms.UpdateStudent_A.bd.Text & "', Contact = '" & My.Forms.UpdateStudent_A.con.Text & "', SchoolYear = '" & My.Forms.UpdateStudent_A.sy.Text & "', Age = '" & My.Forms.UpdateStudent_A.ag.Text & "', NSO= '" & NSO2 & "', Baptismal = '" & baptis & "', UploadCard= '" & card & "', UploadForm137 = '" & form137 & "', UploadGoodMoral= '" & goodMoral & "' WHERE Student_ID_No = '" & My.Forms.UpdateStudent_A.sn.Text & "'"
+            Dim reg1 As String = "UPDATE student_info SET Address = '" & My.Forms.UpdateStudent_A.add.Text & "', Birthday = '" & My.Forms.UpdateStudent_A.bd.Text & "', GradeLevel = '" & My.Forms.UpdateStudent_A.glComboBox.SelectedItem.ToString & "', Birthday = '" & My.Forms.UpdateStudent_A.bd.Text & "', Contact = '" & My.Forms.UpdateStudent_A.con.Text & "', SchoolYear = '" & My.Forms.UpdateStudent_A.sy.Text & "', Age = '" & My.Forms.UpdateStudent_A.ag.Text & "', NSO= '" & NSO2 & "', Baptismal = '" & baptis & "', UploadCard= '" & card & "', UploadForm137 = '" & form137 & "', UploadGoodMoral= '" & goodMoral & "' WHERE Student_ID_No = '" & My.Forms.UpdateStudent_A.sn.Text & "'"
             'eto yung connection string natin, (insert() noon), cn1 dito.
             Using cn1 = New MySqlConnection("server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'")
                 Using sqlCmd = New MySqlCommand(reg1, cn1)
@@ -1899,7 +1899,7 @@ Module Module1
                     My.Forms.UpdateStudent_A.nam.Text = ""
                     My.Forms.UpdateStudent_A.add.Text = ""
                     My.Forms.UpdateStudent_A.bd.Text = ""
-                    My.Forms.UpdateStudent_A.gl.Text = ""
+                    My.Forms.UpdateStudent_A.glComboBox.Items.Clear()
                     My.Forms.UpdateStudent_A.con.Text = ""
                     My.Forms.UpdateStudent_A.sy.Text = ""
                     My.Forms.UpdateStudent_A.ag.Text = ""
@@ -1964,7 +1964,7 @@ Module Module1
                 form137 = ""
                 form137 = "No"
             End If
-            Dim reg1 As String = "UPDATE student_info SET Address = '" & My.Forms.UpdateStudent_R.add.Text & "', Birthday = '" & My.Forms.UpdateStudent_R.bd.Text & "', GradeLevel = '" & My.Forms.UpdateStudent_R.gl.Text & "', Birthday = '" & My.Forms.UpdateStudent_R.bd.Text & "', Contact = '" & My.Forms.UpdateStudent_R.con.Text & "', SchoolYear = '" & My.Forms.UpdateStudent_R.sy.Text & "', Age = '" & My.Forms.UpdateStudent_R.ag.Text & "', NSO= '" & NSO2 & "', Baptismal = '" & baptis & "', UploadCard= '" & card & "', UploadForm137 = '" & form137 & "', UploadGoodMoral= '" & goodMoral & "' WHERE Student_ID_No = '" & My.Forms.UpdateStudent_A.sn.Text & "'"
+            Dim reg1 As String = "UPDATE student_info SET Address = '" & My.Forms.UpdateStudent_R.add.Text & "', Birthday = '" & My.Forms.UpdateStudent_R.bd.Text & "', GradeLevel = '" & My.Forms.UpdateStudent_R.glComboBox.SelectedItem.ToString & "', Birthday = '" & My.Forms.UpdateStudent_R.bd.Text & "', Contact = '" & My.Forms.UpdateStudent_R.con.Text & "', SchoolYear = '" & My.Forms.UpdateStudent_R.sy.Text & "', Age = '" & My.Forms.UpdateStudent_R.ag.Text & "', NSO= '" & NSO2 & "', Baptismal = '" & baptis & "', UploadCard= '" & card & "', UploadForm137 = '" & form137 & "', UploadGoodMoral= '" & goodMoral & "' WHERE Student_ID_No = '" & My.Forms.UpdateStudent_A.sn.Text & "'"
             'eto yung connection string natin, (insert() noon), cn1 dito.
             Using cn1 = New MySqlConnection("server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'")
                 Using sqlCmd = New MySqlCommand(reg1, cn1)
@@ -1979,7 +1979,7 @@ Module Module1
                     My.Forms.UpdateStudent_R.nam.Text = ""
                     My.Forms.UpdateStudent_R.add.Text = ""
                     My.Forms.UpdateStudent_R.bd.Text = ""
-                    My.Forms.UpdateStudent_R.gl.Text = ""
+                    My.Forms.UpdateStudent_R.glComboBox.Items.Clear()
                     My.Forms.UpdateStudent_R.con.Text = ""
                     My.Forms.UpdateStudent_R.sy.Text = ""
                     My.Forms.UpdateStudent_R.ag.Text = ""
@@ -2729,7 +2729,7 @@ Module Module1
                 My.Forms.UpdateStudent_A.nam.Text = r("LastName").ToString() & ", " & r("GivenName").ToString() & " " & r("MiddleName").ToString() & "."
                 My.Forms.UpdateStudent_A.add.Text = r("Address").ToString()
                 My.Forms.UpdateStudent_A.bd.Text = r("Birthday").ToString()
-                My.Forms.UpdateStudent_A.gl.Text = r("GradeLevel").ToString()
+                My.Forms.UpdateStudent_A.gradeLabel.Text = r("GradeLevel").ToString()
                 My.Forms.UpdateStudent_A.con.Text = r("Contact").ToString()
                 My.Forms.UpdateStudent_A.sy.Text = r("SchoolYear").ToString()
                 pic = r("Photo").ToString()
@@ -2738,7 +2738,7 @@ Module Module1
 
                 My.Forms.UpdateStudent_A.add.Enabled = True
                 My.Forms.UpdateStudent_A.bd.Enabled = True
-                My.Forms.UpdateStudent_A.gl.Enabled = True
+                My.Forms.UpdateStudent_A.glComboBox.Enabled = True
                 My.Forms.UpdateStudent_A.con.Enabled = True
                 My.Forms.UpdateStudent_A.sy.Enabled = True
 
@@ -2975,7 +2975,7 @@ Module Module1
                 My.Forms.UpdateStudent_R.nam.Text = r("LastName").ToString() & ", " & r("GivenName").ToString() & " " & r("MiddleName").ToString() & "."
                 My.Forms.UpdateStudent_R.add.Text = r("Address").ToString()
                 My.Forms.UpdateStudent_R.bd.Text = r("Birthday").ToString()
-                My.Forms.UpdateStudent_R.gl.Text = r("GradeLevel").ToString()
+                My.Forms.UpdateStudent_R.gradeLabel.Text = r("GradeLevel").ToString()
                 My.Forms.UpdateStudent_R.con.Text = r("Contact").ToString()
                 My.Forms.UpdateStudent_R.sy.Text = r("SchoolYear").ToString()
                 pic = r("Photo").ToString()
@@ -2984,7 +2984,7 @@ Module Module1
 
                 My.Forms.UpdateStudent_R.add.Enabled = True
                 My.Forms.UpdateStudent_R.bd.Enabled = True
-                My.Forms.UpdateStudent_R.gl.Enabled = True
+                My.Forms.UpdateStudent_R.glComboBox.Enabled = True
                 My.Forms.UpdateStudent_R.con.Enabled = True
                 My.Forms.UpdateStudent_R.sy.Enabled = True
 

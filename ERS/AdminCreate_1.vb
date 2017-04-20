@@ -1,5 +1,7 @@
 ﻿Imports System.IO
 Imports System.Drawing.Imaging
+Imports MySql.Data.MySqlClient
+
 Public Class AdminCreate_1
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         Dim a As Integer
@@ -100,5 +102,32 @@ Public Class AdminCreate_1
 
     Private Sub cno_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cno.TextChanged
 
+    End Sub
+
+    Private Sub en_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles en.TextChanged
+        If en.Text = "" Then
+            Label16.Text = " -"
+        Else
+            insert()
+            Dim reg As String = "SELECT * FROM admin WHERE (EmployeeID ='" & en.Text & "')"
+            cn1.Open()
+
+            Dim cmd As MySqlCommand = New MySqlCommand(reg, cn1)
+            r = cmd.ExecuteReader() 'execute sql query
+
+            Try
+                If r.Read Then
+                    Label16.ForeColor = Color.Red
+                    Label16.Text = "Employee ID is not Available!"
+                    cn1.Close()
+                Else
+                    Label16.Text = "Employee ID is Available!"
+                    Label16.ForeColor = Color.Green
+                    cn1.Close()
+                End If
+            Catch ex As Exception
+            End Try
+            cn1.Close()
+        End If
     End Sub
 End Class
