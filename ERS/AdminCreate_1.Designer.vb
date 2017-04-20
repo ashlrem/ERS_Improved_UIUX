@@ -63,6 +63,7 @@ Partial Class AdminCreate_1
         Me.add = New System.Windows.Forms.TextBox()
         Me.mn = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label16 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -98,7 +99,7 @@ Partial Class AdminCreate_1
         Me.Label15.AutoSize = True
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(493, 260)
+        Me.Label15.Location = New System.Drawing.Point(493, 274)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(132, 19)
         Me.Label15.TabIndex = 87
@@ -109,7 +110,7 @@ Partial Class AdminCreate_1
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Label14.Location = New System.Drawing.Point(505, 227)
+        Me.Label14.Location = New System.Drawing.Point(505, 241)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(86, 23)
         Me.Label14.TabIndex = 86
@@ -120,7 +121,7 @@ Partial Class AdminCreate_1
         Me.Label13.AutoSize = True
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(116, 309)
+        Me.Label13.Location = New System.Drawing.Point(116, 310)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(60, 19)
         Me.Label13.TabIndex = 85
@@ -131,7 +132,7 @@ Partial Class AdminCreate_1
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(116, 253)
+        Me.Label12.Location = New System.Drawing.Point(116, 254)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(60, 19)
         Me.Label12.TabIndex = 84
@@ -142,7 +143,7 @@ Partial Class AdminCreate_1
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(34, 280)
+        Me.Label11.Location = New System.Drawing.Point(34, 281)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(142, 19)
         Me.Label11.TabIndex = 83
@@ -153,7 +154,7 @@ Partial Class AdminCreate_1
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(34, 227)
+        Me.Label10.Location = New System.Drawing.Point(34, 228)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(142, 19)
         Me.Label10.TabIndex = 82
@@ -268,7 +269,7 @@ Partial Class AdminCreate_1
         '
         'ans2
         '
-        Me.ans2.Location = New System.Drawing.Point(182, 308)
+        Me.ans2.Location = New System.Drawing.Point(182, 309)
         Me.ans2.MaxLength = 30
         Me.ans2.Name = "ans2"
         Me.ans2.Size = New System.Drawing.Size(305, 20)
@@ -276,23 +277,23 @@ Partial Class AdminCreate_1
         '
         'rtp
         '
-        Me.rtp.Location = New System.Drawing.Point(626, 259)
+        Me.rtp.Location = New System.Drawing.Point(626, 273)
         Me.rtp.MaxLength = 18
         Me.rtp.Name = "rtp"
-        Me.rtp.Size = New System.Drawing.Size(215, 20)
+        Me.rtp.Size = New System.Drawing.Size(206, 20)
         Me.rtp.TabIndex = 66
         '
         'pw
         '
-        Me.pw.Location = New System.Drawing.Point(626, 231)
+        Me.pw.Location = New System.Drawing.Point(626, 245)
         Me.pw.MaxLength = 18
         Me.pw.Name = "pw"
-        Me.pw.Size = New System.Drawing.Size(214, 20)
+        Me.pw.Size = New System.Drawing.Size(206, 20)
         Me.pw.TabIndex = 65
         '
         'ans1
         '
-        Me.ans1.Location = New System.Drawing.Point(182, 252)
+        Me.ans1.Location = New System.Drawing.Point(182, 253)
         Me.ans1.MaxLength = 30
         Me.ans1.Name = "ans1"
         Me.ans1.Size = New System.Drawing.Size(305, 20)
@@ -347,7 +348,7 @@ Partial Class AdminCreate_1
         Me.sq2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.sq2.FormattingEnabled = True
         Me.sq2.Items.AddRange(New Object() {"Who was your childhood hero?", "What is your oldest cousin's first and last name?", "What is your favorite movie?"})
-        Me.sq2.Location = New System.Drawing.Point(182, 280)
+        Me.sq2.Location = New System.Drawing.Point(182, 281)
         Me.sq2.Name = "sq2"
         Me.sq2.Size = New System.Drawing.Size(305, 21)
         Me.sq2.TabIndex = 63
@@ -366,7 +367,7 @@ Partial Class AdminCreate_1
         Me.sq1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.sq1.FormattingEnabled = True
         Me.sq1.Items.AddRange(New Object() {"What is your favorite book?", "What is the brand of your first car?", "What was the name of your second dog?"})
-        Me.sq1.Location = New System.Drawing.Point(182, 225)
+        Me.sq1.Location = New System.Drawing.Point(182, 226)
         Me.sq1.Name = "sq1"
         Me.sq1.Size = New System.Drawing.Size(305, 21)
         Me.sq1.TabIndex = 61
@@ -384,7 +385,7 @@ Partial Class AdminCreate_1
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(766, 293)
+        Me.Button5.Location = New System.Drawing.Point(766, 307)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 38)
         Me.Button5.TabIndex = 70
@@ -396,7 +397,7 @@ Partial Class AdminCreate_1
         Me.Button6.BackgroundImage = CType(resources.GetObject("Button6.BackgroundImage"), System.Drawing.Image)
         Me.Button6.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.Color.White
-        Me.Button6.Location = New System.Drawing.Point(590, 293)
+        Me.Button6.Location = New System.Drawing.Point(590, 307)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(170, 38)
         Me.Button6.TabIndex = 67
@@ -442,10 +443,18 @@ Partial Class AdminCreate_1
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(873, 351)
+        Me.PictureBox2.Size = New System.Drawing.Size(873, 365)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 71
         Me.PictureBox2.TabStop = False
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(623, 226)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(0, 13)
+        Me.Label16.TabIndex = 88
         '
         'AdminCreate_1
         '
@@ -453,8 +462,9 @@ Partial Class AdminCreate_1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(873, 351)
+        Me.ClientSize = New System.Drawing.Size(873, 365)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label13)
@@ -543,4 +553,5 @@ Partial Class AdminCreate_1
     Friend WithEvents add As System.Windows.Forms.TextBox
     Friend WithEvents mn As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
 End Class

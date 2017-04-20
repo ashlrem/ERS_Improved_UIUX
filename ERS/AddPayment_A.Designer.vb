@@ -27,9 +27,7 @@ Partial Class AddPayment_A
         Me.sn = New System.Windows.Forms.TextBox()
         Me.SearchAddpayemt_btn = New System.Windows.Forms.Button()
         Me.miscellaneous_fee_grp = New System.Windows.Forms.GroupBox()
-        Me.Label20 = New System.Windows.Forms.Label()
         Me.enterTuition_btn = New System.Windows.Forms.Button()
-        Me.getSubj = New System.Windows.Forms.ComboBox()
         Me.total = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.pp_rdbnt = New System.Windows.Forms.RadioButton()
@@ -117,9 +115,7 @@ Partial Class AddPayment_A
         '
         'miscellaneous_fee_grp
         '
-        Me.miscellaneous_fee_grp.Controls.Add(Me.Label20)
         Me.miscellaneous_fee_grp.Controls.Add(Me.enterTuition_btn)
-        Me.miscellaneous_fee_grp.Controls.Add(Me.getSubj)
         Me.miscellaneous_fee_grp.Controls.Add(Me.total)
         Me.miscellaneous_fee_grp.Controls.Add(Me.Label7)
         Me.miscellaneous_fee_grp.Controls.Add(Me.pp_rdbnt)
@@ -131,15 +127,6 @@ Partial Class AddPayment_A
         Me.miscellaneous_fee_grp.TabIndex = 3
         Me.miscellaneous_fee_grp.TabStop = False
         Me.miscellaneous_fee_grp.Text = "EnterTuition fee:"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(6, 20)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(65, 13)
-        Me.Label20.TabIndex = 9
-        Me.Label20.Text = "Grade Level"
         '
         'enterTuition_btn
         '
@@ -153,18 +140,9 @@ Partial Class AddPayment_A
         Me.enterTuition_btn.Text = "COMPUTE"
         Me.enterTuition_btn.UseVisualStyleBackColor = True
         '
-        'getSubj
-        '
-        Me.getSubj.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.getSubj.FormattingEnabled = True
-        Me.getSubj.Location = New System.Drawing.Point(130, 12)
-        Me.getSubj.Name = "getSubj"
-        Me.getSubj.Size = New System.Drawing.Size(103, 21)
-        Me.getSubj.TabIndex = 8
-        '
         'total
         '
-        Me.total.Location = New System.Drawing.Point(133, 45)
+        Me.total.Location = New System.Drawing.Point(134, 29)
         Me.total.MaxLength = 5
         Me.total.Name = "total"
         Me.total.Size = New System.Drawing.Size(100, 20)
@@ -174,7 +152,7 @@ Partial Class AddPayment_A
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(6, 47)
+        Me.Label7.Location = New System.Drawing.Point(6, 30)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(121, 16)
         Me.Label7.TabIndex = 0
@@ -184,7 +162,7 @@ Partial Class AddPayment_A
         '
         Me.pp_rdbnt.AutoSize = True
         Me.pp_rdbnt.Enabled = False
-        Me.pp_rdbnt.Location = New System.Drawing.Point(139, 71)
+        Me.pp_rdbnt.Location = New System.Drawing.Point(136, 65)
         Me.pp_rdbnt.Name = "pp_rdbnt"
         Me.pp_rdbnt.Size = New System.Drawing.Size(98, 17)
         Me.pp_rdbnt.TabIndex = 4
@@ -196,7 +174,7 @@ Partial Class AddPayment_A
         '
         Me.fp_rdobnt.AutoSize = True
         Me.fp_rdobnt.Enabled = False
-        Me.fp_rdobnt.Location = New System.Drawing.Point(43, 71)
+        Me.fp_rdobnt.Location = New System.Drawing.Point(29, 65)
         Me.fp_rdobnt.Name = "fp_rdobnt"
         Me.fp_rdobnt.Size = New System.Drawing.Size(85, 17)
         Me.fp_rdobnt.TabIndex = 4
@@ -219,11 +197,11 @@ Partial Class AddPayment_A
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(16, 30)
+        Me.Label8.Location = New System.Drawing.Point(10, 29)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(76, 13)
+        Me.Label8.Size = New System.Drawing.Size(10, 13)
         Me.Label8.TabIndex = 0
-        Me.Label8.Text = "First Payment::"
+        Me.Label8.Text = "-"
         '
         'prelim
         '
@@ -735,9 +713,7 @@ Partial Class AddPayment_A
     Friend WithEvents Subj7 As System.Windows.Forms.Label
     Friend WithEvents Subj6 As System.Windows.Forms.Label
     Friend WithEvents Subj5 As System.Windows.Forms.Label
-    Friend WithEvents getSubj As System.Windows.Forms.ComboBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents totalBooks As System.Windows.Forms.Label
     Friend WithEvents label As System.Windows.Forms.Label
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox

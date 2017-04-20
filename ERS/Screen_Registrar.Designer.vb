@@ -49,6 +49,8 @@ Partial Class Screen_Registrar
         Me.ViewEnrolledStudentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarPanelPictureBox = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PaymentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewPaymentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2.SuspendLayout()
         CType(Me.RegistrarPanelPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,7 +58,7 @@ Partial Class Screen_Registrar
         '
         'MenuStrip2
         '
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.AcademeToolStripMenuItem, Me.SearchToolStripMenuItem})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.AcademeToolStripMenuItem, Me.SearchToolStripMenuItem, Me.PaymentToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Size = New System.Drawing.Size(1020, 24)
@@ -228,6 +230,19 @@ Partial Class Screen_Registrar
         Me.PictureBox1.TabIndex = 43
         Me.PictureBox1.TabStop = False
         '
+        'PaymentToolStripMenuItem
+        '
+        Me.PaymentToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewPaymentToolStripMenuItem})
+        Me.PaymentToolStripMenuItem.Name = "PaymentToolStripMenuItem"
+        Me.PaymentToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
+        Me.PaymentToolStripMenuItem.Text = "Payment"
+        '
+        'ViewPaymentToolStripMenuItem
+        '
+        Me.ViewPaymentToolStripMenuItem.Name = "ViewPaymentToolStripMenuItem"
+        Me.ViewPaymentToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ViewPaymentToolStripMenuItem.Text = "View Payment"
+        '
         'Screen_Registrar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -273,4 +288,6 @@ Partial Class Screen_Registrar
     Friend WithEvents SubjectToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ViewEnrolledStudentsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents PaymentToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ViewPaymentToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

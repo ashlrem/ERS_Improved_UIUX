@@ -36,7 +36,6 @@ Partial Class UpdateStudent_R
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.con = New System.Windows.Forms.TextBox()
         Me.ag = New System.Windows.Forms.TextBox()
-        Me.gl = New System.Windows.Forms.TextBox()
         Me.bd = New System.Windows.Forms.TextBox()
         Me.nam = New System.Windows.Forms.TextBox()
         Me.add = New System.Windows.Forms.TextBox()
@@ -55,6 +54,9 @@ Partial Class UpdateStudent_R
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.form_lbl = New System.Windows.Forms.Label()
         Me.baptismal_lbl = New System.Windows.Forms.Label()
+        Me.gradeLabel = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.glComboBox = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -75,7 +77,7 @@ Partial Class UpdateStudent_R
         '
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Location = New System.Drawing.Point(525, 199)
+        Me.Label8.Location = New System.Drawing.Point(514, 221)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(47, 13)
         Me.Label8.TabIndex = 34
@@ -85,7 +87,7 @@ Partial Class UpdateStudent_R
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Location = New System.Drawing.Point(525, 147)
+        Me.Label7.Location = New System.Drawing.Point(514, 169)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(48, 13)
         Me.Label7.TabIndex = 35
@@ -105,7 +107,7 @@ Partial Class UpdateStudent_R
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Location = New System.Drawing.Point(525, 173)
+        Me.Label5.Location = New System.Drawing.Point(514, 195)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(29, 13)
         Me.Label5.TabIndex = 38
@@ -173,7 +175,7 @@ Partial Class UpdateStudent_R
         'con
         '
         Me.con.Enabled = False
-        Me.con.Location = New System.Drawing.Point(616, 196)
+        Me.con.Location = New System.Drawing.Point(605, 218)
         Me.con.MaxLength = 11
         Me.con.Name = "con"
         Me.con.Size = New System.Drawing.Size(158, 20)
@@ -182,25 +184,16 @@ Partial Class UpdateStudent_R
         'ag
         '
         Me.ag.Enabled = False
-        Me.ag.Location = New System.Drawing.Point(615, 169)
+        Me.ag.Location = New System.Drawing.Point(604, 191)
         Me.ag.MaxLength = 2
         Me.ag.Name = "ag"
         Me.ag.Size = New System.Drawing.Size(159, 20)
         Me.ag.TabIndex = 32
         '
-        'gl
-        '
-        Me.gl.Enabled = False
-        Me.gl.Location = New System.Drawing.Point(315, 166)
-        Me.gl.MaxLength = 18
-        Me.gl.Name = "gl"
-        Me.gl.Size = New System.Drawing.Size(176, 20)
-        Me.gl.TabIndex = 31
-        '
         'bd
         '
         Me.bd.Enabled = False
-        Me.bd.Location = New System.Drawing.Point(615, 140)
+        Me.bd.Location = New System.Drawing.Point(604, 162)
         Me.bd.MaxLength = 18
         Me.bd.Name = "bd"
         Me.bd.Size = New System.Drawing.Size(159, 20)
@@ -384,6 +377,35 @@ Partial Class UpdateStudent_R
         Me.baptismal_lbl.TabIndex = 87
         Me.baptismal_lbl.Text = "Baptismal"
         '
+        'gradeLabel
+        '
+        Me.gradeLabel.AutoSize = True
+        Me.gradeLabel.BackColor = System.Drawing.Color.Transparent
+        Me.gradeLabel.Location = New System.Drawing.Point(633, 140)
+        Me.gradeLabel.Name = "gradeLabel"
+        Me.gradeLabel.Size = New System.Drawing.Size(13, 13)
+        Me.gradeLabel.TabIndex = 92
+        Me.gradeLabel.Text = "--"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Location = New System.Drawing.Point(514, 140)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(102, 13)
+        Me.Label9.TabIndex = 91
+        Me.Label9.Text = "Current Grade Level"
+        '
+        'glComboBox
+        '
+        Me.glComboBox.Enabled = False
+        Me.glComboBox.FormattingEnabled = True
+        Me.glComboBox.Location = New System.Drawing.Point(315, 165)
+        Me.glComboBox.Name = "glComboBox"
+        Me.glComboBox.Size = New System.Drawing.Size(176, 21)
+        Me.glComboBox.TabIndex = 93
+        '
         'UpdateStudent_R
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -392,6 +414,9 @@ Partial Class UpdateStudent_R
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(904, 395)
         Me.ControlBox = False
+        Me.Controls.Add(Me.glComboBox)
+        Me.Controls.Add(Me.gradeLabel)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.SearchStudent_btn)
         Me.Controls.Add(Me.Label8)
@@ -407,7 +432,6 @@ Partial Class UpdateStudent_R
         Me.Controls.Add(Me.con)
         Me.Controls.Add(Me.sy)
         Me.Controls.Add(Me.ag)
-        Me.Controls.Add(Me.gl)
         Me.Controls.Add(Me.bd)
         Me.Controls.Add(Me.nam)
         Me.Controls.Add(Me.add)
@@ -437,7 +461,6 @@ Partial Class UpdateStudent_R
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents con As System.Windows.Forms.TextBox
     Friend WithEvents ag As System.Windows.Forms.TextBox
-    Friend WithEvents gl As System.Windows.Forms.TextBox
     Friend WithEvents bd As System.Windows.Forms.TextBox
     Friend WithEvents nam As System.Windows.Forms.TextBox
     Friend WithEvents add As System.Windows.Forms.TextBox
@@ -456,4 +479,7 @@ Partial Class UpdateStudent_R
     Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents gradeLabel As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents glComboBox As System.Windows.Forms.ComboBox
 End Class

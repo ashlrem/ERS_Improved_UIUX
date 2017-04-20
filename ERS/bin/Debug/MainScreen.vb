@@ -18,13 +18,6 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutUsBtn.Click
-        'PictureBox1.Visible = False
-        'About.TopLevel = False
-        'AdminBtn.Visible = False
-        'CashierBtn.Visible = False
-        'RegistrarBtn.Visible = False
-        'AboutUsBtn.Visible = False
-        'PictureBox1.Visible = False
 
         PictureBox1.Enabled = False
         AboutUsBtn.Enabled = False

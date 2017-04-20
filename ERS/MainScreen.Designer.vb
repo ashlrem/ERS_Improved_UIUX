@@ -156,9 +156,9 @@ Partial Class MainScreen
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(386, 289)
+        Me.PictureBox1.Location = New System.Drawing.Point(412, 289)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(633, 422)
+        Me.PictureBox1.Size = New System.Drawing.Size(587, 422)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False

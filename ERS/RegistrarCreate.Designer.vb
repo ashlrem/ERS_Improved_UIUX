@@ -62,6 +62,7 @@ Partial Class RegistrarCreate
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -122,7 +123,7 @@ Partial Class RegistrarCreate
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Calibri", 9.0!)
-        Me.Button1.Location = New System.Drawing.Point(776, 297)
+        Me.Button1.Location = New System.Drawing.Point(776, 309)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(85, 37)
         Me.Button1.TabIndex = 19
@@ -156,7 +157,7 @@ Partial Class RegistrarCreate
         Me.en.Location = New System.Drawing.Point(656, 199)
         Me.en.MaxLength = 18
         Me.en.Name = "en"
-        Me.en.Size = New System.Drawing.Size(207, 20)
+        Me.en.Size = New System.Drawing.Size(205, 20)
         Me.en.TabIndex = 9
         '
         'ln
@@ -178,7 +179,7 @@ Partial Class RegistrarCreate
         '
         'rtp
         '
-        Me.rtp.Location = New System.Drawing.Point(656, 260)
+        Me.rtp.Location = New System.Drawing.Point(656, 272)
         Me.rtp.MaxLength = 18
         Me.rtp.Name = "rtp"
         Me.rtp.Size = New System.Drawing.Size(205, 20)
@@ -206,7 +207,7 @@ Partial Class RegistrarCreate
         Me.Button5.BackgroundImage = CType(resources.GetObject("Button5.BackgroundImage"), System.Drawing.Image)
         Me.Button5.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(600, 297)
+        Me.Button5.Location = New System.Drawing.Point(600, 309)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(170, 38)
         Me.Button5.TabIndex = 18
@@ -215,7 +216,7 @@ Partial Class RegistrarCreate
         '
         'pw
         '
-        Me.pw.Location = New System.Drawing.Point(656, 229)
+        Me.pw.Location = New System.Drawing.Point(656, 241)
         Me.pw.MaxLength = 18
         Me.pw.Name = "pw"
         Me.pw.Size = New System.Drawing.Size(205, 20)
@@ -284,7 +285,7 @@ Partial Class RegistrarCreate
         Me.Label15.AutoSize = True
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(515, 263)
+        Me.Label15.Location = New System.Drawing.Point(515, 275)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(132, 19)
         Me.Label15.TabIndex = 61
@@ -295,7 +296,7 @@ Partial Class RegistrarCreate
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Label14.Location = New System.Drawing.Point(515, 233)
+        Me.Label14.Location = New System.Drawing.Point(515, 245)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(86, 23)
         Me.Label14.TabIndex = 60
@@ -433,14 +434,23 @@ Partial Class RegistrarCreate
         Me.Label10.TabIndex = 67
         Me.Label10.Text = "Security Question 1"
         '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(653, 222)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(0, 13)
+        Me.Label16.TabIndex = 71
+        '
         'RegistrarCreate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(873, 351)
+        Me.ClientSize = New System.Drawing.Size(873, 365)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
@@ -527,4 +537,5 @@ Partial Class RegistrarCreate
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
 End Class
