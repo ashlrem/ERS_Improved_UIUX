@@ -5,12 +5,8 @@ Imports System.Drawing
 Imports System.Drawing.Printing
 Public Class Reciept
     Private Sub Reciept_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        'Me.Location = New Point(1, 1)
-        'Me.Size = SystemInformation.PrimaryMonitorSize()
         dateP.Text = DateTimePicker1.Value.ToString
 
-     
         Dim Screen As System.Drawing.Rectangle
         Screen = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea()
         Me.Top = (Screen.Height \ 2) - (Me.Height - 320)

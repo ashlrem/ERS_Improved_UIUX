@@ -121,11 +121,14 @@
     End Sub
 
     Private Sub ViewEnrolledStudentsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewEnrolledStudentsToolStripMenuItem.Click
-        'SearchStudent_R.TopLevel = False
-        'RegistrarPanelPictureBox.Controls.Add(SearchStudent_R)
-        'RegistrarPanel.Hide()
         SearchStudent_R.TopMost = True
         Me.Enabled = False
         SearchStudent_R.Show()
+    End Sub
+
+    Private Sub ViewPaymentToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewPaymentToolStripMenuItem.Click
+        ViewPayment_Registrar.TopMost = True
+        Me.Enabled = False
+        ViewPayment_Registrar.Show()
     End Sub
 End Class

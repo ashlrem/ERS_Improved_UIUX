@@ -32,6 +32,8 @@ Partial Class UpdatePayment_A
         Me.prelim = New System.Windows.Forms.Label()
         Me.grade = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.studentName = New System.Windows.Forms.Label()
         Me.Payment_grp.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -69,7 +71,7 @@ Partial Class UpdatePayment_A
         Me.Payment_grp.Controls.Add(Me.pre_btn)
         Me.Payment_grp.Controls.Add(Me.prelim)
         Me.Payment_grp.Enabled = False
-        Me.Payment_grp.Location = New System.Drawing.Point(15, 76)
+        Me.Payment_grp.Location = New System.Drawing.Point(15, 103)
         Me.Payment_grp.Name = "Payment_grp"
         Me.Payment_grp.Size = New System.Drawing.Size(338, 61)
         Me.Payment_grp.TabIndex = 7
@@ -110,7 +112,7 @@ Partial Class UpdatePayment_A
         'grade
         '
         Me.grade.AutoSize = True
-        Me.grade.Location = New System.Drawing.Point(139, 38)
+        Me.grade.Location = New System.Drawing.Point(139, 69)
         Me.grade.Name = "grade"
         Me.grade.Size = New System.Drawing.Size(10, 13)
         Me.grade.TabIndex = 8
@@ -119,18 +121,38 @@ Partial Class UpdatePayment_A
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(68, 38)
+        Me.Label12.Location = New System.Drawing.Point(68, 69)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(68, 13)
         Me.Label12.TabIndex = 8
         Me.Label12.Text = "Grade Level:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(58, 46)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(78, 13)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Student Name:"
+        '
+        'studentName
+        '
+        Me.studentName.AutoSize = True
+        Me.studentName.Location = New System.Drawing.Point(139, 46)
+        Me.studentName.Name = "studentName"
+        Me.studentName.Size = New System.Drawing.Size(10, 13)
+        Me.studentName.TabIndex = 10
+        Me.studentName.Text = "-"
         '
         'UpdatePayment_A
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(369, 155)
+        Me.ClientSize = New System.Drawing.Size(369, 176)
+        Me.Controls.Add(Me.studentName)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.grade)
         Me.Controls.Add(Me.Payment_grp)
@@ -154,4 +176,6 @@ Partial Class UpdatePayment_A
     Friend WithEvents grade As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents pre_btn As System.Windows.Forms.Button
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents studentName As System.Windows.Forms.Label
 End Class

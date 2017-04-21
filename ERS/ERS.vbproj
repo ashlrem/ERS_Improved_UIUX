@@ -414,6 +414,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Payment.vb" />
+    <Compile Include="Receipt2.Designer.vb">
+      <DependentUpon>Receipt2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Receipt2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reciept.Designer.vb">
       <DependentUpon>Reciept.vb</DependentUpon>
     </Compile>
@@ -568,6 +574,12 @@
       <DependentUpon>UpdateSub_A.vb</DependentUpon>
     </Compile>
     <Compile Include="UpdateSub_A.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPayment_Registrar.Designer.vb">
+      <DependentUpon>ViewPayment_Registrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPayment_Registrar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ViewStudent.Designer.vb">
@@ -735,6 +747,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Receipt2.resx">
+      <DependentUpon>Receipt2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reciept.resx">
       <DependentUpon>Reciept.vb</DependentUpon>
     </EmbeddedResource>
@@ -817,6 +832,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateSub_A.resx">
       <DependentUpon>UpdateSub_A.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPayment_Registrar.resx">
+      <DependentUpon>ViewPayment_Registrar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewStudent.resx">
       <DependentUpon>ViewStudent.vb</DependentUpon>

@@ -472,7 +472,7 @@ Module Module1
                 End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.ToString)
+            MessageBox.Show("Section already exists!")
         End Try
         ins.Parameters.Clear()
         objConn.Close()
@@ -498,7 +498,7 @@ Module Module1
                 AddSubClear()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Section Already Exists!")
         End Try
         ins.Parameters.Clear()
         objConn.Close()
@@ -668,7 +668,7 @@ Module Module1
 
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to login.")
         End Try
     End Sub
     Public Sub LoginAdm()
@@ -772,7 +772,7 @@ Module Module1
             End If
 
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox("Failed to login.")
             cn1.Close()
             cn.Close()
         End Try
@@ -880,7 +880,7 @@ Module Module1
             End If
 
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox("Failed to login.")
             cn1.Close()
             cn.Close()
         End Try
@@ -893,9 +893,7 @@ Module Module1
         cn1.Open() 'open database connection ulit para maka connect tayo sa databae.
 
         Dim cmd As MySqlCommand = New MySqlCommand(reg, cn1)
-        r = cmd.ExecuteReader() 'execute sql query
-        'alam na natin kung ano ibig sabihin ng r.Read diba guys? ibig sabihin, meron nun sa database. so,
-        'ididisplay niya kung ano yung nakita niya sa database na under nung employee id
+        r = cmd.ExecuteReader()
         Try
             If r.Read Then
                 My.Forms.AdminPanel.n1.Text = r("Surname").ToString() & ", " & r("GivenName").ToString() & " " & r("MiddleName").ToString() & "."
@@ -982,7 +980,7 @@ Module Module1
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to change password.")
             cn.Close()
         End Try
     End Sub
@@ -1037,7 +1035,7 @@ Module Module1
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to change password.")
             cn.Close()
         End Try
     End Sub
@@ -1091,7 +1089,7 @@ Module Module1
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to change password.")
             cn.Close()
         End Try
     End Sub
@@ -1121,7 +1119,7 @@ Module Module1
                 cn1.Close()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to change password.")
             cn.Close()
         End Try
     End Sub
@@ -1151,7 +1149,7 @@ Module Module1
                 cn1.Close()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to change password.")
             cn.Close()
         End Try
     End Sub
@@ -1181,15 +1179,12 @@ Module Module1
                 cn1.Close()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to change password.")
             cn.Close()
         End Try
     End Sub
     Public Sub forgor01()
-        'etong method na to, nagveverify lang kung existing si employee number sa database.
-        'same explanation lang din to guys tulad ng ibang methods natin.
 
-        'Verification for EmployeeNumber of Admin to change password
         Try
             'eto yung connection string natin, same lang din ng nasa insert()
             cn.ConnectionString = "server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'"
@@ -1213,7 +1208,7 @@ Module Module1
                 cn.Close()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to change password.")
             cn.Close()
         End Try
         cn.Close()
@@ -1246,7 +1241,7 @@ Module Module1
                 cn.Close()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to change password.")
             cn.Close()
         End Try
         cn.Close()
@@ -1279,13 +1274,12 @@ Module Module1
                 cn.Close()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to change password.")
             cn.Close()
         End Try
         cn.Close()
     End Sub
     Public Sub veditR()
-        'not implemented in system
         Try
             insert()
             Dim r As MySqlDataReader
@@ -1313,7 +1307,7 @@ Module Module1
                 cn.Close()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to search account.")
             cn.Close()
         End Try
     End Sub
@@ -1370,12 +1364,11 @@ Module Module1
                 cn.Close()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to search account.")
             cn.Close()
         End Try
     End Sub
     Public Sub editC()
-        'not implemented
         Try
             Dim reg As String = "UPDATE cashier_account SET Surname = '" & My.Forms.CashierEdit.ln.Text & "', GivenName = '" & My.Forms.CashierEdit.fn.Text & "', MiddleName = '" & My.Forms.CashierEdit.mn.Text & "', Birthday = '" & My.Forms.CashierEdit.bd.Text & "', Address = '" & My.Forms.CashierEdit.add.Text & "', Email_Account = '" & My.Forms.CashierEdit.eadd.Text & "', ContactNumber = '" & My.Forms.CashierEdit.cno.Text & "' WHERE EmployeeID = '" & My.Forms.CashierEdit.en.Text & "'"
             Using cn = New MySqlConnection("server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'")
@@ -1399,12 +1392,11 @@ Module Module1
                 cn.Close()
             End Using
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to update account.")
             cn.Close()
         End Try
     End Sub
     Public Sub RegE()
-        'not implemented
         Try
             insert()
             Dim r As MySqlDataReader
@@ -1434,12 +1426,11 @@ Module Module1
                 cn.Close()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to search account.")
             cn.Close()
         End Try
     End Sub
     Public Sub regdel()
-        'not implemented
         Try
             Dim reg As String = "DELETE FROM registrar_account WHERE EmployeeID = '" & My.Forms.DeleteRegistrar.en.Text & "'"
             Using cn = New MySqlConnection("server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'")
@@ -1465,12 +1456,11 @@ Module Module1
                 cn.Close()
             End Using
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to delete account.")
             cn.Close()
         End Try
     End Sub
     Public Sub delcas()
-        'not implemented
         Try
             insert()
             Dim r As MySqlDataReader
@@ -1500,12 +1490,11 @@ Module Module1
                 cn.Close()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to delete account.")
             cn.Close()
         End Try
     End Sub
     Public Sub delad()
-        'not implemented
         Try
             insert()
             Dim r As MySqlDataReader
@@ -1536,7 +1525,7 @@ Module Module1
                 cn.Close()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to delete account.")
             cn.Close()
         End Try
     End Sub
@@ -1556,7 +1545,7 @@ Module Module1
             End Using
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to delete account.")
             cn1.Close()
         End Try
         '  Next
@@ -1564,8 +1553,6 @@ Module Module1
     Public Sub deleteAdminAccounts()
         '   For Each FRM As Form In Application.OpenForms
         Try
-            '  Dim deleteAccountUser As String = "My.Forms." & FRM.Name.ToString & ".en.Text"
-            '  Dim reg1 As String = "DELETE FROM accounts WHERE EmployeeID = '" & My.Forms.DeleteRegistrar.en.Text & "'"
             Dim reg1 As String = "DELETE FROM accounts WHERE EmployeeID = '" & My.Forms.deleteAdmin.en.Text & "'"
             Using cn1 = New MySqlConnection("server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'")
                 Using sqlCmd1 = New MySqlCommand(reg1, cn1)
@@ -1577,16 +1564,13 @@ Module Module1
             End Using
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to delete account.")
             cn1.Close()
         End Try
         '  Next
     End Sub
     Public Sub deleteRegistrarAccounts()
-        '   For Each FRM As Form In Application.OpenForms
         Try
-            '  Dim deleteAccountUser As String = "My.Forms." & FRM.Name.ToString & ".en.Text"
-            '  Dim reg1 As String = "DELETE FROM accounts WHERE EmployeeID = '" & My.Forms.DeleteRegistrar.en.Text & "'"
             Dim reg1 As String = "DELETE FROM accounts WHERE EmployeeID = '" & My.Forms.DeleteRegistrar.en.Text & "'"
             Using cn1 = New MySqlConnection("server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'")
                 Using sqlCmd1 = New MySqlCommand(reg1, cn1)
@@ -1598,14 +1582,12 @@ Module Module1
             End Using
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to delete account.")
             cn1.Close()
         End Try
         '  Next
     End Sub
     Public Sub delad1()
-        'not implemented
-
         Dim reg As String = "DELETE FROM admin WHERE EmployeeID = '" & My.Forms.deleteAdmin.en.Text & "'"
         Try
             Using cn = New MySqlConnection("server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'")
@@ -1630,12 +1612,11 @@ Module Module1
                 cn.Close()
             End Using
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to delete account.")
             cn.Close()
         End Try
     End Sub
     Public Sub delcas1()
-        'not implemented
         Dim reg As String = "DELETE FROM cashier_account WHERE EmployeeID = '" & My.Forms.DeleteCashier.en.Text & "'"
         Try
             Using cn = New MySqlConnection("server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'")
@@ -1660,7 +1641,7 @@ Module Module1
                 cn.Close()
             End Using
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to delete account.")
             cn.Close()
         End Try
     End Sub
@@ -1748,7 +1729,7 @@ Module Module1
             MsgBox("Student Info Deleted!!")
             My.Forms.DeleteStudent_A.DeleteButton_a_Student.Enabled = False
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to delete student info.")
             cn.Close()
         End Try
     End Sub
@@ -1836,14 +1817,12 @@ Module Module1
             MsgBox("Student Deleted!!")
             My.Forms.DeleteStudent_R.DeleteButton_a_Student.Enabled = False
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to delete student info.")
             cn.Close()
         End Try
     End Sub
 
     Public Sub editstud()
-        'edit student info method guys, easy lang to maintindihan. alam naman na natin yung
-        'routine natin kapag magttransact tayo kay database eh.
         If My.Forms.UpdateStudent_A.CheckBox2.Checked = True Then
             NSO2 = ""
             NSO2 = "YES"
@@ -1881,11 +1860,8 @@ Module Module1
             form137 = ""
             form137 = "No"
         End If
-        'edit Student info
         Try
-            'eto yung sql query natin, which is UPDATE.
             Dim reg1 As String = "UPDATE student_info SET Address = '" & My.Forms.UpdateStudent_A.add.Text & "', Birthday = '" & My.Forms.UpdateStudent_A.bd.Text & "', GradeLevel = '" & My.Forms.UpdateStudent_A.glComboBox.SelectedItem.ToString & "', Birthday = '" & My.Forms.UpdateStudent_A.bd.Text & "', Contact = '" & My.Forms.UpdateStudent_A.con.Text & "', SchoolYear = '" & My.Forms.UpdateStudent_A.sy.Text & "', Age = '" & My.Forms.UpdateStudent_A.ag.Text & "', NSO= '" & NSO2 & "', Baptismal = '" & baptis & "', UploadCard= '" & card & "', UploadForm137 = '" & form137 & "', UploadGoodMoral= '" & goodMoral & "' WHERE Student_ID_No = '" & My.Forms.UpdateStudent_A.sn.Text & "'"
-            'eto yung connection string natin, (insert() noon), cn1 dito.
             Using cn1 = New MySqlConnection("server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'")
                 Using sqlCmd = New MySqlCommand(reg1, cn1)
                     cn1.Open() 'open connection
@@ -1921,7 +1897,7 @@ Module Module1
                 cn1.Close()
             End Using
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to edit student info.")
             cn.Close()
         End Try
     End Sub
@@ -1965,7 +1941,6 @@ Module Module1
                 form137 = "No"
             End If
             Dim reg1 As String = "UPDATE student_info SET Address = '" & My.Forms.UpdateStudent_R.add.Text & "', Birthday = '" & My.Forms.UpdateStudent_R.bd.Text & "', GradeLevel = '" & My.Forms.UpdateStudent_R.glComboBox.SelectedItem.ToString & "', Birthday = '" & My.Forms.UpdateStudent_R.bd.Text & "', Contact = '" & My.Forms.UpdateStudent_R.con.Text & "', SchoolYear = '" & My.Forms.UpdateStudent_R.sy.Text & "', Age = '" & My.Forms.UpdateStudent_R.ag.Text & "', NSO= '" & NSO2 & "', Baptismal = '" & baptis & "', UploadCard= '" & card & "', UploadForm137 = '" & form137 & "', UploadGoodMoral= '" & goodMoral & "' WHERE Student_ID_No = '" & My.Forms.UpdateStudent_A.sn.Text & "'"
-            'eto yung connection string natin, (insert() noon), cn1 dito.
             Using cn1 = New MySqlConnection("server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'")
                 Using sqlCmd = New MySqlCommand(reg1, cn1)
                     cn1.Open() 'open connection
@@ -2000,12 +1975,11 @@ Module Module1
                 cn1.Close()
             End Using
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Failed to update student info.")
             cn.Close()
         End Try
     End Sub
     Public Sub vadmmin_btn()
-        'not implemented
         Try
             insert()
             Dim r As MySqlDataReader

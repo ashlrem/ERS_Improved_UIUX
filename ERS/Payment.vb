@@ -102,26 +102,21 @@ Module Payment
     End Sub
     Public Sub SearchUpdatePayment_A()
         Dim conn As New MySqlConnection ' <---
-        ' Me.sn.Text = My.Forms.AdminPanel.TextBox1.Text
-        'Me.FormBorderStyle = 0
 
         Try
-            'insert() 'tatanggalin natin to, ang error kasi is yung pag connect sa db. gawa tayo ng sarili.
             conn.ConnectionString = "server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'"
             Dim r As MySqlDataReader
             Dim reg As String = "SELECT * FROM payment_tbl WHERE (Student_ID_No ='" & My.Forms.UpdatePayment_A.sn.Text & "')"
-            conn.Open() 'instead na cn1.Open, babaguhin natin. ilalagay natin yung conn na ni declare natin sa taas.
-            Dim cmd As MySqlCommand = New MySqlCommand(reg, conn) '<--- dapat gagana na to. haha.
+            conn.Open()
+            Dim cmd As MySqlCommand = New MySqlCommand(reg, conn)
             r = cmd.ExecuteReader()
             If r.Read Then
                 My.Forms.UpdatePayment_A.prelim.Text = r("FirstPayment").ToString()
                 My.Forms.UpdatePayment_A.pre_btn.Visible = True
                 TotalPaid = r("TotalAmountPaid")
 
-
                 My.Forms.Reciept.nameOS.Text = My.Forms.UpdatePayment_A.sn.Text
                 My.Forms.Reciept.grade.Text = My.Forms.UpdatePayment_A.grade.Text
-
 
                 My.Forms.UpdatePayment_A.Payment_grp.Enabled = True
                 If My.Forms.UpdatePayment_A.prelim.Text = "0" Then
@@ -133,7 +128,7 @@ Module Payment
                 conn.Close()
             End If
         Catch ex As Exception
-            MsgBox(ex.StackTrace) '<-- tanggalin naten yung error.
+            MsgBox(ex.Message)
         End Try
         conn.Close()
     End Sub
@@ -160,28 +155,31 @@ Module Payment
 
     Public Sub SearchDeletePayment_A()
         Dim conn As New MySqlConnection ' <---
-
-
         Try
-            'insert() 'tatanggalin natin to, ang error kasi is yung pag connect sa db. gawa tayo ng sarili.
             conn.ConnectionString = "server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'"
             Dim r As MySqlDataReader
             Dim reg As String = "SELECT * FROM payment_tbl WHERE (Student_ID_No ='" & My.Forms.DeletePayment.sn.Text & "')"
-            conn.Open() 'instead na cn1.Open, babaguhin natin. ilalagay natin yung conn na ni declare natin sa taas.
-            Dim cmd As MySqlCommand = New MySqlCommand(reg, conn) '<--- dapat gagana na to. haha.
+            conn.Open()
+            Dim cmd As MySqlCommand = New MySqlCommand(reg, conn)
             r = cmd.ExecuteReader()
             If r.Read Then
-                My.Forms.DeletePayment.prelim.Text = r("FirstPayment").ToString()
-                My.Forms.DeletePayment.midterm.Text = r("SecondPayment").ToString()
-                My.Forms.DeletePayment.sn.Enabled = False
-                My.Forms.DeletePayment.SearchAddpayemt_btn.Enabled = False
-                My.Forms.DeletePayment.DeletePayment_btn.Enabled = True
+                If r("FirstPayment").ToString() = "0" Then
+                    My.Forms.DeletePayment.prelim.Text = "PAID"
+                Else
+                    My.Forms.DeletePayment.prelim.Text = r("FirstPayment").ToString()
+                End If
+
+                If r("TotalAmountPaid").ToString() = "0" Then
+                    My.Forms.DeletePayment.midterm.Text = "PAID"
+                Else
+                    My.Forms.DeletePayment.midterm.Text = r("TotalAmountPaid").ToString()
+                End If
             Else
                 MsgBox("Student Number not Found!")
                 conn.Close()
             End If
         Catch ex As Exception
-            MsgBox(ex.StackTrace) '<-- tanggalin naten yung error.
+            'MsgBox(ex.StackTrace)
         End Try
         conn.Close()
     End Sub

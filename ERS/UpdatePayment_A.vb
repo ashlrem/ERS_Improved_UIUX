@@ -4,24 +4,22 @@ Public Class UpdatePayment_A
 
     Private Sub SearchAddpayemt_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchAddpayemt_btn.Click
         Dim conn As New MySqlConnection ' <---
-        ' Me.sn.Text = My.Forms.AdminPanel.TextBox1.Text
-        'Me.FormBorderStyle = 0
         Try
-            'insert() 'tatanggalin natin to, ang error kasi is yung pag connect sa db. gawa tayo ng sarili.
             conn.ConnectionString = "server= '" & server & "'; userid= '" & user & "'; port= '" & port & "';password= '" & password & "';database='" & database & "'"
             Dim r As MySqlDataReader
             Dim reg As String = "SELECT * FROM 	student_info WHERE (Student_ID_No ='" & sn.Text & "')"
-            conn.Open() 'instead na cn1.Open, babaguhin natin. ilalagay natin yung conn na ni declare natin sa taas.
-            Dim cmd As MySqlCommand = New MySqlCommand(reg, conn) '<--- dapat gagana na to. haha.
+            conn.Open()
+            Dim cmd As MySqlCommand = New MySqlCommand(reg, conn)
             r = cmd.ExecuteReader()
             If r.Read Then
+                studentName.Text = r("LastName").ToString() & ", " & r("GivenName").ToString & ", " & r("MiddleName").ToString & ""
                 grade.Text = r("GradeLevel").ToString()
                 SearchUpdatePayment_A()
             Else
                 conn.Close()
             End If
         Catch ex As Exception
-            MsgBox(ex.StackTrace.ToString) '<-- tanggalin naten yung error.
+            MsgBox("Student does not made any payment yet!")
         End Try
         conn.Close()
     End Sub
@@ -29,20 +27,21 @@ Public Class UpdatePayment_A
     Private Sub pre_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pre_btn.Click
         Me.Text = ""
         Me.TopMost = False
-        Reciept.TopMost = True
-
-        Dim lastpayment As Integer
-        lastpayment = prelim.Text
-        total = TotalPaid + lastpayment
-
-        SearchUpdatePayment_A()
+        Receipt2.TopMost = True
+        Receipt2.nameOS.Text = studentName.Text
+        Receipt2.grade.Text = grade.Text
+        Receipt2.am.Text = prelim.Text
+        Receipt2.am1.Text = prelim.Text
+        Receipt2.am2.Text = prelim.Text
+        Receipt2.amount.Text = prelim.Text
+        Receipt2.po.Text = "Final Payment"
 
         If prelim.Text = "0" Then
             MsgBox("Already paid!")
             pre_btn.Visible = False
             Me.Enabled = False
         End If
-        Reciept.Show()
+        Receipt2.Show()
     End Sub
     Private Sub UpdatePayment_A_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim Screen As System.Drawing.Rectangle
