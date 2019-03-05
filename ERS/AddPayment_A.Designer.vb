@@ -622,10 +622,10 @@ Partial Class AddPayment_A
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.Location = New System.Drawing.Point(25, 55)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(13, 16)
+        Me.Label24.Size = New System.Drawing.Size(12, 15)
         Me.Label24.TabIndex = 0
         Me.Label24.Text = "-"
         '

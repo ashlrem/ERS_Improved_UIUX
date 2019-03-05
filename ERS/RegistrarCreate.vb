@@ -99,7 +99,7 @@ Public Class RegistrarCreate
             Label16.Text = " -"
         Else
             insert()
-            Dim reg As String = "SELECT * FROM registrar_account WHERE (EmployeeID ='" & en.Text & "')"
+            Dim reg As String = "SELECT * FROM accounts WHERE (EmployeeID ='" & en.Text & "')"
             cn1.Open()
 
             Dim cmd As MySqlCommand = New MySqlCommand(reg, cn1)

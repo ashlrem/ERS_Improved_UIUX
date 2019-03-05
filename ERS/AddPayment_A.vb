@@ -679,7 +679,6 @@ Public Class AddPayment_A
             Me.TopMost = False
             Reciept.TopMost = True
             Reciept.Show()
-            'FullPayment_A()
             Subj1.Text = ""
             Subj2.Text = ""
             Subj3.Text = ""
@@ -717,7 +716,6 @@ Public Class AddPayment_A
             Reciept.TopMost = True
             Reciept.Show()
             Proceed_btn.Enabled = False
-            'PartialPayment_A()
             Subj1.Text = ""
             Subj2.Text = ""
             Subj3.Text = ""
@@ -939,10 +937,10 @@ Public Class AddPayment_A
         r = cmd.ExecuteReader() 'execute sql query
         Try
             If r.Read Then
-                Label24.Text = "P " & r("TotalAmountPaid").ToString & " Amout Paid!"
+                Label24.Text = "P " & r("TotalAmountPaid").ToString & " Amount Paid!"
                 cn1.Close()
             Else
-                Label24.Text = "Student Number is not added in Cashier!"
+                Label24.Text = "Student does not have any payments yet!"
                 cn1.Close()
             End If
         Catch ex As Exception

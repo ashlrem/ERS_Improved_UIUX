@@ -21,18 +21,12 @@
     End Sub
 
     Private Sub AddPaymentToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddPaymentToolStripMenuItem.Click
-        'AddPayment_A.TopLevel = False
-        'CashierPanelPictureBox.Controls.Add(AddPayment_A)
-        'CashierPanel.Hide()
         AddPayment_A.TopMost = True
         Me.Enabled = False
         AddPayment_A.Show()
         AddPayment_A.Text = "Add payment"
     End Sub
     Private Sub UpdatePaymentToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UpdatePaymentToolStripMenuItem.Click
-        'UpdatePayment_A.TopLevel = False
-        'CashierPanelPictureBox.Controls.Add(UpdatePayment_A)
-        'CashierPanel.Hide()
         UpdatePayment_A.TopMost = True
         Me.Enabled = False
         UpdatePayment_A.Show()
@@ -40,18 +34,12 @@
     End Sub
 
     Private Sub DeletePaymentToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeletePaymentToolStripMenuItem.Click
-        'DeletePayment.TopLevel = False
-        'CashierPanelPictureBox.Controls.Add(DeletePayment)
-        'CashierPanel.Hide()
         DeletePayment.TopMost = True
         Me.Enabled = False
         DeletePayment.Show()
     End Sub
 
     Private Sub ViewStudentPaymentToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewStudentPaymentToolStripMenuItem.Click
-        'DeletePayment.TopLevel = False
-        'CashierPanelPictureBox.Controls.Add(DeletePayment)
-        'CashierPanel.Hide()
         DeletePayment.TopMost = False
         Me.Enabled = False
         DeletePayment.Show()
